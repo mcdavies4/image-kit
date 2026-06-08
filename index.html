@@ -661,23 +661,50 @@ function mergeDrop(e, n) { e.preventDefault(); e.currentTarget.classList.remove(
 
 // ── IMAGE LOADER ──
 function loadImage(file, tool) {
-  if (!file || !file.type.startsWith('image/')) return
-  const reader = new FileReader()
-  reader.onload = function(ev) {
-    const img = new Image()
-    img.onload = function() {
-      imgState[tool] = {img, file, name: file.name.replace(/\.[^.]+$/, ''), origSize: file.size}
-      onImageLoaded(tool)
-    }
-    img.src = ev.target.result
+  if (!file) return
+  const chip = document.getElementById(tool + '-chip')
+  if (chip) {
+    chip.style.display = 'inline-flex'
+    const x = document.createElement('span')
+    x.className = 'x'; x.textContent = '✕'
+    x.onclick = function() { clearTool(tool) }
+    chip.textContent = ''
+    chip.appendChild(document.createTextNode('📎 ' + file.name + ' (' + fmtSize(file.size) + ') '))
+    chip.appendChild(x)
   }
-  reader.readAsDataURL(file)
-  const chip = document.getElementById(tool+'-chip')
-  if (chip) { chip.style.display = 'inline-flex'; chip.innerHTML = '📎 '+file.name+' ('+fmtSize(file.size)+') <span class="x" onclick="clearTool(\''+tool+'\')">✕</span>' }
+  // Show controls immediately
+  const ctrl = document.getElementById(tool + '-ctrl')
+  const btns = document.getElementById(tool + '-btns')
+  if (ctrl) ctrl.style.display = 'flex'
+  if (btns) btns.style.display = 'flex'
+
+  // Load image using object URL (faster than FileReader)
+  const url = URL.createObjectURL(file)
+  const img = new Image()
+  img.onload = function() {
+    URL.revokeObjectURL(url)
+    imgState[tool] = { img: img, file: file, name: file.name.replace(/\.[^.]+$/, ''), origSize: file.size }
+    onImageLoaded(tool)
+  }
+  img.onerror = function() {
+    // Fallback to FileReader
+    const reader = new FileReader()
+    reader.onload = function(ev) {
+      const img2 = new Image()
+      img2.onload = function() {
+        imgState[tool] = { img: img2, file: file, name: file.name.replace(/\.[^.]+$/, ''), origSize: file.size }
+        onImageLoaded(tool)
+      }
+      img2.src = ev.target.result
+    }
+    reader.readAsDataURL(file)
+  }
+  img.src = url
 }
 
 function onImageLoaded(tool) {
   const s = imgState[tool]; if (!s) return
+  // Ensure controls visible (may already be from loadImage)
   const ctrl = document.getElementById(tool+'-ctrl')
   const btns = document.getElementById(tool+'-btns')
   if (ctrl) ctrl.style.display = 'flex'
@@ -688,8 +715,11 @@ function onImageLoaded(tool) {
       updateCompress()
       break
     case 'resize':
-      document.getElementById('resize-w').value = s.img.naturalWidth
-      document.getElementById('resize-h').value = s.img.naturalHeight
+      if (s.img.naturalWidth) {
+        document.getElementById('resize-w').value = s.img.naturalWidth
+        document.getElementById('resize-h').value = s.img.naturalHeight
+        _rOrigW = s.img.naturalWidth; _rOrigH = s.img.naturalHeight
+      }
       break
     case 'rotate': drawToCanvas('rotate-canvas', s.img); break
     case 'filters': applyFilters(); break
