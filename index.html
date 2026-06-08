@@ -161,28 +161,28 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
       <div class="logo-name">RightImage<span>Kit</span></div>
     </div>
     <div class="nav-section">Free Tools</div>
-    <button class="nav-item active" onclick="nav('home')" data-t="home"><span class="ni">🏠</span>Home</button>
-    <button class="nav-item" onclick="nav('compress')" data-t="compress"><span class="ni">🗜</span>Compress</button>
-    <button class="nav-item" onclick="nav('resize')" data-t="resize"><span class="ni">↔️</span>Resize</button>
-    <button class="nav-item" onclick="nav('convert')" data-t="convert"><span class="ni">🔄</span>Convert Format</button>
-    <button class="nav-item" onclick="nav('crop')" data-t="crop"><span class="ni">✂️</span>Crop</button>
-    <button class="nav-item" onclick="nav('rotate')" data-t="rotate"><span class="ni">🔃</span>Rotate & Flip</button>
-    <button class="nav-item" onclick="nav('watermark')" data-t="watermark"><span class="ni">💧</span>Add Watermark</button>
-    <button class="nav-item" onclick="nav('filters')" data-t="filters"><span class="ni">🎨</span>Filters</button>
-    <button class="nav-item" onclick="nav('text')" data-t="text"><span class="ni">✏️</span>Add Text</button>
-    <button class="nav-item" onclick="nav('img2pdf')" data-t="img2pdf"><span class="ni">📄</span>Image to PDF</button>
-    <button class="nav-item" onclick="nav('info')" data-t="info"><span class="ni">ℹ️</span>Image Info</button>
-    <button class="nav-item" onclick="nav('heic')" data-t="heic"><span class="ni">📱</span>HEIC to JPG</button>
-    <button class="nav-item" onclick="nav('merge')" data-t="merge"><span class="ni">🖼</span>Merge Images</button>
-    <button class="nav-item" onclick="nav('palette')" data-t="palette"><span class="ni">🎨</span>Color Palette</button>
+    <button class="nav-item active" data-nav="home" data-t="home"><span class="ni">🏠</span>Home</button>
+    <button class="nav-item" data-nav="compress" data-t="compress"><span class="ni">🗜</span>Compress</button>
+    <button class="nav-item" data-nav="resize" data-t="resize"><span class="ni">↔️</span>Resize</button>
+    <button class="nav-item" data-nav="convert" data-t="convert"><span class="ni">🔄</span>Convert Format</button>
+    <button class="nav-item" data-nav="crop" data-t="crop"><span class="ni">✂️</span>Crop</button>
+    <button class="nav-item" data-nav="rotate" data-t="rotate"><span class="ni">🔃</span>Rotate & Flip</button>
+    <button class="nav-item" data-nav="watermark" data-t="watermark"><span class="ni">💧</span>Add Watermark</button>
+    <button class="nav-item" data-nav="filters" data-t="filters"><span class="ni">🎨</span>Filters</button>
+    <button class="nav-item" data-nav="text" data-t="text"><span class="ni">✏️</span>Add Text</button>
+    <button class="nav-item" data-nav="img2pdf" data-t="img2pdf"><span class="ni">📄</span>Image to PDF</button>
+    <button class="nav-item" data-nav="info" data-t="info"><span class="ni">ℹ️</span>Image Info</button>
+    <button class="nav-item" data-nav="heic" data-t="heic"><span class="ni">📱</span>HEIC to JPG</button>
+    <button class="nav-item" data-nav="merge" data-t="merge"><span class="ni">🖼</span>Merge Images</button>
+    <button class="nav-item" data-nav="palette" data-t="palette"><span class="ni">🎨</span>Color Palette</button>
     <div class="nav-section">Pro Tools</div>
-    <button class="nav-item" onclick="nav('removebg')" data-t="removebg"><span class="ni">🪄</span>Remove Background<span class="pro-badge">PRO</span></button>
-    <button class="nav-item" onclick="nav('blur')" data-t="blur"><span class="ni">🫥</span>Blur / Censor<span class="pro-badge">PRO</span></button>
-    <button class="nav-item" onclick="nav('enhance')" data-t="enhance"><span class="ni">✨</span>AI Enhance<span class="pro-badge">PRO</span></button>
-    <button class="nav-item" onclick="nav('bulk')" data-t="bulk"><span class="ni">📦</span>Bulk Compress<span class="pro-badge">PRO</span></button>
-    <button class="nav-item" onclick="nav('roundcorners')" data-t="roundcorners"><span class="ni">⬜</span>Round Corners<span class="pro-badge">PRO</span></button>
+    <button class="nav-item" data-nav="removebg" data-t="removebg"><span class="ni">🪄</span>Remove Background<span class="pro-badge">PRO</span></button>
+    <button class="nav-item" data-nav="blur" data-t="blur"><span class="ni">🫥</span>Blur / Censor<span class="pro-badge">PRO</span></button>
+    <button class="nav-item" data-nav="enhance" data-t="enhance"><span class="ni">✨</span>AI Enhance<span class="pro-badge">PRO</span></button>
+    <button class="nav-item" data-nav="bulk" data-t="bulk"><span class="ni">📦</span>Bulk Compress<span class="pro-badge">PRO</span></button>
+    <button class="nav-item" data-nav="roundcorners" data-t="roundcorners"><span class="ni">⬜</span>Round Corners<span class="pro-badge">PRO</span></button>
     <div class="nav-section">More</div>
-    <button class="nav-item" onclick="nav('pricing')" data-t="pricing"><span class="ni">⚡</span>Pricing</button>
+    <button class="nav-item" data-nav="pricing" data-t="pricing"><span class="ni">⚡</span>Pricing</button>
     <a class="nav-item" href="/blog/"><span class="ni">📝</span>Blog</a>
     <div class="sidebar-footer">
       <button class="upgrade-btn" onclick="window.location.href='https://rightpdfkit.lemonsqueezy.com/checkout/buy/29e1e924-ef12-4f4e-91fa-35e693698ef8'">⚡ Upgrade to Pro — £4.99/mo</button>
@@ -207,27 +207,27 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
       </div>
       <div class="section-label">Free tools</div>
       <div class="tools-grid">
-        <div class="tool-card" onclick="nav('compress')"><span class="tc-icon">🗜</span><div class="tc-name">Compress</div><div class="tc-desc">Reduce file size</div></div>
-        <div class="tool-card" onclick="nav('resize')"><span class="tc-icon">↔️</span><div class="tc-name">Resize</div><div class="tc-desc">Change dimensions</div></div>
-        <div class="tool-card" onclick="nav('convert')"><span class="tc-icon">🔄</span><div class="tc-name">Convert</div><div class="tc-desc">JPG/PNG/WebP</div></div>
-        <div class="tool-card" onclick="nav('crop')"><span class="tc-icon">✂️</span><div class="tc-name">Crop</div><div class="tc-desc">Trim edges</div></div>
-        <div class="tool-card" onclick="nav('rotate')"><span class="tc-icon">🔃</span><div class="tc-name">Rotate & Flip</div><div class="tc-desc">Any direction</div></div>
-        <div class="tool-card" onclick="nav('watermark')"><span class="tc-icon">💧</span><div class="tc-name">Watermark</div><div class="tc-desc">Text overlay</div></div>
-        <div class="tool-card" onclick="nav('filters')"><span class="tc-icon">🎨</span><div class="tc-name">Filters</div><div class="tc-desc">Grayscale, sepia...</div></div>
-        <div class="tool-card" onclick="nav('text')"><span class="tc-icon">✏️</span><div class="tc-name">Add Text</div><div class="tc-desc">Caption or label</div></div>
-        <div class="tool-card" onclick="nav('img2pdf')"><span class="tc-icon">📄</span><div class="tc-name">Image to PDF</div><div class="tc-desc">Combine images</div></div>
-        <div class="tool-card" onclick="nav('info')"><span class="tc-icon">ℹ️</span><div class="tc-name">Image Info</div><div class="tc-desc">Size, dimensions</div></div>
-        <div class="tool-card" onclick="nav('heic')"><span class="tc-icon">📱</span><div class="tc-name">HEIC to JPG</div><div class="tc-desc">iPhone photos</div></div>
-        <div class="tool-card" onclick="nav('merge')"><span class="tc-icon">🖼</span><div class="tc-name">Merge Images</div><div class="tc-desc">Side by side</div></div>
-        <div class="tool-card" onclick="nav('palette')"><span class="tc-icon">🎨</span><div class="tc-name">Color Palette</div><div class="tc-desc">Extract colours</div></div>
+        <div class="tool-card" data-nav="compress"><span class="tc-icon">🗜</span><div class="tc-name">Compress</div><div class="tc-desc">Reduce file size</div></div>
+        <div class="tool-card" data-nav="resize"><span class="tc-icon">↔️</span><div class="tc-name">Resize</div><div class="tc-desc">Change dimensions</div></div>
+        <div class="tool-card" data-nav="convert"><span class="tc-icon">🔄</span><div class="tc-name">Convert</div><div class="tc-desc">JPG/PNG/WebP</div></div>
+        <div class="tool-card" data-nav="crop"><span class="tc-icon">✂️</span><div class="tc-name">Crop</div><div class="tc-desc">Trim edges</div></div>
+        <div class="tool-card" data-nav="rotate"><span class="tc-icon">🔃</span><div class="tc-name">Rotate & Flip</div><div class="tc-desc">Any direction</div></div>
+        <div class="tool-card" data-nav="watermark"><span class="tc-icon">💧</span><div class="tc-name">Watermark</div><div class="tc-desc">Text overlay</div></div>
+        <div class="tool-card" data-nav="filters"><span class="tc-icon">🎨</span><div class="tc-name">Filters</div><div class="tc-desc">Grayscale, sepia...</div></div>
+        <div class="tool-card" data-nav="text"><span class="tc-icon">✏️</span><div class="tc-name">Add Text</div><div class="tc-desc">Caption or label</div></div>
+        <div class="tool-card" data-nav="img2pdf"><span class="tc-icon">📄</span><div class="tc-name">Image to PDF</div><div class="tc-desc">Combine images</div></div>
+        <div class="tool-card" data-nav="info"><span class="tc-icon">ℹ️</span><div class="tc-name">Image Info</div><div class="tc-desc">Size, dimensions</div></div>
+        <div class="tool-card" data-nav="heic"><span class="tc-icon">📱</span><div class="tc-name">HEIC to JPG</div><div class="tc-desc">iPhone photos</div></div>
+        <div class="tool-card" data-nav="merge"><span class="tc-icon">🖼</span><div class="tc-name">Merge Images</div><div class="tc-desc">Side by side</div></div>
+        <div class="tool-card" data-nav="palette"><span class="tc-icon">🎨</span><div class="tc-name">Color Palette</div><div class="tc-desc">Extract colours</div></div>
       </div>
       <div class="section-label">Pro tools</div>
       <div class="tools-grid">
-        <div class="tool-card" onclick="nav('removebg')"><span class="pro-tag">PRO</span><span class="tc-icon">🪄</span><div class="tc-name">Remove Background</div><div class="tc-desc">Local WASM AI</div></div>
-        <div class="tool-card" onclick="nav('blur')"><span class="pro-tag">PRO</span><span class="tc-icon">🫥</span><div class="tc-name">Blur / Censor</div><div class="tc-desc">Hide faces & areas</div></div>
-        <div class="tool-card" onclick="nav('enhance')"><span class="pro-tag">PRO</span><span class="tc-icon">✨</span><div class="tc-name">AI Enhance</div><div class="tc-desc">Auto improve</div></div>
-        <div class="tool-card" onclick="nav('bulk')"><span class="pro-tag">PRO</span><span class="tc-icon">📦</span><div class="tc-name">Bulk Compress</div><div class="tc-desc">Multiple files</div></div>
-        <div class="tool-card" onclick="nav('roundcorners')"><span class="pro-tag">PRO</span><span class="tc-icon">⬜</span><div class="tc-name">Round Corners</div><div class="tc-desc">Custom radius</div></div>
+        <div class="tool-card" data-nav="removebg"><span class="pro-tag">PRO</span><span class="tc-icon">🪄</span><div class="tc-name">Remove Background</div><div class="tc-desc">Local WASM AI</div></div>
+        <div class="tool-card" data-nav="blur"><span class="pro-tag">PRO</span><span class="tc-icon">🫥</span><div class="tc-name">Blur / Censor</div><div class="tc-desc">Hide faces & areas</div></div>
+        <div class="tool-card" data-nav="enhance"><span class="pro-tag">PRO</span><span class="tc-icon">✨</span><div class="tc-name">AI Enhance</div><div class="tc-desc">Auto improve</div></div>
+        <div class="tool-card" data-nav="bulk"><span class="pro-tag">PRO</span><span class="tc-icon">📦</span><div class="tc-name">Bulk Compress</div><div class="tc-desc">Multiple files</div></div>
+        <div class="tool-card" data-nav="roundcorners"><span class="pro-tag">PRO</span><span class="tc-icon">⬜</span><div class="tc-name">Round Corners</div><div class="tc-desc">Custom radius</div></div>
       </div>
       <!-- Cross promo RPK -->
       <div style="margin:0 24px 28px;background:linear-gradient(135deg,rgba(232,69,10,0.08),rgba(13,13,26,0.5));border:1px solid rgba(232,69,10,0.2);border-radius:16px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap">
@@ -255,8 +255,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
     <!-- COMPRESS -->
     <div class="panel" id="panel-compress">
       <div class="ph"><h2>🗜 Compress Image</h2><p>Reduce image file size. Live before/after preview. JPG, PNG, WebP supported.</p></div>
-      <div class="dropzone" id="compress-dz" onclick="document.getElementById('compress-in').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'compress')">
-        <input type="file" id="compress-in" accept="image/*" onchange="loadImage(this.files[0],'compress')">
+      <div class="dropzone" id="compress-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'compress')">
+        <input type="file" id="compress-in" accept="image/*">
         <div class="dz-icon">🖼</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span> · JPG, PNG, WebP</div>
       </div>
       <div class="file-chip" id="compress-chip" style="display:none"></div>
@@ -274,8 +274,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
     <!-- RESIZE -->
     <div class="panel" id="panel-resize">
       <div class="ph"><h2>↔️ Resize Image</h2><p>Change image dimensions with aspect ratio lock.</p></div>
-      <div class="dropzone" id="resize-dz" onclick="document.getElementById('resize-in').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'resize')">
-        <input type="file" id="resize-in" accept="image/*" onchange="loadImage(this.files[0],'resize')">
+      <div class="dropzone" id="resize-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'resize')">
+        <input type="file" id="resize-in" accept="image/*">
         <div class="dz-icon">↔️</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
       <div class="file-chip" id="resize-chip" style="display:none"></div>
@@ -292,8 +292,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
     <!-- CONVERT -->
     <div class="panel" id="panel-convert">
       <div class="ph"><h2>🔄 Convert Format</h2><p>Convert between JPG, PNG and WebP instantly.</p></div>
-      <div class="dropzone" id="convert-dz" onclick="document.getElementById('convert-in').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'convert')">
-        <input type="file" id="convert-in" accept="image/*" onchange="loadImage(this.files[0],'convert')">
+      <div class="dropzone" id="convert-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'convert')">
+        <input type="file" id="convert-in" accept="image/*">
         <div class="dz-icon">🔄</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
       <div class="file-chip" id="convert-chip" style="display:none"></div>
@@ -307,8 +307,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
     <!-- CROP -->
     <div class="panel" id="panel-crop">
       <div class="ph"><h2>✂️ Crop Image</h2><p>Drag to select the crop area. Lock to common aspect ratios.</p></div>
-      <div class="dropzone" id="crop-dz" onclick="document.getElementById('crop-in').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'crop')">
-        <input type="file" id="crop-in" accept="image/*" onchange="loadImage(this.files[0],'crop')">
+      <div class="dropzone" id="crop-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'crop')">
+        <input type="file" id="crop-in" accept="image/*">
         <div class="dz-icon">✂️</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
       <div class="file-chip" id="crop-chip" style="display:none"></div>
@@ -324,8 +324,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
     <!-- ROTATE -->
     <div class="panel" id="panel-rotate">
       <div class="ph"><h2>🔃 Rotate & Flip</h2><p>Rotate 90°, 180°, 270° or flip horizontally/vertically.</p></div>
-      <div class="dropzone" id="rotate-dz" onclick="document.getElementById('rotate-in').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'rotate')">
-        <input type="file" id="rotate-in" accept="image/*" onchange="loadImage(this.files[0],'rotate')">
+      <div class="dropzone" id="rotate-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'rotate')">
+        <input type="file" id="rotate-in" accept="image/*">
         <div class="dz-icon">🔃</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
       <div class="file-chip" id="rotate-chip" style="display:none"></div>
@@ -345,8 +345,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
     <!-- FILTERS -->
     <div class="panel" id="panel-filters">
       <div class="ph"><h2>🎨 Filters</h2><p>Grayscale, sepia, invert, brightness, contrast and saturation.</p></div>
-      <div class="dropzone" id="filters-dz" onclick="document.getElementById('filters-in').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'filters')">
-        <input type="file" id="filters-in" accept="image/*" onchange="loadImage(this.files[0],'filters')">
+      <div class="dropzone" id="filters-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'filters')">
+        <input type="file" id="filters-in" accept="image/*">
         <div class="dz-icon">🎨</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
       <div class="file-chip" id="filters-chip" style="display:none"></div>
@@ -363,8 +363,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
     <!-- WATERMARK -->
     <div class="panel" id="panel-watermark">
       <div class="ph"><h2>💧 Add Watermark</h2><p>Add text watermark. Control font size, opacity and position.</p></div>
-      <div class="dropzone" id="watermark-dz" onclick="document.getElementById('watermark-in').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'watermark')">
-        <input type="file" id="watermark-in" accept="image/*" onchange="loadImage(this.files[0],'watermark')">
+      <div class="dropzone" id="watermark-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'watermark')">
+        <input type="file" id="watermark-in" accept="image/*">
         <div class="dz-icon">💧</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
       <div class="file-chip" id="watermark-chip" style="display:none"></div>
@@ -381,8 +381,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
     <!-- ADD TEXT -->
     <div class="panel" id="panel-text">
       <div class="ph"><h2>✏️ Add Text</h2><p>Add captions, labels or annotations to any image.</p></div>
-      <div class="dropzone" id="text-dz" onclick="document.getElementById('text-in').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'text')">
-        <input type="file" id="text-in" accept="image/*" onchange="loadImage(this.files[0],'text')">
+      <div class="dropzone" id="text-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'text')">
+        <input type="file" id="text-in" accept="image/*">
         <div class="dz-icon">✏️</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
       <div class="file-chip" id="text-chip" style="display:none"></div>
@@ -399,8 +399,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
     <!-- IMAGE INFO -->
     <div class="panel" id="panel-info">
       <div class="ph"><h2>ℹ️ Image Info</h2><p>Get dimensions, file size, format and colour details.</p></div>
-      <div class="dropzone" id="info-dz" onclick="document.getElementById('info-in').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'info')">
-        <input type="file" id="info-in" accept="image/*" onchange="loadImage(this.files[0],'info')">
+      <div class="dropzone" id="info-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'info')">
+        <input type="file" id="info-in" accept="image/*">
         <div class="dz-icon">ℹ️</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
       <div class="result-box" id="info-res" style="margin-top:12px"><div id="info-table"></div></div>
@@ -409,8 +409,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
     <!-- HEIC TO JPG -->
     <div class="panel" id="panel-heic">
       <div class="ph"><h2>📱 HEIC to JPG</h2><p>Convert iPhone HEIC photos to JPG, PNG or WebP. No upload.</p></div>
-      <div class="dropzone" id="heic-dz" onclick="document.getElementById('heic-in').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="heicDrop(event)">
-        <input type="file" id="heic-in" accept="image/*,.heic,.heif" onchange="heicLoad(this.files[0])">
+      <div class="dropzone" id="heic-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="heicDrop(event)">
+        <input type="file" id="heic-in" accept="image/*,.heic,.heif">
         <div class="dz-icon">📱</div><div class="dz-title">Drop HEIC file here</div><div class="dz-sub">or <span>browse files</span> · .heic, .heif, JPG, PNG</div>
       </div>
       <div class="file-chip" id="heic-chip" style="display:none"></div>
@@ -428,15 +428,15 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
       <div class="ph"><h2>🖼 Merge Images</h2><p>Combine two images side by side or stacked.</p></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
         <div><div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:6px;text-transform:uppercase">Image 1</div>
-          <div class="dropzone" style="padding:20px" onclick="document.getElementById('merge-in1').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="mergeDrop(event,1)">
-            <input type="file" id="merge-in1" accept="image/*" onchange="mergeLoad(this.files[0],1)">
+          <div class="dropzone" style="padding:20px" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="mergeDrop(event,1)">
+            <input type="file" id="merge-in1" accept="image/*">
             <div class="dz-icon" style="font-size:24px">🖼</div><div class="dz-sub" style="font-size:11px"><span>Browse</span></div>
           </div>
           <div id="merge-chip1" style="display:none;font-size:11px;color:var(--muted);margin-top:4px"></div>
         </div>
         <div><div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:6px;text-transform:uppercase">Image 2</div>
-          <div class="dropzone" style="padding:20px" onclick="document.getElementById('merge-in2').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="mergeDrop(event,2)">
-            <input type="file" id="merge-in2" accept="image/*" onchange="mergeLoad(this.files[0],2)">
+          <div class="dropzone" style="padding:20px" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="mergeDrop(event,2)">
+            <input type="file" id="merge-in2" accept="image/*">
             <div class="dz-icon" style="font-size:24px">🖼</div><div class="dz-sub" style="font-size:11px"><span>Browse</span></div>
           </div>
           <div id="merge-chip2" style="display:none;font-size:11px;color:var(--muted);margin-top:4px"></div>
@@ -457,8 +457,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
     <!-- COLOR PALETTE -->
     <div class="panel" id="panel-palette">
       <div class="ph"><h2>🎨 Color Palette</h2><p>Extract dominant colours from any image. Click to copy hex codes.</p></div>
-      <div class="dropzone" id="palette-dz" onclick="document.getElementById('palette-in').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'palette')">
-        <input type="file" id="palette-in" accept="image/*" onchange="loadImage(this.files[0],'palette')">
+      <div class="dropzone" id="palette-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'palette')">
+        <input type="file" id="palette-in" accept="image/*">
         <div class="dz-icon">🎨</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
       <div class="file-chip" id="palette-chip" style="display:none"></div>
@@ -472,8 +472,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
     <!-- IMAGE TO PDF -->
     <div class="panel" id="panel-img2pdf">
       <div class="ph"><h2>📄 Image to PDF</h2><p>Convert one or multiple images into a single PDF.</p></div>
-      <div class="dropzone" id="img2pdf-dz" onclick="document.getElementById('img2pdf-in').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="img2pdfDrop(event)">
-        <input type="file" id="img2pdf-in" accept="image/*" multiple onchange="img2pdfLoad(this.files)">
+      <div class="dropzone" id="img2pdf-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="img2pdfDrop(event)">
+        <input type="file" id="img2pdf-in" accept="image/*" multiple>
         <div class="dz-icon">📄</div><div class="dz-title">Drop images here</div><div class="dz-sub">or <span>browse files</span> · Multiple images supported</div>
       </div>
       <div id="img2pdf-list" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px"></div>
@@ -496,8 +496,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
         </div>
       </div>
       <div id="removebg-tool" style="display:none">
-        <div class="dropzone" id="removebg-dz" onclick="document.getElementById('removebg-in').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'removebg')">
-          <input type="file" id="removebg-in" accept="image/*" onchange="loadImage(this.files[0],'removebg')">
+        <div class="dropzone" id="removebg-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'removebg')">
+          <input type="file" id="removebg-in" accept="image/*">
           <div class="dz-icon">🖼</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
         </div>
         <div class="file-chip" id="removebg-chip" style="display:none"></div>
@@ -526,8 +526,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
         </div>
       </div>
       <div id="blur-tool" style="display:none">
-        <div class="dropzone" id="blur-dz" onclick="document.getElementById('blur-in').click()" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'blur')">
-          <input type="file" id="blur-in" accept="image/*" onchange="loadImage(this.files[0],'blur')">
+        <div class="dropzone" id="blur-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'blur')">
+          <input type="file" id="blur-in" accept="image/*">
           <div class="dz-icon">🫥</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
         </div>
         <div class="file-chip" id="blur-chip" style="display:none"></div>
@@ -1142,6 +1142,77 @@ async function activateLicense(){
     else{msg.style.color='#ef4444';msg.textContent='✗ Invalid key. Check your Lemon Squeezy email.'}
   }catch(e){const stored=localStorage.getItem('rik-license');if(stored&&stored===key){isPro=true;localStorage.setItem('rik-pro','true');msg.style.color='#22C55E';msg.textContent='✓ Activated!';setTimeout(()=>nav('home'),1200)}else{msg.style.color='#ef4444';msg.textContent='✗ Could not verify. Try again.'}}
 }
+
+
+// ══════════════════════════════════════════
+// WIRE ALL EVENT LISTENERS ON DOM READY
+// (no inline handlers - CSP safe on all browsers)
+// ══════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', function() {
+
+  // File inputs → loadImage
+  var singleTools = ['compress','resize','convert','crop','rotate','filters','watermark','text','info','palette','removebg','blur']
+  singleTools.forEach(function(tool) {
+    var input = document.getElementById(tool + '-in')
+    if (input) {
+      input.addEventListener('change', function() {
+        if (this.files && this.files[0]) loadImage(this.files[0], tool)
+      })
+    }
+    // Dropzone click → trigger input
+    var dz = document.getElementById(tool + '-dz')
+    if (dz && input) {
+      dz.addEventListener('click', function(e) {
+        if (e.target === dz || e.target.closest('.dropzone') === dz) {
+          // Don't re-trigger if clicking the span link
+          input.click()
+        }
+      })
+    }
+  })
+
+  // HEIC
+  var heicInput = document.getElementById('heic-in')
+  if (heicInput) heicInput.addEventListener('change', function() { if (this.files[0]) heicLoad(this.files[0]) })
+  var heicDz = document.getElementById('heic-dz')
+  if (heicDz && heicInput) heicDz.addEventListener('click', function() { heicInput.click() })
+
+  // Merge
+  var mi1 = document.getElementById('merge-in1')
+  var mi2 = document.getElementById('merge-in2')
+  if (mi1) mi1.addEventListener('change', function() { if (this.files[0]) mergeLoad(this.files[0], 1) })
+  if (mi2) mi2.addEventListener('change', function() { if (this.files[0]) mergeLoad(this.files[0], 2) })
+  // Merge dropzone clicks
+  document.querySelectorAll('[onclick*="merge-in1"]').forEach(function(el) {
+    el.removeAttribute('onclick')
+    el.addEventListener('click', function() { if(mi1) mi1.click() })
+  })
+  document.querySelectorAll('[onclick*="merge-in2"]').forEach(function(el) {
+    el.removeAttribute('onclick')
+    el.addEventListener('click', function() { if(mi2) mi2.click() })
+  })
+
+  // img2pdf
+  var pdfInput = document.getElementById('img2pdf-in')
+  if (pdfInput) pdfInput.addEventListener('change', function() { if (this.files.length) img2pdfLoad(this.files) })
+  var pdfDz = document.getElementById('img2pdf-dz')
+  if (pdfDz && pdfInput) pdfDz.addEventListener('click', function() { pdfInput.click() })
+
+  // Tool cards nav
+  document.querySelectorAll('[data-nav]').forEach(function(el) {
+    el.addEventListener('click', function() { nav(this.getAttribute('data-nav')) })
+  })
+
+  // Upgrade buttons
+  document.querySelectorAll('.upgrade-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      window.location.href = LS_URL
+    })
+  })
+
+  console.log('✅ RightImageKit: all event listeners wired')
+})
+// ── End wire ──
 
 // ── UTILS ──
 function loadScript(src){return new Promise((res,rej)=>{if(document.querySelector('script[src="'+src+'"]')){res();return}const s=document.createElement('script');s.src=src;s.onload=res;s.onerror=rej;document.head.appendChild(s)})}
