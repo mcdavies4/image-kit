@@ -871,7 +871,23 @@ function clearTool(tool) {
 
 function onImageLoaded(tool) {
   const s = imgState[tool]; if (!s) return
-  // Show controls
+
+  // ── New tools ──
+  if (tool === 'blur') {
+    const chip = document.getElementById('blur-chip')
+    if (chip) { chip.style.display='inline-flex'; chip.innerHTML=`📎 ${s.file.name}` }
+    setupBlurCanvas()
+    return
+  }
+  if (tool === 'palette') {
+    const ctrl = document.getElementById('palette-ctrl')
+    if (ctrl) ctrl.style.display = 'flex'
+    const btns = document.getElementById('palette-btns')
+    if (btns) btns.style.display = 'flex'
+    return
+  }
+
+  // ── Show controls ──
   const ctrl = document.getElementById(tool+'-ctrl')
   if(ctrl) ctrl.style.display='flex'
   const btns = document.getElementById(tool+'-btns')
@@ -1815,24 +1831,7 @@ function kMeans(data, k) {
 // ══════════════════════════════════════════
 // OVERRIDE onImageLoaded for new tools
 // ══════════════════════════════════════════
-const _origOnImageLoaded = onImageLoaded
-function onImageLoaded(tool) {
-  // Handle new tools
-  if (tool === 'blur') {
-    const chip = document.getElementById('blur-chip')
-    if (chip) { chip.style.display='inline-flex'; const s=imgState.blur; chip.innerHTML=`📎 ${s.file.name}` }
-    setupBlurCanvas()
-    return
-  }
-  if (tool === 'palette') {
-    const ctrl = document.getElementById('palette-ctrl')
-    if (ctrl) ctrl.style.display = 'flex'
-    const btns = document.getElementById('palette-btns')
-    if (btns) btns.style.display = 'flex'
-    return
-  }
-  _origOnImageLoaded(tool)
-}
+
 // ── End new tools ──
 
 
