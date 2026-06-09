@@ -80,8 +80,7 @@ a{color:var(--accent);text-decoration:none}
 .dz-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px}
 .dz-sub{font-size:13px;color:var(--muted)}.dz-sub span{color:var(--accent)}
 input[type=file]{display:none}
-.preview-wrap{display:none;gap:16px;margin-bottom:16px}
-.preview-wrap.show{display:grid;grid-template-columns:1fr 1fr}
+.preview-wrap{display:grid;grid-template-columns:1fr 1fr}
 .preview-box{background:var(--surface2);border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .preview-box canvas,.preview-box img{width:100%;height:180px;object-fit:contain;display:block;background:#000}
 .preview-label{padding:8px 12px;font-size:11px;font-weight:700;color:var(--muted);border-top:1px solid var(--border)}
@@ -104,8 +103,7 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
 .file-chip .x:hover{color:var(--text)}
 .err-box{background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);border-radius:10px;padding:12px 16px;font-size:13px;color:#fca5a5;display:none}
 .err-box.show{display:block}
-.result-box{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:18px;display:none}
-.result-box.show{display:block}
+.result-box{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:18px}
 .result-stats{display:flex;gap:12px;margin-bottom:14px;flex-wrap:wrap}
 .stat-chip{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px}
 .stat-chip .sv{font-size:16px;font-weight:900;color:var(--accent);display:block}
@@ -139,6 +137,7 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
   .pricing-grid{grid-template-columns:1fr}
   .ctrl-label{min-width:60px}
 }
+.rik-hidden{display:none !important}
 .toast{position:fixed;bottom:24px;right:24px;background:var(--surface);border:1px solid var(--border2);border-radius:10px;padding:10px 16px;font-size:13px;font-weight:600;color:var(--text);z-index:200;opacity:0;transform:translateY(8px);transition:all .2s;pointer-events:none;max-width:280px}
 .toast.show{opacity:1;transform:translateY(0)}
 </style>
@@ -259,12 +258,12 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
         <input type="file" id="compress-in" accept="image/*">
         <div class="dz-icon">🖼</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span> · JPG, PNG, WebP</div>
       </div>
-      <div class="file-chip" id="compress-chip" style="display:none"></div>
+      <div class="file-chip" id="compress-chip" class="rik-hidden"></div>
       <div class="preview-wrap" id="compress-prev">
         <div class="preview-box"><canvas id="compress-canvas-orig"></canvas><div class="preview-label">Original</div></div>
         <div class="preview-box"><canvas id="compress-canvas-out"></canvas><div class="preview-label">Compressed</div></div>
       </div>
-      <div class="controls" id="compress-ctrl" style="display:none">
+      <div class="controls" id="compress-ctrl" class="rik-hidden">
         <div class="ctrl-row"><span class="ctrl-label">Quality</span><input type="range" id="compress-q" min="10" max="100" value="80" oninput="updateCompress()"><span class="ctrl-val" id="compress-qv">80%</span></div>
         <div class="ctrl-row"><span class="ctrl-label">Format</span><div class="format-btns"><button class="fmt-btn on" data-fmt="jpeg" onclick="setFmt('compress','jpeg',this)">JPG</button><button class="fmt-btn" data-fmt="png" onclick="setFmt('compress','png',this)">PNG</button><button class="fmt-btn" data-fmt="webp" onclick="setFmt('compress','webp',this)">WebP</button></div></div>
       </div>
@@ -278,14 +277,14 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
         <input type="file" id="resize-in" accept="image/*">
         <div class="dz-icon">↔️</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
-      <div class="file-chip" id="resize-chip" style="display:none"></div>
-      <div class="controls" id="resize-ctrl" style="display:none">
+      <div class="file-chip" id="resize-chip" class="rik-hidden"></div>
+      <div class="controls" id="resize-ctrl" class="rik-hidden">
         <div class="ctrl-row"><span class="ctrl-label">Width</span><input class="ctrl-input" type="number" id="resize-w" oninput="resizeLock('w')" style="max-width:120px"> px</div>
         <div class="ctrl-row"><span class="ctrl-label">Height</span><input class="ctrl-input" type="number" id="resize-h" oninput="resizeLock('h')" style="max-width:120px"> px</div>
         <div class="ctrl-row"><span class="ctrl-label">Lock ratio</span><input type="checkbox" id="resize-lock" checked style="width:16px;height:16px;accent-color:var(--accent);cursor:pointer"><span style="font-size:12px;color:var(--muted)">Maintain aspect ratio</span></div>
         <div class="ctrl-row"><span class="ctrl-label">Presets</span><div class="format-btns"><button class="fmt-btn" onclick="setResizePreset(1920,1080)">1080p</button><button class="fmt-btn" onclick="setResizePreset(1280,720)">720p</button><button class="fmt-btn" onclick="setResizePreset(800,600)">800×600</button><button class="fmt-btn" onclick="setResizePreset(400,400)">400×400</button></div></div>
       </div>
-      <div class="btn-row" id="resize-btns" style="display:none"><button class="btn" onclick="runResize()">↔️ Resize Image</button></div>
+      <div class="btn-row" id="resize-btns" class="rik-hidden"><button class="btn" onclick="runResize()">↔️ Resize Image</button></div>
       <div class="result-box" id="resize-res" style="margin-top:14px"><div class="result-stats" id="resize-stats"></div><div class="btn-row"><button class="btn" onclick="downloadCanvas('resize-canvas','resized','jpeg')">⬇ Download</button></div><canvas id="resize-canvas" style="max-width:100%;border-radius:8px;margin-top:12px;display:none"></canvas></div>
     </div>
 
@@ -296,11 +295,11 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
         <input type="file" id="convert-in" accept="image/*">
         <div class="dz-icon">🔄</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
-      <div class="file-chip" id="convert-chip" style="display:none"></div>
-      <div class="controls" id="convert-ctrl" style="display:none">
+      <div class="file-chip" id="convert-chip" class="rik-hidden"></div>
+      <div class="controls" id="convert-ctrl" class="rik-hidden">
         <div class="ctrl-row"><span class="ctrl-label">Convert to</span><div class="format-btns"><button class="fmt-btn" data-fmt="jpeg" onclick="setConvertFmt('jpeg',this)">JPG</button><button class="fmt-btn on" data-fmt="png" onclick="setConvertFmt('png',this)">PNG</button><button class="fmt-btn" data-fmt="webp" onclick="setConvertFmt('webp',this)">WebP</button></div></div>
       </div>
-      <div class="btn-row" id="convert-btns" style="display:none"><button class="btn" onclick="runConvert()">🔄 Convert</button></div>
+      <div class="btn-row" id="convert-btns" class="rik-hidden"><button class="btn" onclick="runConvert()">🔄 Convert</button></div>
       <div class="result-box" id="convert-res" style="margin-top:14px"><div class="result-stats" id="convert-stats"></div><div class="btn-row"><button class="btn" id="convert-dl">⬇ Download</button></div></div>
     </div>
 
@@ -311,8 +310,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
         <input type="file" id="crop-in" accept="image/*">
         <div class="dz-icon">✂️</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
-      <div class="file-chip" id="crop-chip" style="display:none"></div>
-      <div class="controls" id="crop-ctrl" style="display:none">
+      <div class="file-chip" id="crop-chip" class="rik-hidden"></div>
+      <div class="controls" id="crop-ctrl" class="rik-hidden">
         <div class="ctrl-row"><span class="ctrl-label">Ratio</span><div class="format-btns"><button class="fmt-btn on" onclick="setCropRatio('free',this)">Free</button><button class="fmt-btn" onclick="setCropRatio('1:1',this)">1:1</button><button class="fmt-btn" onclick="setCropRatio('16:9',this)">16:9</button><button class="fmt-btn" onclick="setCropRatio('4:3',this)">4:3</button><button class="fmt-btn" onclick="setCropRatio('3:2',this)">3:2</button></div></div>
       </div>
       <div id="crop-wrap" style="position:relative;display:none;margin-top:12px;user-select:none"><img id="crop-img" style="max-width:100%;display:block;border-radius:8px"><div id="crop-sel" style="position:absolute;border:2px solid var(--accent);box-shadow:0 0 0 9999px rgba(0,0,0,0.5);cursor:move;display:none"></div></div>
@@ -328,8 +327,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
         <input type="file" id="rotate-in" accept="image/*">
         <div class="dz-icon">🔃</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
-      <div class="file-chip" id="rotate-chip" style="display:none"></div>
-      <div class="controls" id="rotate-ctrl" style="display:none">
+      <div class="file-chip" id="rotate-chip" class="rik-hidden"></div>
+      <div class="controls" id="rotate-ctrl" class="rik-hidden">
         <div class="ctrl-row" style="flex-wrap:wrap;gap:8px">
           <button class="fmt-btn" onclick="applyRotate(90)">↻ 90°</button>
           <button class="fmt-btn" onclick="applyRotate(180)">↻ 180°</button>
@@ -349,8 +348,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
         <input type="file" id="filters-in" accept="image/*">
         <div class="dz-icon">🎨</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
-      <div class="file-chip" id="filters-chip" style="display:none"></div>
-      <div class="controls" id="filters-ctrl" style="display:none">
+      <div class="file-chip" id="filters-chip" class="rik-hidden"></div>
+      <div class="controls" id="filters-ctrl" class="rik-hidden">
         <div class="ctrl-row"><span class="ctrl-label">Preset</span><div class="format-btns"><button class="fmt-btn on" onclick="setFilter('none',this)">None</button><button class="fmt-btn" onclick="setFilter('grayscale',this)">Grayscale</button><button class="fmt-btn" onclick="setFilter('sepia',this)">Sepia</button><button class="fmt-btn" onclick="setFilter('invert',this)">Invert</button></div></div>
         <div class="ctrl-row"><span class="ctrl-label">Brightness</span><input type="range" id="f-bright" min="0" max="200" value="100" oninput="applyFilters()"><span class="ctrl-val" id="f-bright-v">100</span></div>
         <div class="ctrl-row"><span class="ctrl-label">Contrast</span><input type="range" id="f-contrast" min="0" max="200" value="100" oninput="applyFilters()"><span class="ctrl-val" id="f-contrast-v">100</span></div>
@@ -367,8 +366,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
         <input type="file" id="watermark-in" accept="image/*">
         <div class="dz-icon">💧</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
-      <div class="file-chip" id="watermark-chip" style="display:none"></div>
-      <div class="controls" id="watermark-ctrl" style="display:none">
+      <div class="file-chip" id="watermark-chip" class="rik-hidden"></div>
+      <div class="controls" id="watermark-ctrl" class="rik-hidden">
         <div class="ctrl-row"><span class="ctrl-label">Text</span><input class="ctrl-input" type="text" id="wm-text" value="© My Photo" oninput="applyWatermark()" style="flex:1"></div>
         <div class="ctrl-row"><span class="ctrl-label">Size</span><input type="range" id="wm-size" min="12" max="120" value="36" oninput="applyWatermark()"><span class="ctrl-val" id="wm-size-v">36</span></div>
         <div class="ctrl-row"><span class="ctrl-label">Opacity</span><input type="range" id="wm-opacity" min="5" max="100" value="40" oninput="applyWatermark()"><span class="ctrl-val" id="wm-opacity-v">40%</span></div>
@@ -385,8 +384,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
         <input type="file" id="text-in" accept="image/*">
         <div class="dz-icon">✏️</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
-      <div class="file-chip" id="text-chip" style="display:none"></div>
-      <div class="controls" id="text-ctrl" style="display:none">
+      <div class="file-chip" id="text-chip" class="rik-hidden"></div>
+      <div class="controls" id="text-ctrl" class="rik-hidden">
         <div class="ctrl-row"><span class="ctrl-label">Text</span><input class="ctrl-input" type="text" id="txt-text" value="Your text here" oninput="applyText()" style="flex:1"></div>
         <div class="ctrl-row"><span class="ctrl-label">Size</span><input type="range" id="txt-size" min="10" max="120" value="32" oninput="applyText()"><span class="ctrl-val" id="txt-size-v">32</span></div>
         <div class="ctrl-row"><span class="ctrl-label">Colour</span><input type="color" id="txt-color" value="#ffffff" oninput="applyText()" style="width:40px;height:30px;border:none;border-radius:6px;cursor:pointer;background:none"></div>
@@ -413,14 +412,14 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
         <input type="file" id="heic-in" accept="image/*,.heic,.heif">
         <div class="dz-icon">📱</div><div class="dz-title">Drop HEIC file here</div><div class="dz-sub">or <span>browse files</span> · .heic, .heif, JPG, PNG</div>
       </div>
-      <div class="file-chip" id="heic-chip" style="display:none"></div>
-      <div class="controls" id="heic-ctrl" style="display:none">
+      <div class="file-chip" id="heic-chip" class="rik-hidden"></div>
+      <div class="controls" id="heic-ctrl" class="rik-hidden">
         <div class="ctrl-row"><span class="ctrl-label">Convert to</span><div class="format-btns"><button class="fmt-btn on" onclick="heicSetFmt('jpeg',this)">JPG</button><button class="fmt-btn" onclick="heicSetFmt('png',this)">PNG</button><button class="fmt-btn" onclick="heicSetFmt('webp',this)">WebP</button></div></div>
         <div class="ctrl-row"><span class="ctrl-label">Quality</span><input type="range" id="heic-q" min="60" max="100" value="90" oninput="document.getElementById('heic-qv').textContent=this.value+'%'"><span class="ctrl-val" id="heic-qv">90%</span></div>
       </div>
       <canvas id="heic-canvas" style="max-width:100%;border-radius:8px;margin:12px 0;display:none"></canvas>
       <div class="err-box" id="heic-err"></div>
-      <div class="btn-row" id="heic-btns" style="display:none"><button class="btn" onclick="runHeicConvert()">📱 Convert & Download</button></div>
+      <div class="btn-row" id="heic-btns" class="rik-hidden"><button class="btn" onclick="runHeicConvert()">📱 Convert & Download</button></div>
     </div>
 
     <!-- MERGE IMAGES -->
@@ -442,7 +441,7 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
           <div id="merge-chip2" style="display:none;font-size:11px;color:var(--muted);margin-top:4px"></div>
         </div>
       </div>
-      <div class="controls" id="merge-ctrl" style="display:none">
+      <div class="controls" id="merge-ctrl" class="rik-hidden">
         <div class="ctrl-row"><span class="ctrl-label">Layout</span><div class="format-btns"><button class="fmt-btn on" onclick="setMergeDir('horizontal',this)">⬛⬛ Side by side</button><button class="fmt-btn" onclick="setMergeDir('vertical',this)">🔲 Stacked</button></div></div>
         <div class="ctrl-row"><span class="ctrl-label">Gap</span><input type="range" id="merge-gap" min="0" max="40" value="0" oninput="document.getElementById('merge-gap-v').textContent=this.value;runMerge()"><span class="ctrl-val" id="merge-gap-v">0</span></div>
         <div class="ctrl-row"><span class="ctrl-label">Background</span><input type="color" id="merge-bg" value="#000000" oninput="runMerge()" style="width:40px;height:30px;border:none;border-radius:6px;cursor:pointer;background:none"></div>
@@ -450,7 +449,7 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
       <canvas id="merge-canvas" style="max-width:100%;border-radius:8px;margin-top:12px;display:none"></canvas>
       <div class="btn-row" id="merge-btns" style="display:none;margin-top:12px">
         <button class="btn" onclick="runMerge()">🖼 Merge</button>
-        <button class="btn" id="merge-dl" style="display:none" onclick="downloadCanvas('merge-canvas','merged','jpeg')">⬇ Download</button>
+        <button class="btn" id="merge-dl" class="rik-hidden" onclick="downloadCanvas('merge-canvas','merged','jpeg')">⬇ Download</button>
       </div>
     </div>
 
@@ -461,11 +460,11 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
         <input type="file" id="palette-in" accept="image/*">
         <div class="dz-icon">🎨</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
       </div>
-      <div class="file-chip" id="palette-chip" style="display:none"></div>
-      <div class="controls" id="palette-ctrl" style="display:none">
+      <div class="file-chip" id="palette-chip" class="rik-hidden"></div>
+      <div class="controls" id="palette-ctrl" class="rik-hidden">
         <div class="ctrl-row"><span class="ctrl-label">Colours</span><input type="range" id="palette-count" min="4" max="12" value="8" oninput="document.getElementById('palette-count-v').textContent=this.value"><span class="ctrl-val" id="palette-count-v">8</span></div>
       </div>
-      <div class="btn-row" id="palette-btns" style="display:none"><button class="btn" onclick="runPalette()">🎨 Extract Palette</button></div>
+      <div class="btn-row" id="palette-btns" class="rik-hidden"><button class="btn" onclick="runPalette()">🎨 Extract Palette</button></div>
       <div class="result-box" id="palette-res" style="margin-top:14px"><div id="palette-output"></div></div>
     </div>
 
@@ -478,7 +477,7 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
       </div>
       <div id="img2pdf-list" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px"></div>
       <div class="prog" id="img2pdf-prog"><div class="prog-bar"><div class="prog-fill" id="img2pdf-pf"></div></div><div class="prog-label"><span id="img2pdf-status">Converting...</span><span id="img2pdf-pp">0%</span></div></div>
-      <div class="btn-row" id="img2pdf-btns" style="display:none"><button class="btn" onclick="runImg2Pdf()">📄 Convert to PDF</button></div>
+      <div class="btn-row" id="img2pdf-btns" class="rik-hidden"><button class="btn" onclick="runImg2Pdf()">📄 Convert to PDF</button></div>
     </div>
 
     <!-- PRO: REMOVE BG -->
@@ -495,21 +494,21 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
           <button class="btn" style="padding:8px 16px;font-size:12px" onclick="checkProCode('removebg')">Unlock</button>
         </div>
       </div>
-      <div id="removebg-tool" style="display:none">
+      <div id="removebg-tool" class="rik-hidden">
         <div class="dropzone" id="removebg-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'removebg')">
           <input type="file" id="removebg-in" accept="image/*">
           <div class="dz-icon">🖼</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
         </div>
-        <div class="file-chip" id="removebg-chip" style="display:none"></div>
+        <div class="file-chip" id="removebg-chip" class="rik-hidden"></div>
         <div class="prog" id="removebg-prog"><div class="prog-bar"><div class="prog-fill" id="removebg-pf"></div></div><div class="prog-label"><span id="removebg-status">Loading AI model...</span><span id="removebg-pp">0%</span></div></div>
         <div class="preview-wrap" id="removebg-prev">
           <div class="preview-box"><img id="removebg-orig" style="width:100%;height:180px;object-fit:contain;display:block"><div class="preview-label">Original</div></div>
           <div class="preview-box" style="background:repeating-conic-gradient(#333 0% 25%,#222 0% 50%) 0 0/20px 20px"><canvas id="removebg-canvas" style="width:100%;height:180px;object-fit:contain;display:block"></canvas><div class="preview-label">Background removed</div></div>
         </div>
         <div class="err-box" id="removebg-err"></div>
-        <div class="btn-row" id="removebg-btns" style="display:none">
+        <div class="btn-row" id="removebg-btns" class="rik-hidden">
           <button class="btn" onclick="runRemoveBg()">🪄 Remove Background</button>
-          <button class="btn" id="removebg-dl" style="display:none" onclick="downloadCanvas('removebg-canvas','no-bg','png')">⬇ Download PNG</button>
+          <button class="btn" id="removebg-dl" class="rik-hidden" onclick="downloadCanvas('removebg-canvas','no-bg','png')">⬇ Download PNG</button>
         </div>
       </div>
     </div>
@@ -525,13 +524,13 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
           <button class="btn" style="padding:8px 16px;font-size:12px" onclick="checkProCode('blur')">Unlock</button>
         </div>
       </div>
-      <div id="blur-tool" style="display:none">
+      <div id="blur-tool" class="rik-hidden">
         <div class="dropzone" id="blur-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'blur')">
           <input type="file" id="blur-in" accept="image/*">
           <div class="dz-icon">🫥</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
         </div>
-        <div class="file-chip" id="blur-chip" style="display:none"></div>
-        <div class="controls" id="blur-ctrl" style="display:none">
+        <div class="file-chip" id="blur-chip" class="rik-hidden"></div>
+        <div class="controls" id="blur-ctrl" class="rik-hidden">
           <div class="ctrl-row"><span class="ctrl-label">Mode</span><div class="format-btns"><button class="fmt-btn on" onclick="setBlurMode('blur',this)">🌫 Blur</button><button class="fmt-btn" onclick="setBlurMode('pixelate',this)">⬛ Pixelate</button></div></div>
           <div class="ctrl-row"><span class="ctrl-label">Strength</span><input type="range" id="blur-strength" min="5" max="40" value="15" oninput="document.getElementById('blur-strength-v').textContent=this.value"><span class="ctrl-val" id="blur-strength-v">15</span></div>
           <div class="ctrl-row"><span class="ctrl-label">Brush</span><input type="range" id="blur-brush" min="20" max="150" value="60" oninput="document.getElementById('blur-brush-v').textContent=this.value"><span class="ctrl-val" id="blur-brush-v">60</span></div>
@@ -629,15 +628,20 @@ function nav(id) {
   if (PRO_TOOLS.has(id)) {
     const gate = document.getElementById(id+'-gate')
     const tool = document.getElementById(id+'-tool')
-    if (gate) gate.style.display = isPro ? 'none' : 'block'
-    if (tool) tool.style.display = isPro ? 'block' : 'none'
+    if (gate) { isPro ? gate.classList.add('rik-hidden') : gate.classList.remove('rik-hidden') }
+    if (tool) { isPro ? tool.classList.remove('rik-hidden') : tool.classList.add('rik-hidden') }
   }
 }
 
 function toggleMobileMenu() {
   const s = document.getElementById('sidebar')
-  if (s.style.display === 'flex') { s.style.display = 'none'; return }
-  Object.assign(s.style, {display:'flex',position:'fixed',zIndex:'200',height:'100vh',left:'0',top:'0',width:'260px'})
+  if (s.classList.contains('sidebar-open')) {
+    s.classList.remove('sidebar-open')
+    s.style.cssText = ''
+  } else {
+    s.classList.add('sidebar-open')
+    s.style.cssText = 'display:flex !important;position:fixed;z-index:200;height:100vh;left:0;top:0;width:260px'
+  }
 }
 
 function checkProCode(tool) {
@@ -664,7 +668,7 @@ function loadImage(file, tool) {
   if (!file) return
   const chip = document.getElementById(tool + '-chip')
   if (chip) {
-    chip.style.display = 'inline-flex'
+    chip.classList.remove('rik-hidden')
     const x = document.createElement('span')
     x.className = 'x'; x.textContent = '✕'
     x.onclick = function() { clearTool(tool) }
@@ -675,8 +679,8 @@ function loadImage(file, tool) {
   // Show controls immediately
   const ctrl = document.getElementById(tool + '-ctrl')
   const btns = document.getElementById(tool + '-btns')
-  if (ctrl) ctrl.style.display = 'flex'
-  if (btns) btns.style.display = 'flex'
+  if (ctrl) ctrl.classList.remove('rik-hidden')
+  if (btns) btns.classList.remove('rik-hidden')
 
   // Load image using object URL (faster than FileReader)
   const url = URL.createObjectURL(file)
@@ -707,8 +711,8 @@ function onImageLoaded(tool) {
   // Ensure controls visible (may already be from loadImage)
   const ctrl = document.getElementById(tool+'-ctrl')
   const btns = document.getElementById(tool+'-btns')
-  if (ctrl) ctrl.style.display = 'flex'
-  if (btns) btns.style.display = 'flex'
+  if (ctrl) ctrl.classList.remove('rik-hidden')
+  if (btns) btns.classList.remove('rik-hidden')
   switch(tool) {
     case 'compress':
       drawToCanvas('compress-canvas-orig', s.img)
@@ -727,8 +731,8 @@ function onImageLoaded(tool) {
     case 'text': applyText(); break
     case 'crop':
       const ci = document.getElementById('crop-img')
-      ci.src = s.img.src; ci.style.display = 'block'
-      document.getElementById('crop-wrap').style.display = 'block'
+      ci.src = s.img.src; ci.classList.remove('rik-hidden')
+      document.getElementById('crop-wrap').classList.remove('rik-hidden')
       setTimeout(initCrop, 100)
       break
     case 'info': showInfo(s); break
@@ -737,7 +741,7 @@ function onImageLoaded(tool) {
     case 'removebg':
       const ro = document.getElementById('removebg-orig')
       if (ro) ro.src = s.img.src
-      document.getElementById('removebg-prev').classList.add('show')
+      document.getElementById('removebg-prev').classList.remove('rik-hidden')
       break
     case 'blur':
       setupBlurCanvas()
@@ -754,20 +758,20 @@ function fmtSize(b) {
 function clearTool(tool) {
   imgState[tool] = null
   const ids = [tool+'-chip',tool+'-ctrl',tool+'-btns',tool+'-res',tool+'-prev']
-  ids.forEach(id => { const el=document.getElementById(id); if(el){ el.style.display='none'; el.classList.remove('show') } })
+  ids.forEach(id => { const el=document.getElementById(id); if(el){ el.classList.add('rik-hidden'); el.classList.add('rik-hidden') } })
 }
 
 function drawToCanvas(id, img, w, h) {
   const c = document.getElementById(id); if(!c) return
   const W = w||img.naturalWidth, H = h||img.naturalHeight
-  c.width=W; c.height=H; c.style.display='block'
+  c.width=W; c.height=H; c.classList.remove('rik-hidden')
   const ctx = c.getContext('2d'); ctx.clearRect(0,0,W,H); ctx.drawImage(img,0,0,W,H)
   return ctx
 }
 
 function toast(msg) {
-  const t = document.getElementById('toast'); t.textContent=msg; t.classList.add('show')
-  setTimeout(()=>t.classList.remove('show'), 2500)
+  const t = document.getElementById('toast'); t.textContent=msg; t.classList.remove('rik-hidden')
+  setTimeout(()=>t.classList.add('rik-hidden'), 2500)
 }
 
 function downloadCanvas(id, name, fmt) {
@@ -792,14 +796,14 @@ function updateCompress() {
   const s = imgState['compress']; if(!s) return
   const q = parseInt(document.getElementById('compress-q').value)/100
   document.getElementById('compress-qv').textContent = Math.round(q*100)+'%'
-  const prev = document.getElementById('compress-prev'); prev.classList.add('show')
+  const prev = document.getElementById('compress-prev'); prev.classList.remove('rik-hidden')
   const out = document.getElementById('compress-canvas-out')
   out.width=s.img.naturalWidth; out.height=s.img.naturalHeight
   out.getContext('2d').drawImage(s.img,0,0)
   out.toBlob(blob=>{
     if(!blob) return
     const pct = Math.round((1-blob.size/s.origSize)*100)
-    const res = document.getElementById('compress-res'); res.classList.add('show')
+    const res = document.getElementById('compress-res'); res.classList.remove('rik-hidden')
     document.getElementById('compress-stats').innerHTML =
       '<div class="stat-chip"><span class="sv">'+fmtSize(s.origSize)+'</span><span class="sk">Original</span></div>'+
       '<div class="stat-chip"><span class="sv">'+fmtSize(blob.size)+'</span><span class="sk">Compressed</span></div>'+
@@ -828,8 +832,8 @@ function runResize() {
   const w=parseInt(document.getElementById('resize-w').value), h=parseInt(document.getElementById('resize-h').value)
   if(!w||!h||w<1||h<1) return
   drawToCanvas('resize-canvas',s.img,w,h)
-  const res=document.getElementById('resize-res'); res.classList.add('show')
-  document.getElementById('resize-canvas').style.display='block'
+  const res=document.getElementById('resize-res'); res.classList.remove('rik-hidden')
+  document.getElementById('resize-canvas').classList.remove('rik-hidden')
   document.getElementById('resize-stats').innerHTML='<div class="stat-chip"><span class="sv">'+s.img.naturalWidth+'×'+s.img.naturalHeight+'</span><span class="sk">Original</span></div><div class="stat-chip"><span class="sv">'+w+'×'+h+'</span><span class="sk">New size</span></div>'
 }
 
@@ -846,7 +850,7 @@ function runConvert() {
   tmp.toBlob(blob=>{
     if(!blob) return
     const url=URL.createObjectURL(blob)
-    const res=document.getElementById('convert-res'); res.classList.add('show')
+    const res=document.getElementById('convert-res'); res.classList.remove('rik-hidden')
     document.getElementById('convert-stats').innerHTML='<div class="stat-chip"><span class="sv">'+fmtSize(s.origSize)+'</span><span class="sk">Original</span></div><div class="stat-chip"><span class="sv">'+fmtSize(blob.size)+'</span><span class="sk">Converted</span></div><div class="stat-chip"><span class="sv">'+convertFmt.toUpperCase()+'</span><span class="sk">Format</span></div>'
     const dl=document.getElementById('convert-dl')
     dl.onclick=()=>{const a=document.createElement('a');a.href=url;a.download=s.name+'.'+(convertFmt==='jpeg'?'jpg':convertFmt);a.click()}
@@ -863,9 +867,9 @@ function renderRotate(){
   const cos=Math.abs(Math.cos(rad)), sin=Math.abs(Math.sin(rad))
   const nw=Math.floor(sw*cos+sh*sin), nh=Math.floor(sw*sin+sh*cos)
   const c=document.getElementById('rotate-canvas')
-  c.width=nw;c.height=nh;c.style.display='block'
+  c.width=nw;c.height=nh;c.classList.remove('rik-hidden')
   const ctx=c.getContext('2d'); ctx.save(); ctx.translate(nw/2,nh/2); ctx.rotate(rad); ctx.scale(_flipH?-1:1,_flipV?-1:1); ctx.drawImage(s.img,-sw/2,-sh/2); ctx.restore()
-  document.getElementById('rotate-btns').style.display='flex'
+  document.getElementById('rotate-btns').classList.remove('rik-hidden')
 }
 
 // ── FILTERS ──
@@ -874,7 +878,7 @@ function setFilter(f,btn){_activeFilter=f;btn.closest('.format-btns').querySelec
 function applyFilters(){
   const s=imgState['filters']; if(!s) return
   const c=document.getElementById('filters-canvas')
-  c.width=s.img.naturalWidth;c.height=s.img.naturalHeight;c.style.display='block'
+  c.width=s.img.naturalWidth;c.height=s.img.naturalHeight;c.classList.remove('rik-hidden')
   const ctx=c.getContext('2d')
   const br=document.getElementById('f-bright').value, co=document.getElementById('f-contrast').value, sa=document.getElementById('f-sat').value
   document.getElementById('f-bright-v').textContent=br; document.getElementById('f-contrast-v').textContent=co; document.getElementById('f-sat-v').textContent=sa
@@ -883,7 +887,7 @@ function applyFilters(){
   else if(_activeFilter==='sepia') filter+=' sepia(100%)'
   else if(_activeFilter==='invert') filter+=' invert(100%)'
   ctx.filter=filter; ctx.drawImage(s.img,0,0); ctx.filter='none'
-  document.getElementById('filters-btns').style.display='flex'
+  document.getElementById('filters-btns').classList.remove('rik-hidden')
 }
 
 // ── WATERMARK ──
@@ -892,7 +896,7 @@ function setWmPos(p,btn){_wmPos=p;btn.closest('.format-btns').querySelectorAll('
 function applyWatermark(){
   const s=imgState['watermark']; if(!s) return
   const c=document.getElementById('watermark-canvas')
-  c.width=s.img.naturalWidth;c.height=s.img.naturalHeight;c.style.display='block'
+  c.width=s.img.naturalWidth;c.height=s.img.naturalHeight;c.classList.remove('rik-hidden')
   const ctx=c.getContext('2d'); ctx.drawImage(s.img,0,0)
   const text=document.getElementById('wm-text').value||''
   const size=parseInt(document.getElementById('wm-size').value)
@@ -908,7 +912,7 @@ function applyWatermark(){
   else if(_wmPos==='bottom-left'){ctx.textAlign='left';ctx.textBaseline='bottom';x=pad;y=H-pad}
   else if(_wmPos==='bottom-right'){ctx.textAlign='right';ctx.textBaseline='bottom';x=W-pad;y=H-pad}
   ctx.fillText(text,x,y); ctx.globalAlpha=1
-  document.getElementById('watermark-btns').style.display='flex'
+  document.getElementById('watermark-btns').classList.remove('rik-hidden')
 }
 
 // ── ADD TEXT ──
@@ -917,7 +921,7 @@ function setTxtPos(p,btn){_txtPos=p;btn.closest('.format-btns').querySelectorAll
 function applyText(){
   const s=imgState['text']; if(!s) return
   const c=document.getElementById('text-canvas')
-  c.width=s.img.naturalWidth;c.height=s.img.naturalHeight;c.style.display='block'
+  c.width=s.img.naturalWidth;c.height=s.img.naturalHeight;c.classList.remove('rik-hidden')
   const ctx=c.getContext('2d'); ctx.drawImage(s.img,0,0)
   const text=document.getElementById('txt-text').value||''
   const size=parseInt(document.getElementById('txt-size').value)
@@ -929,12 +933,12 @@ function applyText(){
   else if(_txtPos==='bottom'){ctx.textBaseline='bottom';y=c.height-pad}
   else ctx.textBaseline='middle'
   ctx.fillText(text,c.width/2,y)
-  document.getElementById('text-btns').style.display='flex'
+  document.getElementById('text-btns').classList.remove('rik-hidden')
 }
 
 // ── IMAGE INFO ──
 function showInfo(s){
-  const res=document.getElementById('info-res'); res.classList.add('show')
+  const res=document.getElementById('info-res'); res.classList.remove('rik-hidden')
   const w=s.img.naturalWidth, h=s.img.naturalHeight
   const g=(a,b)=>{while(b){[a,b]=[b,a%b]}return a}
   const gv=g(w,h), ratio=w/gv+':'+h/gv
@@ -954,8 +958,8 @@ function initCrop(){
   let sw=iw*0.8,sh=ih*0.8
   if(_cropState.ratio!=='free'){const[rw,rh]=_cropState.ratio.split(':').map(Number);sh=sw*rh/rw;if(sh>ih*0.8){sh=ih*0.8;sw=sh*rw/rh}}
   _cropState.x=(iw-sw)/2;_cropState.y=(ih-sh)/2;_cropState.w=sw;_cropState.h=sh
-  updateCropSel(); sel.style.display='block'
-  document.getElementById('crop-btns').style.display='flex'
+  updateCropSel(); sel.classList.remove('rik-hidden')
+  document.getElementById('crop-btns').classList.remove('rik-hidden')
   sel.onmousedown=(e)=>{_cropState.dragging=true;_cropState.startX=e.clientX-_cropState.x;_cropState.startY=e.clientY-_cropState.y;e.preventDefault()}
   document.onmousemove=(e)=>{
     if(!_cropState.dragging) return
@@ -980,9 +984,9 @@ function runCrop(){
   const sx=s.img.naturalWidth/rect.width, sy=s.img.naturalHeight/rect.height
   const cx=Math.round(_cropState.x*sx), cy=Math.round(_cropState.y*sy)
   const cw=Math.round(_cropState.w*sx), ch=Math.round(_cropState.h*sy)
-  const c=document.getElementById('crop-canvas'); c.width=cw;c.height=ch;c.style.display='block'
+  const c=document.getElementById('crop-canvas'); c.width=cw;c.height=ch;c.classList.remove('rik-hidden')
   c.getContext('2d').drawImage(s.img,cx,cy,cw,ch,0,0,cw,ch)
-  document.getElementById('crop-dl').style.display='flex'
+  document.getElementById('crop-dl').classList.remove('rik-hidden')
 }
 
 // ── HEIC ──
@@ -990,10 +994,10 @@ const heicState={fmt:'jpeg',file:null}
 function heicSetFmt(fmt,btn){heicState.fmt=fmt;btn.closest('.format-btns').querySelectorAll('.fmt-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on')}
 function heicLoad(file){
   if(!file) return; heicState.file=file
-  const chip=document.getElementById('heic-chip'); chip.style.display='inline-flex'; chip.innerHTML='📎 '+file.name+' ('+fmtSize(file.size)+')'
-  document.getElementById('heic-ctrl').style.display='flex'; document.getElementById('heic-btns').style.display='flex'
+  const chip=document.getElementById('heic-chip'); chip.classList.remove('rik-hidden'); chip.innerHTML='📎 '+file.name+' ('+fmtSize(file.size)+')'
+  document.getElementById('heic-ctrl').classList.remove('rik-hidden'); document.getElementById('heic-btns').classList.remove('rik-hidden')
   const src=URL.createObjectURL(file); const img=new Image()
-  img.onload=()=>{const c=document.getElementById('heic-canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;c.style.display='block';c.getContext('2d').drawImage(img,0,0)}
+  img.onload=()=>{const c=document.getElementById('heic-canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;c.classList.remove('rik-hidden');c.getContext('2d').drawImage(img,0,0)}
   img.onerror=()=>toast('HEIC detected — click Convert to process')
   img.src=src
 }
@@ -1002,7 +1006,7 @@ async function runHeicConvert(){
   const q=parseInt(document.getElementById('heic-q').value)/100
   const fmt=heicState.fmt
   const c=document.getElementById('heic-canvas')
-  if(c.style.display!=='none'&&c.width>0){downloadCanvas('heic-canvas',file.name.replace(/\.[^.]+$/,''),fmt);return}
+  if(c.width>0){downloadCanvas('heic-canvas',file.name.replace(/\.[^.]+$/,''),fmt);return}
   try{
     await loadScript('https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js')
     const result=await heic2any({blob:file,toType:'image/'+fmt,quality:q})
@@ -1010,14 +1014,14 @@ async function runHeicConvert(){
     const url=URL.createObjectURL(blob), a=document.createElement('a')
     a.href=url; a.download=file.name.replace(/\.[^.]+$/,'')+'.'+(fmt==='jpeg'?'jpg':fmt); a.click()
     toast('Converted ✓')
-  }catch(e){const err=document.getElementById('heic-err');err.textContent='⚠ '+e.message;err.classList.add('show')}
+  }catch(e){const err=document.getElementById('heic-err');err.textContent='⚠ '+e.message;err.classList.remove('rik-hidden')}
 }
 
 // ── MERGE ──
 const mergeImages={1:null,2:null}; let _mergeDir='horizontal'
 function mergeLoad(file,n){
   if(!file) return
-  const r=new FileReader(); r.onload=ev=>{const img=new Image();img.onload=()=>{mergeImages[n]={img};const c=document.getElementById('merge-chip'+n);c.style.display='block';c.textContent='📎 '+file.name;if(mergeImages[1]&&mergeImages[2]){document.getElementById('merge-ctrl').style.display='flex';document.getElementById('merge-btns').style.display='flex';runMerge()}};img.src=ev.target.result}
+  const r=new FileReader(); r.onload=ev=>{const img=new Image();img.onload=()=>{mergeImages[n]={img};const c=document.getElementById('merge-chip'+n);c.classList.remove('rik-hidden');c.textContent='📎 '+file.name;if(mergeImages[1]&&mergeImages[2]){document.getElementById('merge-ctrl').classList.remove('rik-hidden');document.getElementById('merge-btns').classList.remove('rik-hidden');runMerge()}};img.src=ev.target.result}
   r.readAsDataURL(file)
 }
 function setMergeDir(dir,btn){_mergeDir=dir;btn.closest('.format-btns').querySelectorAll('.fmt-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');if(mergeImages[1]&&mergeImages[2])runMerge()}
@@ -1028,7 +1032,7 @@ function runMerge(){
   const c=document.getElementById('merge-canvas')
   if(_mergeDir==='horizontal'){const h=Math.max(a.naturalHeight,b.naturalHeight);const sA=h/a.naturalHeight,sB=h/b.naturalHeight;const wA=a.naturalWidth*sA,wB=b.naturalWidth*sB;c.width=wA+wB+gap;c.height=h;const ctx=c.getContext('2d');ctx.fillStyle=bg;ctx.fillRect(0,0,c.width,c.height);ctx.drawImage(a,0,0,wA,h);ctx.drawImage(b,wA+gap,0,wB,h)}
   else{const w=Math.max(a.naturalWidth,b.naturalWidth);const sA=w/a.naturalWidth,sB=w/b.naturalWidth;const hA=a.naturalHeight*sA,hB=b.naturalHeight*sB;c.width=w;c.height=hA+hB+gap;const ctx=c.getContext('2d');ctx.fillStyle=bg;ctx.fillRect(0,0,c.width,c.height);ctx.drawImage(a,0,0,w,hA);ctx.drawImage(b,0,hA+gap,w,hB)}
-  c.style.display='block'; document.getElementById('merge-dl').style.display='inline-flex'
+  c.classList.remove('rik-hidden'); document.getElementById('merge-dl').classList.remove('rik-hidden')
 }
 
 // ── COLOR PALETTE ──
@@ -1041,7 +1045,7 @@ function runPalette(){
   tmp.getContext('2d').drawImage(s.img,0,0,tmp.width,tmp.height)
   const data=tmp.getContext('2d').getImageData(0,0,tmp.width,tmp.height).data
   const colours=kMeans(data,count)
-  const res=document.getElementById('palette-res'); res.classList.add('show')
+  const res=document.getElementById('palette-res'); res.classList.remove('rik-hidden')
   document.getElementById('palette-output').innerHTML='<div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px">'+
     colours.map(([r,g,b])=>{const hex='#'+[r,g,b].map(v=>v.toString(16).padStart(2,'0')).join('');return '<div onclick="navigator.clipboard.writeText(\''+hex+'\').then(()=>toast(\'Copied '+hex+' ✓\'))" style="width:72px;cursor:pointer;border-radius:10px;overflow:hidden;border:1px solid var(--border)" title="Click to copy"><div style="height:56px;background:'+hex+'"></div><div style="padding:6px;background:var(--surface);font-size:11px;font-weight:700;text-align:center;font-family:monospace">'+hex+'</div></div>'}).join('')+
     '</div><div style="font-size:11px;color:var(--muted)">Click any colour to copy hex code</div>'
@@ -1060,15 +1064,15 @@ const img2pdfFiles=[]
 function img2pdfLoad(files){for(const f of files){if(f.type.startsWith('image/'))img2pdfFiles.push(f)}renderImg2pdfList()}
 function renderImg2pdfList(){
   const list=document.getElementById('img2pdf-list')
-  list.style.display=img2pdfFiles.length?'flex':'none'
+  list.classList.remove('rik-hidden')
   list.innerHTML=img2pdfFiles.map((f,i)=>'<div class="file-chip">'+f.name+' <span class="x" onclick="img2pdfRemove('+i+')">✕</span></div>').join('')
-  document.getElementById('img2pdf-btns').style.display=img2pdfFiles.length?'flex':'none'
+  document.getElementById('img2pdf-btns').classList.remove('rik-hidden')
 }
 function img2pdfRemove(i){img2pdfFiles.splice(i,1);renderImg2pdfList()}
 async function runImg2Pdf(){
   if(!img2pdfFiles.length)return
   const prog=document.getElementById('img2pdf-prog'),pf=document.getElementById('img2pdf-pf'),pp=document.getElementById('img2pdf-pp'),status=document.getElementById('img2pdf-status')
-  prog.classList.add('show')
+  prog.classList.remove('rik-hidden')
   try{
     const{PDFDocument}=PDFLib; const pdf=await PDFDocument.create()
     for(let i=0;i<img2pdfFiles.length;i++){
@@ -1083,7 +1087,7 @@ async function runImg2Pdf(){
     const bytes=await pdf.save(); const blob=new Blob([bytes],{type:'application/pdf'})
     const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='images.pdf'; a.click()
     pf.style.width='100%'; pp.textContent='100%'; status.textContent='Done!'
-    toast('PDF downloaded ✓'); setTimeout(()=>prog.classList.remove('show'),1500)
+    toast('PDF downloaded ✓'); setTimeout(()=>prog.classList.add('rik-hidden'),1500)
   }catch(e){status.textContent='Error: '+e.message; pf.style.width='0'}
 }
 
@@ -1092,7 +1096,7 @@ let _bgRemovalLoaded=false
 async function runRemoveBg(){
   const s=imgState['removebg']; if(!s) return
   const prog=document.getElementById('removebg-prog'),pf=document.getElementById('removebg-pf'),pp=document.getElementById('removebg-pp'),status=document.getElementById('removebg-status'),err=document.getElementById('removebg-err'),dl=document.getElementById('removebg-dl')
-  err.classList.remove('show'); prog.classList.add('show')
+  err.classList.add('rik-hidden'); prog.classList.remove('rik-hidden')
   try{
     if(!_bgRemovalLoaded){status.textContent='Loading AI model (~15MB)...';pf.style.width='10%';await loadScript('https://cdn.jsdelivr.net/npm/@imgly/background-removal@1.4.5/dist/browser/index.js');_bgRemovalLoaded=true}
     status.textContent='Processing...'; pf.style.width='40%'
@@ -1102,11 +1106,11 @@ async function runRemoveBg(){
     const result=await imglyRemoveBackground(blob,{progress:(k,c,t)=>{const p=Math.round((c/t)*35)+60;pf.style.width=Math.min(p,95)+'%'}})
     pf.style.width='100%'; status.textContent='Done!'
     const url=URL.createObjectURL(result); const ri=new Image()
-    ri.onload=()=>{const c=document.getElementById('removebg-canvas');c.width=ri.naturalWidth;c.height=ri.naturalHeight;c.getContext('2d').clearRect(0,0,c.width,c.height);c.getContext('2d').drawImage(ri,0,0);dl.style.display='inline-flex'}
+    ri.onload=()=>{const c=document.getElementById('removebg-canvas');c.width=ri.naturalWidth;c.height=ri.naturalHeight;c.getContext('2d').clearRect(0,0,c.width,c.height);c.getContext('2d').drawImage(ri,0,0);dl.classList.remove('rik-hidden')}
     ri.src=url
-    document.getElementById('removebg-prev').classList.add('show')
-    toast('Background removed ✓'); setTimeout(()=>prog.classList.remove('show'),1000)
-  }catch(e){err.textContent='⚠ '+e.message;err.classList.add('show');prog.classList.remove('show')}
+    document.getElementById('removebg-prev').classList.remove('rik-hidden')
+    toast('Background removed ✓'); setTimeout(()=>prog.classList.add('rik-hidden'),1000)
+  }catch(e){err.textContent='⚠ '+e.message;err.classList.remove('rik-hidden');prog.classList.add('rik-hidden')}
 }
 
 // ── BLUR / CENSOR ──
@@ -1115,9 +1119,9 @@ function setBlurMode(mode,btn){_blurMode=mode;btn.closest('.format-btns').queryS
 function setupBlurCanvas(){
   const s=imgState['blur']; if(!s) return
   const bc=document.getElementById('blur-canvas')
-  bc.width=s.img.naturalWidth; bc.height=s.img.naturalHeight; bc.style.display='block'
+  bc.width=s.img.naturalWidth; bc.height=s.img.naturalHeight; bc.classList.remove('rik-hidden')
   bc.getContext('2d').drawImage(s.img,0,0)
-  document.getElementById('blur-ctrl').style.display='flex'; document.getElementById('blur-btns').style.display='flex'
+  document.getElementById('blur-ctrl').classList.remove('rik-hidden'); document.getElementById('blur-btns').classList.remove('rik-hidden')
   function getPos(e){const rect=bc.getBoundingClientRect();const sx=bc.width/rect.width,sy=bc.height/rect.height;const touch=e.touches?.[0]||e;return{x:(touch.clientX-rect.left)*sx,y:(touch.clientY-rect.top)*sy}}
   function applyAt(x,y){
     const strength=parseInt(document.getElementById('blur-strength').value); const brush=parseInt(document.getElementById('blur-brush').value)
@@ -1134,7 +1138,7 @@ function resetBlur(){const s=imgState['blur'];if(!s)return;const c=document.getE
 // ── LICENSE / PRO ──
 async function activateLicense(){
   const key=document.getElementById('rik-license-key')?.value?.trim(); const msg=document.getElementById('license-msg'); if(!key||!msg)return
-  msg.style.display='block'; msg.style.color='var(--muted)'; msg.textContent='Verifying...'
+  msg.classList.remove('rik-hidden'); msg.style.color='var(--muted)'; msg.textContent='Verifying...'
   try{
     const res=await fetch('https://api.lemonsqueezy.com/v1/licenses/validate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({license_key:key,instance_name:'RightImageKit'})})
     const data=await res.json()
@@ -1218,7 +1222,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function loadScript(src){return new Promise((res,rej)=>{if(document.querySelector('script[src="'+src+'"]')){res();return}const s=document.createElement('script');s.src=src;s.onload=res;s.onerror=rej;document.head.appendChild(s)})}
 document.addEventListener('dragover',e=>e.preventDefault())
 document.addEventListener('drop',e=>e.preventDefault())
-document.querySelectorAll('.nav-item').forEach(item=>item.addEventListener('click',()=>{if(window.innerWidth<=768){const s=document.getElementById('sidebar');s.style.display='none'}}))
+document.querySelectorAll('.nav-item').forEach(item=>item.addEventListener('click',()=>{if(window.innerWidth<=768){const s=document.getElementById('sidebar');s.classList.add('rik-hidden')}}))
 </script>
 
 <!-- Default Statcounter code for Right Image Kit -->
