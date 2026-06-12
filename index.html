@@ -1,68 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<!-- ============ SEO ============ -->
-<title>RightImageKit — Free Private Image Tools (Resize, Compress, Convert, Remove Background)</title>
-<meta name="description" content="Edit images right in your browser. Resize, compress, convert, crop, redact and remove metadata — 100% local, no upload, no account. Your photos never leave your device." />
-<meta name="keywords" content="image resizer, compress image, convert image, png to jpg, webp converter, remove image metadata, exif remover, crop image online, redact image, favicon generator, privacy image tool, edit image without upload" />
-<meta name="author" content="The 36th Company Ltd" />
-<meta name="robots" content="index, follow, max-image-preview:large" />
-<link rel="canonical" href="https://rightimagekit.com/" />
-<meta name="theme-color" content="#3D5AFE" />
-
-<!-- Open Graph -->
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="RightImageKit" />
-<meta property="og:title" content="RightImageKit — Private, In-Browser Image Tools" />
-<meta property="og:description" content="Resize, compress, convert, crop and clean image metadata without uploading anything. Everything runs locally in your browser." />
-<meta property="og:url" content="https://rightimagekit.com/" />
-<meta property="og:image" content="https://rightimagekit.com/og-image.png" />
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="RightImageKit — Private, In-Browser Image Tools" />
-<meta name="twitter:description" content="Edit images locally. No upload, no account, no tracking of your files." />
-<meta name="twitter:image" content="https://rightimagekit.com/og-image.png" />
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Anton&display=swap" rel="stylesheet" />
-
-<!-- Structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "RightImageKit",
-  "url": "https://rightimagekit.com/",
-  "applicationCategory": "MultimediaApplication",
-  "operatingSystem": "Any (browser-based)",
-  "description": "Privacy-first browser image toolkit. Resize, compress, convert, crop, redact and remove metadata from images entirely on your own device.",
-  "offers": [
-    { "@type": "Offer", "price": "0", "priceCurrency": "GBP", "description": "Free local image tools" },
-    { "@type": "Offer", "price": "4.99", "priceCurrency": "GBP", "description": "Pro unlock for AI-assisted tools" }
-  ],
-  "featureList": ["Resize image","Compress image","Convert PNG JPG WebP","Crop image","Rotate and flip","Adjust colours","Remove EXIF metadata","Redact image","Add watermark","Favicon generator","Colour picker","Base64 encode"]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "Are my images uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every tool runs locally in your browser using the Canvas API. Your images are never sent anywhere." } },
-    { "@type": "Question", "name": "Do I need an account?", "acceptedAnswer": { "@type": "Answer", "text": "No account, no sign-up, no email required. Open the page and start editing." } },
-    { "@type": "Question", "name": "What does the Pro version cost?", "acceptedAnswer": { "@type": "Answer", "text": "A one-time £4.99 unlock enables the AI-assisted tools such as background removal, upscaling and enhancement." } },
-    { "@type": "Question", "name": "Does removing metadata protect my privacy?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Photos often contain EXIF data including GPS location and device details. RightImageKit strips this when you re-export an image." } }
-  ]
-}
-</script>
-
-<!-- Google Analytics -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RightImageKit – Free Image Compressor, Resizer & Converter | No Upload</title>
+<meta name="description" content="Free image compressor, resizer, converter and background remover. Compress JPG, PNG, WebP. Convert HEIC to JPG. Remove backgrounds locally. No upload, no account — files never leave your browser.">
+<meta name="keywords" content="compress image online free, image compressor, reduce image size, resize image free, remove background free, heic to jpg, jpg to png free, png to jpg, crop image online, image to pdf, convert image format, image tools no upload">
+<link rel="canonical" href="https://rightimagekit.com">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="128x128" href="/favicon-128x128.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RightImageKit – Free Image Compressor, Resizer & Background Remover">
+<meta property="og:description" content="Compress, resize, convert HEIC to JPG, remove background — 19 image tools with zero uploads.">
+<meta property="og:image" content="https://rightimagekit.com/og-image.png">
+<meta property="og:url" content="https://rightimagekit.com">
+<meta property="og:site_name" content="RightImageKit">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RightImageKit – Free Image Compressor & Background Remover">
+<meta name="twitter:description" content="19 image tools. Zero uploads. Files never leave your device.">
+<meta name="twitter:image" content="https://rightimagekit.com/og-image.png">
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJB8W8DEW1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -70,949 +28,1220 @@
   gtag('js', new Date());
   gtag('config', 'G-KJB8W8DEW1');
 </script>
-
 <style>
-  :root{
-    --bg:#FBFBFE; --surface:#FFFFFF; --surface-2:#F4F6FC;
-    --ink:#14151F; --muted:#5C5F73; --faint:#8A8DA0;
-    --line:#E7E9F4; --line-strong:#D6D9E8;
-    --primary:#3D5AFE; --primary-ink:#23259B; --primary-wash:#ECEFFF;
-    --pro:#E89A12; --pro-wash:#FFF4DF;
-    --c-r:#FF2E55; --c-g:#12C99B; --c-b:#3D5AFE;
-    --ok:#12A66B; --danger:#E23D52;
-    --radius:14px; --radius-sm:10px;
-    --shadow:0 1px 2px rgba(20,21,31,.04), 0 8px 24px -12px rgba(20,21,31,.12);
-    --shadow-lg:0 24px 60px -24px rgba(20,21,31,.30);
-    --display:"Bricolage Grotesque", system-ui, sans-serif;
-    --body:"Inter", system-ui, sans-serif;
-    --mono:"JetBrains Mono", ui-monospace, monospace;
-    --maxw:1180px;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0; background:var(--bg); color:var(--ink);
-    font-family:var(--body); font-size:16px; line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{color:inherit; text-decoration:none}
-  button{font-family:inherit; cursor:pointer; border:none; background:none}
-  :focus-visible{outline:3px solid var(--primary); outline-offset:2px; border-radius:6px}
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
-  .mono{font-family:var(--mono)}
-
-  /* ---------- chromatic wordmark ---------- */
-  .chroma{position:relative; font-family:var(--display); font-weight:800; letter-spacing:-.02em; color:var(--ink)}
-  .chroma::before,.chroma::after{
-    content:attr(data-text); position:absolute; left:0; top:0; width:100%; height:100%;
-    pointer-events:none; mix-blend-mode:multiply;
-  }
-  .chroma::before{color:var(--c-r); transform:translateX(-.035em)}
-  .chroma::after{color:var(--c-b); transform:translateX(.035em)}
-  .chroma:hover::before,.chroma:hover::after{transform:none; transition:transform .35s cubic-bezier(.2,.8,.2,1)}
-
-  /* ---------- header ---------- */
-  header.site{position:sticky; top:0; z-index:50; background:rgba(251,251,254,.82); backdrop-filter:blur(12px); border-bottom:1px solid var(--line)}
-  .nav{display:flex; align-items:center; gap:18px; height:64px}
-  .brand{display:flex; align-items:center; gap:10px; font-size:20px}
-  .brand .dot{width:26px; height:26px; border-radius:8px; background:
-    radial-gradient(circle at 30% 30%, var(--c-r), transparent 60%),
-    radial-gradient(circle at 70% 35%, var(--c-g), transparent 60%),
-    radial-gradient(circle at 50% 72%, var(--c-b), transparent 62%), #fff;
-    border:1px solid var(--line-strong)}
-  .nav .links{display:flex; gap:6px; margin-left:8px}
-  .nav .links a{padding:8px 12px; border-radius:9px; font-size:14px; font-weight:500; color:var(--muted)}
-  .nav .links a:hover{background:var(--surface-2); color:var(--ink)}
-  .nav .spacer{flex:1}
-  .pill-priv{display:inline-flex; align-items:center; gap:7px; font-size:12.5px; font-weight:600; color:var(--primary-ink); background:var(--primary-wash); padding:7px 12px; border-radius:999px}
-  .pill-priv .ledpulse{width:7px;height:7px;border-radius:50%;background:var(--ok); box-shadow:0 0 0 3px rgba(18,166,107,.18)}
-  .btn-pro{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14px;color:#7a5200;background:linear-gradient(180deg,#FFD980,#F4B23E);padding:9px 15px;border-radius:10px;box-shadow:0 1px 0 rgba(0,0,0,.06)}
-  .btn-pro:hover{filter:brightness(1.03)}
-  .menu-btn{display:none; font-size:22px; padding:6px 10px; border-radius:9px}
-  .menu-btn:hover{background:var(--surface-2)}
-
-  /* ---------- hero ---------- */
-  .hero{padding:64px 0 30px; position:relative; overflow:hidden}
-  .hero::after{content:""; position:absolute; inset:0; pointer-events:none;
-    background:radial-gradient(700px 320px at 82% -8%, rgba(61,90,254,.10), transparent 70%),
-               radial-gradient(540px 280px at 6% 12%, rgba(255,46,85,.06), transparent 70%)}
-  .hero .inner{position:relative; z-index:1; display:grid; grid-template-columns:1.05fr .95fr; gap:48px; align-items:center}
-  .eyebrow{font-family:var(--mono); font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--primary-ink); font-weight:500}
-  h1.head{font-family:var(--display); font-weight:800; letter-spacing:-.03em; line-height:1.02; font-size:clamp(38px,5.6vw,68px); margin:14px 0 18px}
-  h1.head em{font-style:normal; color:var(--primary)}
-  .sub{font-size:18px; color:var(--muted); max-width:34ch; margin:0 0 26px}
-  .hero-stats{display:flex; gap:26px; margin-top:30px}
-  .hero-stats div{font-family:var(--mono)}
-  .hero-stats b{display:block; font-size:22px; color:var(--ink)}
-  .hero-stats span{font-size:12.5px; color:var(--faint)}
-
-  /* drop zone hero card */
-  .drop{background:var(--surface); border:1.5px dashed var(--line-strong); border-radius:20px; padding:34px 26px; text-align:center; box-shadow:var(--shadow); transition:border-color .2s, background .2s}
-  .drop.drag{border-color:var(--primary); background:var(--primary-wash)}
-  .drop .icon{width:58px;height:58px;margin:0 auto 14px;border-radius:16px;display:grid;place-items:center;background:var(--primary-wash);color:var(--primary);font-size:26px}
-  .drop h3{font-family:var(--display); margin:0 0 6px; font-size:21px}
-  .drop p{margin:0 0 18px; color:var(--muted); font-size:14.5px}
-  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--primary);color:#fff;font-weight:600;font-size:15px;padding:12px 20px;border-radius:11px;transition:transform .12s, filter .15s}
-  .btn:hover{filter:brightness(1.05)} .btn:active{transform:translateY(1px)}
-  .btn.ghost{background:var(--surface-2); color:var(--ink); border:1px solid var(--line)}
-  .btn.sm{padding:9px 14px; font-size:13.5px}
-  .drop .note{margin-top:14px;font-size:12.5px;color:var(--faint)}
-
-  /* ---------- sections ---------- */
-  section{padding:46px 0}
-  .sec-head{display:flex; align-items:flex-end; justify-content:space-between; gap:20px; margin-bottom:24px}
-  .sec-head h2{font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:clamp(24px,3vw,32px); margin:0}
-  .sec-head p{margin:6px 0 0; color:var(--muted); font-size:15px}
-  .cats{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:22px}
-  .cat{font-size:13.5px;font-weight:600;color:var(--muted);background:var(--surface);border:1px solid var(--line);padding:8px 14px;border-radius:999px}
-  .cat.active{background:var(--ink);color:#fff;border-color:var(--ink)}
-  .cat:hover:not(.active){border-color:var(--line-strong)}
-  .cat .cnt{opacity:.5; margin-left:6px; font-variant-numeric:tabular-nums}
-  .cat.active .cnt{opacity:.75}
-  .tool-search{max-width:230px; padding:9px 13px; border:1px solid var(--line-strong); border-radius:10px; font-family:var(--body); font-size:14px; background:var(--surface)}
-  .tool-search:focus{border-color:var(--primary)}
-  .grid-empty{grid-column:1/-1; text-align:center; color:var(--faint); padding:40px 0; font-size:14px}
-
-  .grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
-  .tool{position:relative; text-align:left; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:18px; transition:transform .15s, box-shadow .2s, border-color .2s}
-  .tool:hover{transform:translateY(-3px); box-shadow:var(--shadow); border-color:var(--line-strong)}
-  .tool .tico{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-size:20px;margin-bottom:12px;background:var(--surface-2)}
-  .tool h3{font-family:var(--display); font-weight:600; font-size:16.5px; margin:0 0 4px}
-  .tool p{margin:0; font-size:13px; color:var(--muted); line-height:1.45}
-  .tool .protag{position:absolute; top:14px; right:14px; font-size:10.5px; font-weight:800; letter-spacing:.06em; color:#7a5200; background:var(--pro-wash); border:1px solid #F1D08A; padding:3px 7px; border-radius:6px}
-
-  /* ---------- workspace (modal) ---------- */
-  .ws-back{position:fixed; inset:0; z-index:100; background:rgba(16,17,28,.42); backdrop-filter:blur(3px); display:none; align-items:flex-start; justify-content:center; padding:24px; overflow:auto}
-  .ws-back.open{display:flex}
-  .ws{background:var(--surface); width:min(960px,100%); border-radius:18px; box-shadow:var(--shadow-lg); overflow:hidden; margin:auto}
-  .ws-top{display:flex; align-items:center; gap:12px; padding:16px 20px; border-bottom:1px solid var(--line)}
-  .ws-top .tico{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;background:var(--surface-2);font-size:17px}
-  .ws-top h3{font-family:var(--display); margin:0; font-size:18px; flex:1}
-  .ws-close{font-size:20px; color:var(--muted); padding:6px 10px; border-radius:8px}
-  .ws-close:hover{background:var(--surface-2); color:var(--ink)}
-  .ws-body{display:grid; grid-template-columns:1.3fr .85fr; gap:0}
-  .ws-stage{padding:20px; background:
-    linear-gradient(45deg,#eef0f7 25%,transparent 25%) -8px 0/16px 16px,
-    linear-gradient(-45deg,#eef0f7 25%,transparent 25%) -8px 0/16px 16px,
-    linear-gradient(45deg,transparent 75%,#eef0f7 75%)/16px 16px,
-    linear-gradient(-45deg,transparent 75%,#eef0f7 75%)/16px 16px, #fff;
-    display:flex; align-items:center; justify-content:center; min-height:340px; position:relative; overflow:hidden}
-  .ws-stage canvas, .ws-stage img{max-width:100%; max-height:420px; border-radius:6px; box-shadow:0 6px 20px -8px rgba(0,0,0,.3)}
-  .ws-controls{padding:20px; border-left:1px solid var(--line); display:flex; flex-direction:column; gap:16px}
-  .field label{display:block; font-size:13px; font-weight:600; margin-bottom:7px}
-  .field .row{display:flex; gap:8px; align-items:center}
-  input[type=number],input[type=text],select{width:100%; padding:9px 11px; border:1px solid var(--line-strong); border-radius:9px; font-family:var(--body); font-size:14px; background:var(--surface)}
-  input[type=range]{width:100%; accent-color:var(--primary)}
-  .seg{display:flex; gap:6px; flex-wrap:wrap}
-  .seg button{flex:1; min-width:54px; padding:8px; border:1px solid var(--line-strong); border-radius:8px; font-size:13px; font-weight:600; color:var(--muted); background:var(--surface)}
-  .seg button.on{background:var(--primary-wash); color:var(--primary-ink); border-color:var(--primary)}
-  .stat{display:flex; justify-content:space-between; font-family:var(--mono); font-size:12.5px; color:var(--muted)}
-  .stat b{color:var(--ink)}
-  .swatches{display:flex; flex-wrap:wrap; gap:8px}
-  .swatch{width:42px;height:42px;border-radius:9px;border:1px solid var(--line-strong);cursor:pointer;position:relative}
-  .swatch span{position:absolute;bottom:-17px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:9px;color:var(--faint)}
-  textarea{width:100%;min-height:90px;font-family:var(--mono);font-size:12px;border:1px solid var(--line-strong);border-radius:9px;padding:10px;resize:vertical}
-  .hint{font-size:12px;color:var(--faint)}
-  .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:12px 18px;border-radius:11px;font-size:14px;font-weight:500;opacity:0;transition:.25s;z-index:200;pointer-events:none}
-  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-
-  /* pro modal */
-  .pro-card{text-align:center; padding:8px}
-  .pro-card .crown{font-size:32px}
-  .pro-card h3{font-family:var(--display); font-size:22px; margin:8px 0 4px}
-  .pro-card .price{font-family:var(--display); font-size:40px; font-weight:800; color:var(--pro)}
-  .pro-card .price small{font-size:15px; color:var(--muted); font-weight:500}
-  .pro-card ul{list-style:none; padding:0; margin:14px auto 18px; max-width:280px; text-align:left}
-  .pro-card li{display:flex; gap:9px; padding:5px 0; font-size:14px; color:var(--muted)}
-  .pro-card li::before{content:"✓"; color:var(--ok); font-weight:800}
-  .unlock-row{display:flex; gap:8px; margin-top:14px}
-
-  /* trust + faq */
-  .trust{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-  .trust .card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:22px}
-  .trust .card .ic{font-size:24px} .trust .card h3{font-family:var(--display); font-size:17px; margin:10px 0 6px}
-  .trust .card p{margin:0; color:var(--muted); font-size:14px}
-  .faq details{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:4px 18px; margin-bottom:10px}
-  .faq summary{font-weight:600; padding:14px 0; cursor:pointer; list-style:none; display:flex; justify-content:space-between}
-  .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"+"; color:var(--primary); font-size:20px}
-  .faq details[open] summary::after{content:"–"}
-  .faq p{margin:0 0 14px; color:var(--muted); font-size:14.5px}
-
-  footer{border-top:1px solid var(--line); padding:38px 0; margin-top:20px; color:var(--muted); font-size:13.5px}
-  .foot{display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap}
-
-  @media (max-width:900px){
-    .hero .inner{grid-template-columns:1fr; gap:30px}
-    .grid{grid-template-columns:repeat(2,1fr)}
-    .trust{grid-template-columns:1fr}
-    .nav .links{display:none}
-    .menu-btn{display:block}
-    .ws-body{grid-template-columns:1fr}
-    .ws-controls{border-left:none; border-top:1px solid var(--line)}
-  }
-  @media (max-width:520px){ .grid{grid-template-columns:1fr} .hero-stats{gap:16px} .tool-search{max-width:100%; width:100%} .sec-head{flex-wrap:wrap} }
-  @media (prefers-reduced-motion:reduce){ *{transition:none!important; scroll-behavior:auto} }
+:root{
+  --bg:#0B0B0F;--surface:#13131A;--surface2:#1C1C26;
+  --accent:#6C63FF;--accent2:#A78BFA;--green:#22C55E;
+  --text:#F0EFFF;--muted:rgba(240,239,255,0.5);
+  --border:rgba(255,255,255,0.07);--border2:rgba(108,99,255,0.25);
+  --radius:14px;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+.app{display:flex;height:100vh;overflow:hidden}
+.sidebar{width:240px;background:rgba(13,13,26,0.98);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;overflow-y:auto}
+.main{flex:1;overflow-y:auto;display:flex;flex-direction:column}
+.logo{padding:18px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.logo-icon{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;color:#fff;flex-shrink:0}
+.logo-name{font-size:14px;font-weight:800;color:var(--text)}.logo-name span{color:var(--accent)}
+.nav-section{padding:10px 8px 4px;font-size:9px;font-weight:800;color:rgba(240,239,255,0.25);text-transform:uppercase;letter-spacing:.12em}
+.nav-item{display:flex;align-items:center;gap:9px;padding:8px 12px;border-radius:9px;margin:1px 8px;cursor:pointer;font-size:13px;color:var(--muted);transition:all .15s;border:none;background:none;width:calc(100% - 16px);text-align:left;font-family:var(--font);text-decoration:none;letter-spacing:0.01em}
+.nav-item:hover{background:rgba(108,99,255,0.08);color:var(--text)}
+.nav-item.active{background:rgba(108,99,255,0.18);color:var(--accent);font-weight:700;box-shadow:inset 2px 0 0 var(--accent)}
+.nav-item .ni{width:20px;height:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:currentColor;opacity:0.7}
+.pro-badge{font-size:8px;font-weight:800;background:var(--accent);color:#fff;border-radius:4px;padding:1px 5px;margin-left:auto;letter-spacing:.04em}
+.sidebar-footer{margin-top:auto;padding:12px;border-top:1px solid var(--border)}
+.upgrade-btn{width:100%;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;border-radius:10px;padding:10px;font-size:12px;font-weight:800;cursor:pointer;font-family:var(--font)}
+.panel{display:none;flex:1;flex-direction:column;padding:28px 32px;max-width:760px;width:100%}
+.panel.active{display:flex}.panel-home{max-width:100%}
+.hero{text-align:center;padding:48px 24px 32px}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.3);border-radius:40px;padding:6px 16px;font-size:12px;font-weight:700;color:var(--accent2);margin-bottom:24px;letter-spacing:0.02em}
+.hero h1{font-size:40px;font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:14px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:16px;color:var(--muted);max-width:500px;margin:0 auto 24px;line-height:1.7}
+.hero-pills{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.pill{display:flex;align-items:center;gap:5px;background:rgba(108,99,255,0.08);border:1px solid rgba(108,99,255,0.2);border-radius:40px;padding:5px 14px;font-size:12px;font-weight:600;color:var(--accent)}
+.pill .dot{width:6px;height:6px;border-radius:50%;background:var(--green)}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;padding:0 24px 28px}
+.tool-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 14px;cursor:pointer;transition:all .18s;position:relative;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.2)}
+.tool-card:hover{background:var(--surface2);border-color:rgba(108,99,255,0.4);transform:translateY(-3px);box-shadow:0 8px 24px rgba(108,99,255,0.12)}
+.tool-card .tc-icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;border-radius:10px;background:rgba(108,99,255,0.12);color:var(--accent)}
+.tool-card .tc-name{font-size:12px;font-weight:700;color:var(--text);line-height:1.3}
+.tool-card .tc-desc{font-size:10px;color:var(--muted);margin-top:3px}
+.tool-card .pro-tag{position:absolute;top:8px;right:8px;background:var(--accent);color:#fff;font-size:8px;font-weight:800;border-radius:4px;padding:1px 5px}
+.section-label{font-size:10px;font-weight:800;color:rgba(240,239,255,0.35);text-transform:uppercase;letter-spacing:.14em;padding:0 24px;margin-bottom:14px}
+.ph{margin-bottom:24px}
+.ph h2{font-size:22px;font-weight:900;margin-bottom:6px;display:flex;align-items:center;gap:10px;letter-spacing:-0.02em}
+.ph p{font-size:14px;color:var(--muted);line-height:1.7}
+.dropzone{border:2px dashed var(--border2);border-radius:16px;padding:40px 24px;text-align:center;cursor:pointer;transition:all .2s;background:rgba(108,99,255,0.03);margin-bottom:16px;position:relative}
+.dropzone:hover,.dropzone.drag{border-color:var(--accent);background:rgba(108,99,255,0.06)}
+.dz-icon{font-size:32px;margin-bottom:10px;opacity:0.7}
+.dz-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px}
+.dz-sub{font-size:13px;color:var(--muted)}.dz-sub span{color:var(--accent)}
+input[type=file]{display:none}
+.preview-wrap{display:grid;grid-template-columns:1fr 1fr}
+.preview-box{background:var(--surface2);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.preview-box canvas,.preview-box img{width:100%;height:180px;object-fit:contain;display:block;background:#000}
+.preview-label{padding:8px 12px;font-size:11px;font-weight:700;color:var(--muted);border-top:1px solid var(--border)}
+.controls{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin-bottom:16px;display:flex;flex-direction:column;gap:14px}
+.ctrl-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.ctrl-label{font-size:12px;font-weight:700;color:var(--muted);min-width:80px}
+input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80px}
+.ctrl-val{font-size:12px;font-weight:800;color:var(--accent);min-width:36px;text-align:right}
+.ctrl-input{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:8px 12px;color:var(--text);font-size:13px;font-family:var(--font);outline:none;width:100%}
+.ctrl-input:focus{border-color:var(--accent)}
+.format-btns{display:flex;gap:6px;flex-wrap:wrap}
+.fmt-btn{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:6px 14px;font-size:12px;font-weight:700;color:var(--muted);cursor:pointer;font-family:var(--font);transition:all .15s}
+.fmt-btn.on,.fmt-btn:hover{background:rgba(108,99,255,0.15);border-color:var(--border2);color:var(--accent)}
+.btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;border-radius:10px;padding:12px 24px;font-size:14px;font-weight:800;cursor:pointer;font-family:var(--font);transition:all .18s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 14px rgba(108,99,255,0.3);letter-spacing:0.01em}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(108,99,255,0.35)}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none;box-shadow:none}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap}
+.file-chip{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:6px 12px;font-size:12px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:12px}
+.file-chip .x{cursor:pointer;color:rgba(240,239,255,0.3);font-size:14px;margin-left:4px}
+.file-chip .x:hover{color:var(--text)}
+.err-box{background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);border-radius:10px;padding:12px 16px;font-size:13px;color:#fca5a5;display:none}
+.err-box.show{display:block}
+.result-box{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:18px}
+.result-stats{display:flex;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.stat-chip{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px}
+.stat-chip .sv{font-size:16px;font-weight:900;color:var(--accent);display:block}
+.stat-chip .sk{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.saving-chip{background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.25);border-radius:8px;padding:8px 14px;font-size:12px}
+.saving-chip .sv{font-size:16px;font-weight:900;color:var(--green);display:block}
+.saving-chip .sk{font-size:10px;color:rgba(34,197,94,0.7);text-transform:uppercase;letter-spacing:.06em}
+.prog{display:none;margin-bottom:12px}
+.prog.show{display:block}
+.prog-bar{background:var(--surface2);border-radius:40px;height:6px;overflow:hidden;margin-bottom:6px}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:40px;transition:width .3s;width:0%}
+.prog-label{font-size:11px;color:var(--muted);display:flex;justify-content:space-between}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pricing-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:24px}
+.pricing-card.featured{border-color:var(--border2);background:rgba(108,99,255,0.06)}
+.price-tag{font-size:36px;font-weight:900;letter-spacing:-.02em}
+.price-tag span{font-size:16px;font-weight:500;color:var(--muted)}
+.mobile-nav{display:none;background:var(--surface);border-bottom:1px solid var(--border);padding:12px 16px;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:50}
+@media(max-width:768px){
+  body{overflow-x:hidden}
+  .sidebar{display:none}
+  .mobile-nav{display:flex}
+  .app{flex-direction:column;height:auto}
+  .main{overflow-y:visible}
+  .panel{padding:16px 16px 80px;max-width:100%}
+  .panel-home{padding-bottom:80px}
+  .tools-grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr));padding:0 16px 24px}
+  .hero{padding:28px 16px 20px}
+  .hero h1{font-size:26px}
+  .preview-wrap.show{grid-template-columns:1fr}
+  .pricing-grid{grid-template-columns:1fr}
+  .ctrl-label{min-width:60px}
+}
+.rik-hidden{display:none !important}
+.toast{position:fixed;bottom:24px;right:24px;background:var(--surface);border:1px solid var(--border2);border-radius:10px;padding:10px 16px;font-size:13px;font-weight:600;color:var(--text);z-index:200;opacity:0;transform:translateY(8px);transition:all .2s;pointer-events:none;max-width:280px}
+.toast.show{opacity:1;transform:translateY(0)}
 </style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6221506219055263" crossorigin="anonymous"></script>
 </head>
 <body>
-
-<header class="site">
-  <div class="wrap nav">
-    <a class="brand" href="#top"><span class="dot"></span><span class="chroma" data-text="RightImageKit">RightImageKit</span></a>
-    <nav class="links" aria-label="Tool categories">
-      <a href="#tools" data-jump="Optimise">Optimise</a>
-      <a href="#tools" data-jump="Transform">Transform</a>
-      <a href="#tools" data-jump="Privacy">Privacy</a>
-      <a href="#tools" data-jump="Create">Create</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <span class="spacer"></span>
-    <span class="pill-priv"><span class="ledpulse"></span>100% local</span>
-    <button class="btn-pro" id="openProBtn">★ Pro</button>
-    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+<!-- Mobile nav -->
+<div class="mobile-nav">
+  <div style="display:flex;align-items:center;gap:10px">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="9" fill="url(#rg)"/>
+  <defs><linearGradient id="rg" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6C63FF"/><stop offset="1" stop-color="#A78BFA"/></linearGradient></defs>
+  <text x="9" y="23" font-family="-apple-system,sans-serif" font-size="18" font-weight="900" fill="white">R</text>
+</svg>
+    <span style="font-weight:900;font-size:15px;color:var(--text);letter-spacing:-0.02em">Right<span style="color:var(--accent)">Image</span>Kit</span>
   </div>
-</header>
-
-<main id="top">
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap inner">
-      <div>
-        <span class="eyebrow">Browser-native image tools</span>
-        <h1 class="head">Edit images.<br><em>Nothing</em> leaves<br>your device.</h1>
-        <p class="sub">Resize, compress, convert, crop and scrub metadata — all processed locally in your browser. No upload. No account. No tracking of your files.</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <button class="btn" id="heroPick">Choose an image</button>
-          <a class="btn ghost" href="#tools">Browse tools</a>
-        </div>
-        <div class="hero-stats">
-          <div><b id="freeCount">12</b><span>FREE TOOLS</span></div>
-          <div><b>0</b><span>BYTES UPLOADED</span></div>
-          <div><b>£4.99</b><span>PRO AI UNLOCK</span></div>
-        </div>
-      </div>
-      <div>
-        <div class="drop" id="drop">
-          <div class="icon">⤓</div>
-          <h3>Drop an image here</h3>
-          <p>PNG, JPG, WebP, GIF, BMP — stays on this device</p>
-          <button class="btn" id="dropPick">Select image</button>
-          <p class="note">Processed in-browser · max recommended ~25&nbsp;MP</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TOOLS -->
-  <section id="tools">
-    <div class="wrap">
-      <div class="sec-head">
-        <div><h2>The toolkit</h2><p>Pick a tool, then load your image — or drop one above first.</p></div>
-        <input class="tool-search" id="toolSearch" type="search" placeholder="Search tools…" aria-label="Search tools" />
-      </div>
-      <div class="cats" id="cats"></div>
-      <div class="grid" id="grid"></div>
-    </div>
-  </section>
-
-  <!-- TRUST -->
-  <section style="background:var(--surface-2)">
-    <div class="wrap">
-      <div class="sec-head"><div><h2>Why private by design</h2><p>The difference between RightImageKit and the upload-everything crowd.</p></div></div>
-      <div class="trust">
-        <div class="card"><div class="ic">🔒</div><h3>Never uploaded</h3><p>Files are read with the browser File API and processed on a canvas. They are never transmitted to any server.</p></div>
-        <div class="card"><div class="ic">⚡</div><h3>Instant & offline-able</h3><p>No round trip means no waiting. Once loaded, the tools work even if your connection drops.</p></div>
-        <div class="card"><div class="ic">🧭</div><h3>Metadata you control</h3><p>Re-export to strip EXIF, GPS and device tags. Decide exactly what travels with your image.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="wrap" style="max-width:760px">
-      <div class="sec-head"><div><h2>Questions</h2></div></div>
-      <div class="faq">
-        <details open><summary>Are my images uploaded anywhere?</summary><p>No. Every free tool runs entirely in your browser. Your image data is never sent to a server, which is the whole point of RightImageKit.</p></details>
-        <details><summary>Do I need to sign up?</summary><p>Never. There's no account, no email, no cookie wall for your files. Open the page and start working.</p></details>
-        <details><summary>What's in the £4.99 Pro version?</summary><p>A one-time unlock for the AI-assisted tools — background removal, upscaling, photo enhancement and automatic alt-text. The free tools stay free forever.</p></details>
-        <details><summary>Why does removing metadata matter?</summary><p>Photos can carry hidden EXIF data including the exact GPS coordinates where they were taken and your device model. Re-exporting through RightImageKit removes it.</p></details>
-        <details><summary>Which formats are supported?</summary><p>PNG, JPEG, WebP, GIF and BMP for input. You can export to PNG, JPEG and WebP.</p></details>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap foot">
-    <div><span class="chroma" data-text="RightImageKit" style="font-size:18px">RightImageKit</span><div style="margin-top:6px">Private image tools that run on your device.</div></div>
-    <div>© <span id="yr"></span> The 36th Company Ltd · <a href="#faq">FAQ</a> · <a href="#tools">Tools</a></div>
-  </div>
-</footer>
-
-<!-- WORKSPACE MODAL -->
-<div class="ws-back" id="wsBack" role="dialog" aria-modal="true">
-  <div class="ws">
-    <div class="ws-top">
-      <div class="tico" id="wsIco">🛠️</div>
-      <h3 id="wsTitle">Tool</h3>
-      <button class="ws-close" id="wsClose" aria-label="Close">✕</button>
-    </div>
-    <div class="ws-body">
-      <div class="ws-stage" id="wsStage"></div>
-      <div class="ws-controls" id="wsControls"></div>
-    </div>
-  </div>
+  <button onclick="toggleMobileMenu()" style="background:none;border:1px solid var(--border);color:var(--text);border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;font-family:var(--font)">☰ Tools</button>
 </div>
 
-<input type="file" id="fileInput" accept="image/*" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
+<div class="app">
+  <!-- SIDEBAR -->
+  <nav class="sidebar" id="sidebar">
+    <div class="logo">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none" style="flex-shrink:0">
+        <rect width="32" height="32" rx="9" fill="url(#lg2)"/>
+        <path d="M16 5C16.5 13 19 16 27 16C19 16.5 16.5 19 16 27C15.5 19 13 16.5 5 16C13 15.5 15.5 13 16 5Z" fill="white"/>
+        <defs><linearGradient id="lg2" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#6C63FF"/><stop offset="1" stop-color="#A78BFA"/></linearGradient></defs>
+      </svg>
+      <div class="logo-name">Right<span>Image</span>Kit</div>
+    </div>
+    <div class="nav-section">Free Tools</div>
+    <button class="nav-item active" data-nav="home" data-t="home"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5L8 2l6 4.5V14a1 1 0 01-1 1H3a1 1 0 01-1-1V6.5z"/><path d="M6 15V9h4v6"/></svg></span>Home</button>
+    <button class="nav-item" data-nav="compress" data-t="compress"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6V2m0 4l2-2m-2 2l-2-2M6 10v4m0-4l-2 2m2-2l2 2"/><rect x="1" y="1" width="14" height="14" rx="2"/></svg></span>Compress</button>
+    <button class="nav-item" data-nav="resize" data-t="resize"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11l6-6M10 5h3v3M6 11H3V8"/></svg></span>Resize</button>
+    <button class="nav-item" data-nav="convert" data-t="convert"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8c0-3.3 2.7-6 6-6a6 6 0 015.7 4M14 8c0 3.3-2.7 6-6 6a6 6 0 01-5.7-4"/><path d="M11 6l2-4 2 4M5 10l-2 4-2-4"/></svg></span>Convert Format</button>
+    <button class="nav-item" data-nav="crop" data-t="crop"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 1v9a1 1 0 001 1h9"/><path d="M12 15V6a1 1 0 00-1-1H2"/></svg></span>Crop</button>
+    <button class="nav-item" data-nav="rotate" data-t="rotate"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4.5A6 6 0 103 11.5"/><path d="M11 2l2 2.5-2.5 2"/></svg></span>Rotate & Flip</button>
+    <button class="nav-item" data-nav="watermark" data-t="watermark"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="14" height="10" rx="2"/><path d="M5 9l2-4 2 4m-3-1h2"/></svg></span>Add Watermark</button>
+    <button class="nav-item" data-nav="filters" data-t="filters"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h12M4 8h8M6 12h4"/></svg></span>Filters</button>
+    <button class="nav-item" data-nav="text" data-t="text"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h10v3M8 3v10m-3 0h6"/></svg></span>Add Text</button>
+    <button class="nav-item" data-nav="img2pdf" data-t="img2pdf"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 1H3a1 1 0 00-1 1v12a1 1 0 001 1h10a1 1 0 001-1V5l-5-4z"/><path d="M9 1v4h4"/><circle cx="6" cy="9" r="1.5"/><path d="M5 12l2-2 2 2 2-3"/></svg></span>Image to PDF</button>
+    <button class="nav-item" data-nav="info" data-t="info"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M8 11V8m0-3v.01"/></svg></span>Image Info</button>
+    <button class="nav-item" data-nav="heic" data-t="heic"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="1" width="8" height="14" rx="2"/><path d="M7 13h2"/><circle cx="8" cy="5" r="1.5"/></svg></span>HEIC to JPG</button>
+    <button class="nav-item" data-nav="merge" data-t="merge"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="8" height="8" rx="1.5"/><rect x="7" y="7" width="8" height="8" rx="1.5"/></svg></span>Merge Images</button>
+    <button class="nav-item" data-nav="palette" data-t="palette"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h12M4 8h8M6 12h4"/></svg></span>Color Palette</button>
+    <div class="nav-section">Pro Tools</div>
+    <button class="nav-item" data-nav="removebg" data-t="removebg"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14l3-3m3-7l5 5-3 3-5-5m-1 5l1-1"/><path d="M9 3l4 4-1 1"/><circle cx="12" cy="4" r="1.5"/></svg></span>Remove Background<span class="pro-badge">PRO</span></button>
+    <button class="nav-item" data-nav="blur" data-t="blur"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><path d="M2 8h1M13 8h1M8 2v1M8 13v1"/><path d="M3.5 3.5l.7.7M11.8 11.8l.7.7M3.5 12.5l.7-.7M11.8 4.2l.7-.7" stroke-width="1"/></svg></span>Blur / Censor<span class="pro-badge">PRO</span></button>
+    <button class="nav-item" data-nav="enhance" data-t="enhance"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v2M8 12v2M3 8H1M15 8h-2M4.2 4.2L2.8 2.8M13.2 13.2l-1.4-1.4M4.2 11.8l-1.4 1.4M13.2 2.8l-1.4 1.4"/><circle cx="8" cy="8" r="3"/></svg></span>AI Enhance<span class="pro-badge">PRO</span></button>
+    <button class="nav-item" data-nav="bulk" data-t="bulk"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="10" height="8" rx="1.5"/><path d="M1 3h14M5 1h6"/></svg></span>Bulk Compress<span class="pro-badge">PRO</span></button>
+    <button class="nav-item" data-nav="roundcorners" data-t="roundcorners"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 2H2v2M4 14H2v-2M12 2h2v2M12 14h2v-2"/><rect x="4" y="2" width="8" height="12" rx="3"/></svg></span>Round Corners<span class="pro-badge">PRO</span></button>
+    <div class="nav-section">More</div>
+    <button class="nav-item" data-nav="pricing" data-t="pricing"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2L7 9h6L8 14"/></svg></span>Pricing</button>
+    <a class="nav-item" href="/blog/"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 6h6M5 9h4"/></svg></span>Blog</a>
+    <div class="sidebar-footer">
+      <button class="upgrade-btn" onclick="window.location.href='https://rightpdfkit.lemonsqueezy.com/checkout/buy/29e1e924-ef12-4f4e-91fa-35e693698ef8'">⚡ Upgrade to Pro — £4.99/mo</button>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- HOME -->
+    <div class="panel panel-home active" id="panel-home">
+      <div class="hero">
+        <div class="hero-badge">🔒 Privacy-first image tools</div>
+        <h1>19 image tools.<br><span>Zero uploads.</span></h1>
+        <p>Compress, resize, convert, crop, remove backgrounds and more — all running in your browser. Your images never leave your device.</p>
+        <div class="hero-pills">
+          <div class="pill"><span class="dot"></span>No upload</div>
+          <div class="pill"><span class="dot"></span>No account</div>
+          <div class="pill"><span class="dot"></span>Works offline</div>
+          <div class="pill"><span class="dot"></span>Files stay local</div>
+        </div>
+      </div>
+      <div class="section-label">Free tools</div>
+      <div class="tools-grid">
+        <div class="tool-card" data-nav="compress"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6V2m0 4l2-2m-2 2l-2-2M6 10v4m0-4l-2 2m2-2l2 2"/><rect x="1" y="1" width="14" height="14" rx="2"/></svg></span><div class="tc-name">Compress</div><div class="tc-desc">Reduce file size</div></div>
+        <div class="tool-card" data-nav="resize"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11l6-6M10 5h3v3M6 11H3V8"/></svg></span><div class="tc-name">Resize</div><div class="tc-desc">Change dimensions</div></div>
+        <div class="tool-card" data-nav="convert"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8c0-3.3 2.7-6 6-6a6 6 0 015.7 4M14 8c0 3.3-2.7 6-6 6a6 6 0 01-5.7-4"/><path d="M11 6l2-4 2 4M5 10l-2 4-2-4"/></svg></span><div class="tc-name">Convert</div><div class="tc-desc">JPG/PNG/WebP</div></div>
+        <div class="tool-card" data-nav="crop"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 1v9a1 1 0 001 1h9"/><path d="M12 15V6a1 1 0 00-1-1H2"/></svg></span><div class="tc-name">Crop</div><div class="tc-desc">Trim edges</div></div>
+        <div class="tool-card" data-nav="rotate"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4.5A6 6 0 103 11.5"/><path d="M11 2l2 2.5-2.5 2"/></svg></span><div class="tc-name">Rotate & Flip</div><div class="tc-desc">Any direction</div></div>
+        <div class="tool-card" data-nav="watermark"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="14" height="10" rx="2"/><path d="M5 9l2-4 2 4m-3-1h2"/></svg></span><div class="tc-name">Watermark</div><div class="tc-desc">Text overlay</div></div>
+        <div class="tool-card" data-nav="filters"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><circle cx="6" cy="6" r="1" fill="currentColor" stroke="none"/><circle cx="10" cy="6" r="1" fill="currentColor" stroke="none"/><circle cx="6" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="10" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="5" r="1" fill="currentColor" stroke="none"/></svg></span><div class="tc-name">Filters</div><div class="tc-desc">Grayscale, sepia...</div></div>
+        <div class="tool-card" data-nav="text"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h10v3M8 3v10m-3 0h6"/></svg></span><div class="tc-name">Add Text</div><div class="tc-desc">Caption or label</div></div>
+        <div class="tool-card" data-nav="img2pdf"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 1H3a1 1 0 00-1 1v12a1 1 0 001 1h10a1 1 0 001-1V5l-5-4z"/><path d="M9 1v4h4"/><circle cx="6" cy="9" r="1.5"/><path d="M5 12l2-2 2 2 2-3"/></svg></span><div class="tc-name">Image to PDF</div><div class="tc-desc">Combine images</div></div>
+        <div class="tool-card" data-nav="info"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M8 11V8m0-3v.01"/></svg></span><div class="tc-name">Image Info</div><div class="tc-desc">Size, dimensions</div></div>
+        <div class="tool-card" data-nav="heic"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="1" width="8" height="14" rx="2"/><path d="M7 13h2"/><circle cx="8" cy="5" r="1.5"/></svg></span><div class="tc-name">HEIC to JPG</div><div class="tc-desc">iPhone photos</div></div>
+        <div class="tool-card" data-nav="merge"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="8" height="8" rx="1.5"/><rect x="7" y="7" width="8" height="8" rx="1.5"/></svg></span><div class="tc-name">Merge Images</div><div class="tc-desc">Side by side</div></div>
+        <div class="tool-card" data-nav="palette"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><circle cx="6" cy="6" r="1" fill="currentColor" stroke="none"/><circle cx="10" cy="6" r="1" fill="currentColor" stroke="none"/><circle cx="6" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="10" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="5" r="1" fill="currentColor" stroke="none"/></svg></span><div class="tc-name">Color Palette</div><div class="tc-desc">Extract colours</div></div>
+      </div>
+      <div class="section-label">Pro tools</div>
+      <div class="tools-grid">
+        <div class="tool-card" data-nav="removebg"><span class="pro-tag">PRO</span><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14l3-3m3-7l5 5-3 3-5-5m-1 5l1-1"/><path d="M9 3l4 4-1 1"/><circle cx="12" cy="4" r="1.5"/></svg></span><div class="tc-name">Remove Background</div><div class="tc-desc">Local WASM AI</div></div>
+        <div class="tool-card" data-nav="blur"><span class="pro-tag">PRO</span><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><path d="M2 8h1M13 8h1M8 2v1M8 13v1"/><path d="M3.5 3.5l.7.7M11.8 11.8l.7.7M3.5 12.5l.7-.7M11.8 4.2l.7-.7" stroke-width="1"/></svg></span><div class="tc-name">Blur / Censor</div><div class="tc-desc">Hide faces & areas</div></div>
+        <div class="tool-card" data-nav="enhance"><span class="pro-tag">PRO</span><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v2M8 12v2M3 8H1M15 8h-2M4.2 4.2L2.8 2.8M13.2 13.2l-1.4-1.4M4.2 11.8l-1.4 1.4M13.2 2.8l-1.4 1.4"/><circle cx="8" cy="8" r="3"/></svg></span><div class="tc-name">AI Enhance</div><div class="tc-desc">Auto improve</div></div>
+        <div class="tool-card" data-nav="bulk"><span class="pro-tag">PRO</span><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="10" height="8" rx="1.5"/><path d="M1 3h14M5 1h6"/></svg></span><div class="tc-name">Bulk Compress</div><div class="tc-desc">Multiple files</div></div>
+        <div class="tool-card" data-nav="roundcorners"><span class="pro-tag">PRO</span><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 2H2v2M4 14H2v-2M12 2h2v2M12 14h2v-2"/><rect x="4" y="2" width="8" height="12" rx="3"/></svg></span><div class="tc-name">Round Corners</div><div class="tc-desc">Custom radius</div></div>
+      </div>
+      <!-- Cross promo RPK -->
+      <div style="margin:0 24px 28px;background:linear-gradient(135deg,rgba(232,69,10,0.08),rgba(13,13,26,0.5));border:1px solid rgba(232,69,10,0.2);border-radius:16px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:34px;height:34px;border-radius:9px;background:#E8450A;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;color:#fff;flex-shrink:0">R</div>
+          <div><div style="font-size:13px;font-weight:800;color:var(--text)">Also try RightPDFKit</div><div style="font-size:11px;color:var(--muted)">52 PDF tools · same privacy model · no upload</div></div>
+        </div>
+        <a href="https://rightpdfkit.com?ref=rik" target="_blank" style="background:#E8450A;color:#fff;border-radius:9px;padding:8px 16px;font-size:12px;font-weight:800;text-decoration:none;white-space:nowrap">Try Free →</a>
+      </div>
+      <!-- Blog section -->
+      <div style="padding:0 24px 32px">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+          <div class="section-label" style="padding:0;margin:0">From the blog</div>
+          <a href="/blog/" style="font-size:12px;font-weight:700;color:var(--accent)">View all →</a>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px">
+          <a href="/blog/compress-image-free-online" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;text-decoration:none;display:block"><div style="font-size:10px;font-weight:700;color:var(--accent);margin-bottom:6px">GUIDE</div><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">How to Compress an Image Free</div><div style="font-size:11px;color:var(--muted)">No upload · quality slider</div></a>
+          <a href="/blog/heic-to-jpg-free" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;text-decoration:none;display:block"><div style="font-size:10px;font-weight:700;color:var(--accent);margin-bottom:6px">GUIDE</div><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">HEIC to JPG Free</div><div style="font-size:11px;color:var(--muted)">iPhone photos on any device</div></a>
+          <a href="/blog/remove-background-free-online" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;text-decoration:none;display:block"><div style="font-size:10px;font-weight:700;color:var(--accent);margin-bottom:6px">GUIDE</div><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">Remove Background Free</div><div style="font-size:11px;color:var(--muted)">Local AI · no upload</div></a>
+          <a href="/blog/best-free-image-compressor" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;text-decoration:none;display:block"><div style="font-size:10px;font-weight:700;color:var(--accent);margin-bottom:6px">GUIDE</div><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">Best Free Image Compressor</div><div style="font-size:11px;color:var(--muted)">Tested and compared 2026</div></a>
+        </div>
+      </div>
+    </div><!-- /panel-home -->
+
+    <!-- COMPRESS -->
+    <div class="panel" id="panel-compress">
+      <div class="ph"><h2>🗜 Compress Image</h2><p>Reduce image file size. Live before/after preview. JPG, PNG, WebP supported.</p></div>
+      <div class="dropzone" id="compress-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'compress')">
+        <input type="file" id="compress-in" accept="image/*">
+        <div class="dz-icon">🖼</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span> · JPG, PNG, WebP</div>
+      </div>
+      <div class="file-chip" id="compress-chip" class="rik-hidden"></div>
+      <div class="preview-wrap" id="compress-prev">
+        <div class="preview-box"><canvas id="compress-canvas-orig"></canvas><div class="preview-label">Original</div></div>
+        <div class="preview-box"><canvas id="compress-canvas-out"></canvas><div class="preview-label">Compressed</div></div>
+      </div>
+      <div class="controls" id="compress-ctrl" class="rik-hidden">
+        <div class="ctrl-row"><span class="ctrl-label">Quality</span><input type="range" id="compress-q" min="10" max="100" value="80" oninput="updateCompress()"><span class="ctrl-val" id="compress-qv">80%</span></div>
+        <div class="ctrl-row"><span class="ctrl-label">Format</span><div class="format-btns"><button class="fmt-btn on" data-fmt="jpeg" onclick="setFmt('compress','jpeg',this)">JPG</button><button class="fmt-btn" data-fmt="png" onclick="setFmt('compress','png',this)">PNG</button><button class="fmt-btn" data-fmt="webp" onclick="setFmt('compress','webp',this)">WebP</button></div></div>
+      </div>
+      <div class="result-box" id="compress-res"><div class="result-stats" id="compress-stats"></div><div class="btn-row"><button class="btn" onclick="downloadCanvas('compress-canvas-out','compressed',compressState.fmt)">⬇ Download</button></div></div>
+    </div>
+
+    <!-- RESIZE -->
+    <div class="panel" id="panel-resize">
+      <div class="ph"><h2>↔️ Resize Image</h2><p>Change image dimensions with aspect ratio lock.</p></div>
+      <div class="dropzone" id="resize-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'resize')">
+        <input type="file" id="resize-in" accept="image/*">
+        <div class="dz-icon">↔️</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
+      </div>
+      <div class="file-chip" id="resize-chip" class="rik-hidden"></div>
+      <div class="controls" id="resize-ctrl" class="rik-hidden">
+        <div class="ctrl-row"><span class="ctrl-label">Width</span><input class="ctrl-input" type="number" id="resize-w" oninput="resizeLock('w')" style="max-width:120px"> px</div>
+        <div class="ctrl-row"><span class="ctrl-label">Height</span><input class="ctrl-input" type="number" id="resize-h" oninput="resizeLock('h')" style="max-width:120px"> px</div>
+        <div class="ctrl-row"><span class="ctrl-label">Lock ratio</span><input type="checkbox" id="resize-lock" checked style="width:16px;height:16px;accent-color:var(--accent);cursor:pointer"><span style="font-size:12px;color:var(--muted)">Maintain aspect ratio</span></div>
+        <div class="ctrl-row"><span class="ctrl-label">Presets</span><div class="format-btns"><button class="fmt-btn" onclick="setResizePreset(1920,1080)">1080p</button><button class="fmt-btn" onclick="setResizePreset(1280,720)">720p</button><button class="fmt-btn" onclick="setResizePreset(800,600)">800×600</button><button class="fmt-btn" onclick="setResizePreset(400,400)">400×400</button></div></div>
+      </div>
+      <div class="btn-row" id="resize-btns" class="rik-hidden"><button class="btn" onclick="runResize()">↔️ Resize Image</button></div>
+      <div class="result-box" id="resize-res" style="margin-top:14px"><div class="result-stats" id="resize-stats"></div><div class="btn-row"><button class="btn" onclick="downloadCanvas('resize-canvas','resized','jpeg')">⬇ Download</button></div><canvas id="resize-canvas" style="max-width:100%;border-radius:8px;margin-top:12px;display:none"></canvas></div>
+    </div>
+
+    <!-- CONVERT -->
+    <div class="panel" id="panel-convert">
+      <div class="ph"><h2>🔄 Convert Format</h2><p>Convert between JPG, PNG and WebP instantly.</p></div>
+      <div class="dropzone" id="convert-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'convert')">
+        <input type="file" id="convert-in" accept="image/*">
+        <div class="dz-icon">🔄</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
+      </div>
+      <div class="file-chip" id="convert-chip" class="rik-hidden"></div>
+      <div class="controls" id="convert-ctrl" class="rik-hidden">
+        <div class="ctrl-row"><span class="ctrl-label">Convert to</span><div class="format-btns"><button class="fmt-btn" data-fmt="jpeg" onclick="setConvertFmt('jpeg',this)">JPG</button><button class="fmt-btn on" data-fmt="png" onclick="setConvertFmt('png',this)">PNG</button><button class="fmt-btn" data-fmt="webp" onclick="setConvertFmt('webp',this)">WebP</button></div></div>
+      </div>
+      <div class="btn-row" id="convert-btns" class="rik-hidden"><button class="btn" onclick="runConvert()">🔄 Convert</button></div>
+      <div class="result-box" id="convert-res" style="margin-top:14px"><div class="result-stats" id="convert-stats"></div><div class="btn-row"><button class="btn" id="convert-dl">⬇ Download</button></div></div>
+    </div>
+
+    <!-- CROP -->
+    <div class="panel" id="panel-crop">
+      <div class="ph"><h2>✂️ Crop Image</h2><p>Drag to select the crop area. Lock to common aspect ratios.</p></div>
+      <div class="dropzone" id="crop-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'crop')">
+        <input type="file" id="crop-in" accept="image/*">
+        <div class="dz-icon">✂️</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
+      </div>
+      <div class="file-chip" id="crop-chip" class="rik-hidden"></div>
+      <div class="controls" id="crop-ctrl" class="rik-hidden">
+        <div class="ctrl-row"><span class="ctrl-label">Ratio</span><div class="format-btns"><button class="fmt-btn on" onclick="setCropRatio('free',this)">Free</button><button class="fmt-btn" onclick="setCropRatio('1:1',this)">1:1</button><button class="fmt-btn" onclick="setCropRatio('16:9',this)">16:9</button><button class="fmt-btn" onclick="setCropRatio('4:3',this)">4:3</button><button class="fmt-btn" onclick="setCropRatio('3:2',this)">3:2</button></div></div>
+      </div>
+      <div id="crop-wrap" style="position:relative;display:none;margin-top:12px;user-select:none"><img id="crop-img" style="max-width:100%;display:block;border-radius:8px"><div id="crop-sel" style="position:absolute;border:2px solid var(--accent);box-shadow:0 0 0 9999px rgba(0,0,0,0.5);cursor:move;display:none"></div></div>
+      <div class="btn-row" id="crop-btns" style="display:none;margin-top:12px"><button class="btn" onclick="runCrop()">✂️ Crop</button></div>
+      <canvas id="crop-canvas" style="max-width:100%;border-radius:8px;margin-top:12px;display:none"></canvas>
+      <div class="btn-row" id="crop-dl" style="display:none;margin-top:8px"><button class="btn" onclick="downloadCanvas('crop-canvas','cropped','jpeg')">⬇ Download</button></div>
+    </div>
+
+    <!-- ROTATE -->
+    <div class="panel" id="panel-rotate">
+      <div class="ph"><h2>🔃 Rotate & Flip</h2><p>Rotate 90°, 180°, 270° or flip horizontally/vertically.</p></div>
+      <div class="dropzone" id="rotate-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'rotate')">
+        <input type="file" id="rotate-in" accept="image/*">
+        <div class="dz-icon">🔃</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
+      </div>
+      <div class="file-chip" id="rotate-chip" class="rik-hidden"></div>
+      <div class="controls" id="rotate-ctrl" class="rik-hidden">
+        <div class="ctrl-row" style="flex-wrap:wrap;gap:8px">
+          <button class="fmt-btn" onclick="applyRotate(90)">↻ 90°</button>
+          <button class="fmt-btn" onclick="applyRotate(180)">↻ 180°</button>
+          <button class="fmt-btn" onclick="applyRotate(270)">↻ 270°</button>
+          <button class="fmt-btn" onclick="applyFlip('h')">⇄ Flip H</button>
+          <button class="fmt-btn" onclick="applyFlip('v')">⇅ Flip V</button>
+        </div>
+      </div>
+      <canvas id="rotate-canvas" style="max-width:100%;border-radius:8px;margin-top:12px;display:none"></canvas>
+      <div class="btn-row" id="rotate-btns" style="display:none;margin-top:12px"><button class="btn" onclick="downloadCanvas('rotate-canvas','rotated','jpeg')">⬇ Download</button></div>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="panel" id="panel-filters">
+      <div class="ph"><h2>🎨 Filters</h2><p>Grayscale, sepia, invert, brightness, contrast and saturation.</p></div>
+      <div class="dropzone" id="filters-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'filters')">
+        <input type="file" id="filters-in" accept="image/*">
+        <div class="dz-icon">🎨</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
+      </div>
+      <div class="file-chip" id="filters-chip" class="rik-hidden"></div>
+      <div class="controls" id="filters-ctrl" class="rik-hidden">
+        <div class="ctrl-row"><span class="ctrl-label">Preset</span><div class="format-btns"><button class="fmt-btn on" onclick="setFilter('none',this)">None</button><button class="fmt-btn" onclick="setFilter('grayscale',this)">Grayscale</button><button class="fmt-btn" onclick="setFilter('sepia',this)">Sepia</button><button class="fmt-btn" onclick="setFilter('invert',this)">Invert</button></div></div>
+        <div class="ctrl-row"><span class="ctrl-label">Brightness</span><input type="range" id="f-bright" min="0" max="200" value="100" oninput="applyFilters()"><span class="ctrl-val" id="f-bright-v">100</span></div>
+        <div class="ctrl-row"><span class="ctrl-label">Contrast</span><input type="range" id="f-contrast" min="0" max="200" value="100" oninput="applyFilters()"><span class="ctrl-val" id="f-contrast-v">100</span></div>
+        <div class="ctrl-row"><span class="ctrl-label">Saturation</span><input type="range" id="f-sat" min="0" max="200" value="100" oninput="applyFilters()"><span class="ctrl-val" id="f-sat-v">100</span></div>
+      </div>
+      <canvas id="filters-canvas" style="max-width:100%;border-radius:8px;margin-top:12px;display:none"></canvas>
+      <div class="btn-row" id="filters-btns" style="display:none;margin-top:12px"><button class="btn" onclick="downloadCanvas('filters-canvas','filtered','jpeg')">⬇ Download</button></div>
+    </div>
+
+    <!-- WATERMARK -->
+    <div class="panel" id="panel-watermark">
+      <div class="ph"><h2>💧 Add Watermark</h2><p>Add text watermark. Control font size, opacity and position.</p></div>
+      <div class="dropzone" id="watermark-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'watermark')">
+        <input type="file" id="watermark-in" accept="image/*">
+        <div class="dz-icon">💧</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
+      </div>
+      <div class="file-chip" id="watermark-chip" class="rik-hidden"></div>
+      <div class="controls" id="watermark-ctrl" class="rik-hidden">
+        <div class="ctrl-row"><span class="ctrl-label">Text</span><input class="ctrl-input" type="text" id="wm-text" value="© My Photo" oninput="applyWatermark()" style="flex:1"></div>
+        <div class="ctrl-row"><span class="ctrl-label">Size</span><input type="range" id="wm-size" min="12" max="120" value="36" oninput="applyWatermark()"><span class="ctrl-val" id="wm-size-v">36</span></div>
+        <div class="ctrl-row"><span class="ctrl-label">Opacity</span><input type="range" id="wm-opacity" min="5" max="100" value="40" oninput="applyWatermark()"><span class="ctrl-val" id="wm-opacity-v">40%</span></div>
+        <div class="ctrl-row"><span class="ctrl-label">Position</span><div class="format-btns"><button class="fmt-btn" onclick="setWmPos('top-left',this)">↖</button><button class="fmt-btn" onclick="setWmPos('top-right',this)">↗</button><button class="fmt-btn on" onclick="setWmPos('center',this)">⊙</button><button class="fmt-btn" onclick="setWmPos('bottom-left',this)">↙</button><button class="fmt-btn" onclick="setWmPos('bottom-right',this)">↘</button></div></div>
+      </div>
+      <canvas id="watermark-canvas" style="max-width:100%;border-radius:8px;margin-top:12px;display:none"></canvas>
+      <div class="btn-row" id="watermark-btns" style="display:none;margin-top:12px"><button class="btn" onclick="downloadCanvas('watermark-canvas','watermarked','jpeg')">⬇ Download</button></div>
+    </div>
+
+    <!-- ADD TEXT -->
+    <div class="panel" id="panel-text">
+      <div class="ph"><h2>✏️ Add Text</h2><p>Add captions, labels or annotations to any image.</p></div>
+      <div class="dropzone" id="text-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'text')">
+        <input type="file" id="text-in" accept="image/*">
+        <div class="dz-icon">✏️</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
+      </div>
+      <div class="file-chip" id="text-chip" class="rik-hidden"></div>
+      <div class="controls" id="text-ctrl" class="rik-hidden">
+        <div class="ctrl-row"><span class="ctrl-label">Text</span><input class="ctrl-input" type="text" id="txt-text" value="Your text here" oninput="applyText()" style="flex:1"></div>
+        <div class="ctrl-row"><span class="ctrl-label">Size</span><input type="range" id="txt-size" min="10" max="120" value="32" oninput="applyText()"><span class="ctrl-val" id="txt-size-v">32</span></div>
+        <div class="ctrl-row"><span class="ctrl-label">Colour</span><input type="color" id="txt-color" value="#ffffff" oninput="applyText()" style="width:40px;height:30px;border:none;border-radius:6px;cursor:pointer;background:none"></div>
+        <div class="ctrl-row"><span class="ctrl-label">Position</span><div class="format-btns"><button class="fmt-btn" onclick="setTxtPos('top',this)">Top</button><button class="fmt-btn on" onclick="setTxtPos('center',this)">Center</button><button class="fmt-btn" onclick="setTxtPos('bottom',this)">Bottom</button></div></div>
+      </div>
+      <canvas id="text-canvas" style="max-width:100%;border-radius:8px;margin-top:12px;display:none"></canvas>
+      <div class="btn-row" id="text-btns" style="display:none;margin-top:12px"><button class="btn" onclick="downloadCanvas('text-canvas','with-text','jpeg')">⬇ Download</button></div>
+    </div>
+
+    <!-- IMAGE INFO -->
+    <div class="panel" id="panel-info">
+      <div class="ph"><h2>ℹ️ Image Info</h2><p>Get dimensions, file size, format and colour details.</p></div>
+      <div class="dropzone" id="info-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'info')">
+        <input type="file" id="info-in" accept="image/*">
+        <div class="dz-icon">ℹ️</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
+      </div>
+      <div class="result-box" id="info-res" style="margin-top:12px"><div id="info-table"></div></div>
+    </div>
+
+    <!-- HEIC TO JPG -->
+    <div class="panel" id="panel-heic">
+      <div class="ph"><h2>📱 HEIC to JPG</h2><p>Convert iPhone HEIC photos to JPG, PNG or WebP. No upload.</p></div>
+      <div class="dropzone" id="heic-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="heicDrop(event)">
+        <input type="file" id="heic-in" accept="image/*,.heic,.heif">
+        <div class="dz-icon">📱</div><div class="dz-title">Drop HEIC file here</div><div class="dz-sub">or <span>browse files</span> · .heic, .heif, JPG, PNG</div>
+      </div>
+      <div class="file-chip" id="heic-chip" class="rik-hidden"></div>
+      <div class="controls" id="heic-ctrl" class="rik-hidden">
+        <div class="ctrl-row"><span class="ctrl-label">Convert to</span><div class="format-btns"><button class="fmt-btn on" onclick="heicSetFmt('jpeg',this)">JPG</button><button class="fmt-btn" onclick="heicSetFmt('png',this)">PNG</button><button class="fmt-btn" onclick="heicSetFmt('webp',this)">WebP</button></div></div>
+        <div class="ctrl-row"><span class="ctrl-label">Quality</span><input type="range" id="heic-q" min="60" max="100" value="90" oninput="document.getElementById('heic-qv').textContent=this.value+'%'"><span class="ctrl-val" id="heic-qv">90%</span></div>
+      </div>
+      <canvas id="heic-canvas" style="max-width:100%;border-radius:8px;margin:12px 0;display:none"></canvas>
+      <div class="err-box" id="heic-err"></div>
+      <div class="btn-row" id="heic-btns" class="rik-hidden"><button class="btn" onclick="runHeicConvert()">📱 Convert & Download</button></div>
+    </div>
+
+    <!-- MERGE IMAGES -->
+    <div class="panel" id="panel-merge">
+      <div class="ph"><h2>🖼 Merge Images</h2><p>Combine two images side by side or stacked.</p></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+        <div><div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:6px;text-transform:uppercase">Image 1</div>
+          <div class="dropzone" style="padding:20px" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="mergeDrop(event,1)">
+            <input type="file" id="merge-in1" accept="image/*">
+            <div class="dz-icon" style="font-size:24px">🖼</div><div class="dz-sub" style="font-size:11px"><span>Browse</span></div>
+          </div>
+          <div id="merge-chip1" style="display:none;font-size:11px;color:var(--muted);margin-top:4px"></div>
+        </div>
+        <div><div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:6px;text-transform:uppercase">Image 2</div>
+          <div class="dropzone" style="padding:20px" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="mergeDrop(event,2)">
+            <input type="file" id="merge-in2" accept="image/*">
+            <div class="dz-icon" style="font-size:24px">🖼</div><div class="dz-sub" style="font-size:11px"><span>Browse</span></div>
+          </div>
+          <div id="merge-chip2" style="display:none;font-size:11px;color:var(--muted);margin-top:4px"></div>
+        </div>
+      </div>
+      <div class="controls" id="merge-ctrl" class="rik-hidden">
+        <div class="ctrl-row"><span class="ctrl-label">Layout</span><div class="format-btns"><button class="fmt-btn on" onclick="setMergeDir('horizontal',this)">⬛⬛ Side by side</button><button class="fmt-btn" onclick="setMergeDir('vertical',this)">🔲 Stacked</button></div></div>
+        <div class="ctrl-row"><span class="ctrl-label">Gap</span><input type="range" id="merge-gap" min="0" max="40" value="0" oninput="document.getElementById('merge-gap-v').textContent=this.value;runMerge()"><span class="ctrl-val" id="merge-gap-v">0</span></div>
+        <div class="ctrl-row"><span class="ctrl-label">Background</span><input type="color" id="merge-bg" value="#000000" oninput="runMerge()" style="width:40px;height:30px;border:none;border-radius:6px;cursor:pointer;background:none"></div>
+      </div>
+      <canvas id="merge-canvas" style="max-width:100%;border-radius:8px;margin-top:12px;display:none"></canvas>
+      <div class="btn-row" id="merge-btns" style="display:none;margin-top:12px">
+        <button class="btn" onclick="runMerge()">🖼 Merge</button>
+        <button class="btn" id="merge-dl" class="rik-hidden" onclick="downloadCanvas('merge-canvas','merged','jpeg')">⬇ Download</button>
+      </div>
+    </div>
+
+    <!-- COLOR PALETTE -->
+    <div class="panel" id="panel-palette">
+      <div class="ph"><h2>🎨 Color Palette</h2><p>Extract dominant colours from any image. Click to copy hex codes.</p></div>
+      <div class="dropzone" id="palette-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'palette')">
+        <input type="file" id="palette-in" accept="image/*">
+        <div class="dz-icon">🎨</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
+      </div>
+      <div class="file-chip" id="palette-chip" class="rik-hidden"></div>
+      <div class="controls" id="palette-ctrl" class="rik-hidden">
+        <div class="ctrl-row"><span class="ctrl-label">Colours</span><input type="range" id="palette-count" min="4" max="12" value="8" oninput="document.getElementById('palette-count-v').textContent=this.value"><span class="ctrl-val" id="palette-count-v">8</span></div>
+      </div>
+      <div class="btn-row" id="palette-btns" class="rik-hidden"><button class="btn" onclick="runPalette()">🎨 Extract Palette</button></div>
+      <div class="result-box" id="palette-res" style="margin-top:14px"><div id="palette-output"></div></div>
+    </div>
+
+    <!-- IMAGE TO PDF -->
+    <div class="panel" id="panel-img2pdf">
+      <div class="ph"><h2>📄 Image to PDF</h2><p>Convert one or multiple images into a single PDF.</p></div>
+      <div class="dropzone" id="img2pdf-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="img2pdfDrop(event)">
+        <input type="file" id="img2pdf-in" accept="image/*" multiple>
+        <div class="dz-icon">📄</div><div class="dz-title">Drop images here</div><div class="dz-sub">or <span>browse files</span> · Multiple images supported</div>
+      </div>
+      <div id="img2pdf-list" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px"></div>
+      <div class="prog" id="img2pdf-prog"><div class="prog-bar"><div class="prog-fill" id="img2pdf-pf"></div></div><div class="prog-label"><span id="img2pdf-status">Converting...</span><span id="img2pdf-pp">0%</span></div></div>
+      <div class="btn-row" id="img2pdf-btns" class="rik-hidden"><button class="btn" onclick="runImg2Pdf()">📄 Convert to PDF</button></div>
+    </div>
+
+    <!-- PRO: REMOVE BG -->
+    <div class="panel" id="panel-removebg">
+      <div class="ph"><h2>🪄 Remove Background <span style="font-size:12px;background:var(--accent);color:#fff;border-radius:5px;padding:2px 7px;vertical-align:middle">PRO</span></h2><p>Remove backgrounds using local AI. Your photo never leaves your device.</p></div>
+      <div id="removebg-gate" style="background:rgba(108,99,255,0.08);border:1px solid var(--border2);border-radius:16px;padding:28px;text-align:center">
+        <div style="font-size:36px;margin-bottom:12px">🪄</div>
+        <div style="font-weight:800;font-size:16px;margin-bottom:8px">Pro feature</div>
+        <div style="font-size:14px;color:var(--muted);margin-bottom:20px;max-width:320px;margin-left:auto;margin-right:auto">Background removal runs entirely in your browser using AI — your photos never leave your device.</div>
+        <button class="btn" onclick="window.location.href='https://rightpdfkit.lemonsqueezy.com/checkout/buy/29e1e924-ef12-4f4e-91fa-35e693698ef8'">⚡ Upgrade to Pro — £4.99/mo</button>
+        <div style="font-size:11px;color:var(--muted);margin-top:12px">Or enter dev code:</div>
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:8px">
+          <input class="ctrl-input" type="text" id="pro-code" placeholder="Dev code" style="max-width:180px;font-size:12px">
+          <button class="btn" style="padding:8px 16px;font-size:12px" onclick="checkProCode('removebg')">Unlock</button>
+        </div>
+      </div>
+      <div id="removebg-tool" class="rik-hidden">
+        <div class="dropzone" id="removebg-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'removebg')">
+          <input type="file" id="removebg-in" accept="image/*">
+          <div class="dz-icon">🖼</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
+        </div>
+        <div class="file-chip" id="removebg-chip" class="rik-hidden"></div>
+        <div class="prog" id="removebg-prog"><div class="prog-bar"><div class="prog-fill" id="removebg-pf"></div></div><div class="prog-label"><span id="removebg-status">Loading AI model...</span><span id="removebg-pp">0%</span></div></div>
+        <div class="preview-wrap" id="removebg-prev">
+          <div class="preview-box"><img id="removebg-orig" style="width:100%;height:180px;object-fit:contain;display:block"><div class="preview-label">Original</div></div>
+          <div class="preview-box" style="background:repeating-conic-gradient(#333 0% 25%,#222 0% 50%) 0 0/20px 20px"><canvas id="removebg-canvas" style="width:100%;height:180px;object-fit:contain;display:block"></canvas><div class="preview-label">Background removed</div></div>
+        </div>
+        <div class="err-box" id="removebg-err"></div>
+        <div class="btn-row" id="removebg-btns" class="rik-hidden">
+          <button class="btn" onclick="runRemoveBg()">🪄 Remove Background</button>
+          <button class="btn" id="removebg-dl" class="rik-hidden" onclick="downloadCanvas('removebg-canvas','no-bg','png')">⬇ Download PNG</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRO: BLUR -->
+    <div class="panel" id="panel-blur">
+      <div class="ph"><h2>🫥 Blur / Censor <span style="font-size:12px;background:var(--accent);color:#fff;border-radius:5px;padding:2px 7px;vertical-align:middle">PRO</span></h2><p>Draw over areas to blur or pixelate — faces, plates, sensitive info.</p></div>
+      <div id="blur-gate" style="background:rgba(108,99,255,0.08);border:1px solid var(--border2);border-radius:16px;padding:28px;text-align:center">
+        <div style="font-size:36px;margin-bottom:12px">🫥</div>
+        <button class="btn" onclick="window.location.href='https://rightpdfkit.lemonsqueezy.com/checkout/buy/29e1e924-ef12-4f4e-91fa-35e693698ef8'">⚡ Upgrade to Pro — £4.99/mo</button>
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:12px">
+          <input class="ctrl-input" type="text" id="blur-pro-code" placeholder="Dev code" style="max-width:180px;font-size:12px">
+          <button class="btn" style="padding:8px 16px;font-size:12px" onclick="checkProCode('blur')">Unlock</button>
+        </div>
+      </div>
+      <div id="blur-tool" class="rik-hidden">
+        <div class="dropzone" id="blur-dz" ondragover="dzOver(event)" ondragleave="dzLeave(event)" ondrop="dzDrop(event,'blur')">
+          <input type="file" id="blur-in" accept="image/*">
+          <div class="dz-icon">🫥</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div>
+        </div>
+        <div class="file-chip" id="blur-chip" class="rik-hidden"></div>
+        <div class="controls" id="blur-ctrl" class="rik-hidden">
+          <div class="ctrl-row"><span class="ctrl-label">Mode</span><div class="format-btns"><button class="fmt-btn on" onclick="setBlurMode('blur',this)">🌫 Blur</button><button class="fmt-btn" onclick="setBlurMode('pixelate',this)">⬛ Pixelate</button></div></div>
+          <div class="ctrl-row"><span class="ctrl-label">Strength</span><input type="range" id="blur-strength" min="5" max="40" value="15" oninput="document.getElementById('blur-strength-v').textContent=this.value"><span class="ctrl-val" id="blur-strength-v">15</span></div>
+          <div class="ctrl-row"><span class="ctrl-label">Brush</span><input type="range" id="blur-brush" min="20" max="150" value="60" oninput="document.getElementById('blur-brush-v').textContent=this.value"><span class="ctrl-val" id="blur-brush-v">60</span></div>
+          <div style="font-size:12px;color:var(--muted)">👆 Draw on the image below to blur</div>
+        </div>
+        <div style="position:relative;display:inline-block;margin-top:12px;max-width:100%" id="blur-wrap">
+          <canvas id="blur-canvas" style="max-width:100%;border-radius:8px;display:none;cursor:crosshair"></canvas>
+        </div>
+        <div class="btn-row" id="blur-btns" style="display:none;margin-top:12px">
+          <button class="btn" onclick="downloadCanvas('blur-canvas','censored','jpeg')">⬇ Download</button>
+          <button class="btn" style="background:var(--surface2);color:var(--muted);box-shadow:none" onclick="resetBlur()">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRO PLACEHOLDERS -->
+    <div class="panel" id="panel-enhance"><div class="ph"><h2>✨ AI Enhance <span style="font-size:12px;background:var(--accent);color:#fff;border-radius:5px;padding:2px 7px;vertical-align:middle">PRO</span></h2><p>Auto-enhance photos using Claude AI.</p></div><div style="background:rgba(108,99,255,0.08);border:1px solid var(--border2);border-radius:16px;padding:28px;text-align:center"><div style="font-size:36px;margin-bottom:12px">✨</div><button class="btn" onclick="window.location.href='https://rightpdfkit.lemonsqueezy.com/checkout/buy/29e1e924-ef12-4f4e-91fa-35e693698ef8'">⚡ Upgrade to Pro</button></div></div>
+    <div class="panel" id="panel-bulk"><div class="ph"><h2>📦 Bulk Compress <span style="font-size:12px;background:var(--accent);color:#fff;border-radius:5px;padding:2px 7px;vertical-align:middle">PRO</span></h2><p>Compress multiple images at once. Download as ZIP.</p></div><div style="background:rgba(108,99,255,0.08);border:1px solid var(--border2);border-radius:16px;padding:28px;text-align:center"><div style="font-size:36px;margin-bottom:12px">📦</div><button class="btn" onclick="window.location.href='https://rightpdfkit.lemonsqueezy.com/checkout/buy/29e1e924-ef12-4f4e-91fa-35e693698ef8'">⚡ Upgrade to Pro</button></div></div>
+    <div class="panel" id="panel-roundcorners"><div class="ph"><h2>⬜ Round Corners <span style="font-size:12px;background:var(--accent);color:#fff;border-radius:5px;padding:2px 7px;vertical-align:middle">PRO</span></h2><p>Add rounded corners to any image. Export as PNG.</p></div><div style="background:rgba(108,99,255,0.08);border:1px solid var(--border2);border-radius:16px;padding:28px;text-align:center"><div style="font-size:36px;margin-bottom:12px">⬜</div><button class="btn" onclick="window.location.href='https://rightpdfkit.lemonsqueezy.com/checkout/buy/29e1e924-ef12-4f4e-91fa-35e693698ef8'">⚡ Upgrade to Pro</button></div></div>
+
+    <!-- PRICING -->
+    <div class="panel" id="panel-pricing">
+      <div class="ph"><h2>⚡ Pricing</h2><p>10 tools free forever. Pro unlocks AI-powered features.</p></div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div style="font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">Free</div>
+          <div class="price-tag">£0 <span>forever</span></div>
+          <div style="height:1px;background:var(--border);margin:16px 0"></div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--muted)">
+            <div>✓ Compress</div><div>✓ Resize</div><div>✓ Convert</div><div>✓ Crop</div>
+            <div>✓ Rotate & Flip</div><div>✓ Watermark</div><div>✓ Filters</div>
+            <div>✓ Add Text</div><div>✓ Image to PDF</div><div>✓ Image Info</div>
+            <div>✓ HEIC to JPG</div><div>✓ Merge Images</div><div>✓ Color Palette</div>
+          </div>
+        </div>
+        <div class="pricing-card featured">
+          <div style="font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">Pro</div>
+          <div class="price-tag">£4.99 <span>/ month</span></div>
+          <div style="height:1px;background:var(--border);margin:16px 0"></div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--muted)">
+            <div style="color:var(--text);font-weight:700">Everything in Free, plus:</div>
+            <div>⚡ Remove Background (local AI)</div>
+            <div>⚡ Blur / Censor Areas</div>
+            <div>⚡ AI Enhance (Claude)</div>
+            <div>⚡ Bulk Compress</div>
+            <div>⚡ Round Corners</div>
+          </div>
+          <button class="btn" style="width:100%;margin-top:20px;justify-content:center" onclick="window.location.href='https://rightpdfkit.lemonsqueezy.com/checkout/buy/29e1e924-ef12-4f4e-91fa-35e693698ef8'">Get Pro →</button>
+          <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border)">
+            <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:10px">Already have a license key?</div>
+            <div style="display:flex;gap:8px">
+              <input class="ctrl-input" type="text" id="rik-license-key" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" style="flex:1;font-size:12px;font-family:monospace">
+              <button class="btn" style="padding:8px 14px;font-size:12px;white-space:nowrap" onclick="activateLicense()">Activate</button>
+            </div>
+            <div id="license-msg" style="font-size:12px;margin-top:6px;display:none"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /main -->
+</div><!-- /app -->
+
 <div class="toast" id="toast"></div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
 <script>
-/* ============================================================
-   RightImageKit — privacy-first, single-file image toolkit
-   Everything runs locally. No network calls touch user images.
-   ============================================================ */
-(function(){
-  "use strict";
+// ── STATE ──
+const DEV_CODE = 'rik2026'
+const LS_URL   = 'https://rightpdfkit.lemonsqueezy.com/checkout/buy/29e1e924-ef12-4f4e-91fa-35e693698ef8'
+let isPro = localStorage.getItem('rik-pro') === 'true'
+const PRO_TOOLS = new Set(['removebg','blur','enhance','bulk','roundcorners'])
+const imgState  = {}
+const compressState = {fmt:'jpeg'}
+let convertFmt  = 'png'
 
-  /* ---------- tiny helpers ---------- */
-  const $ = (s,r=document)=>r.querySelector(s);
-  const el = (t,a={},...kids)=>{const n=document.createElement(t);for(const k in a){if(k==="class")n.className=a[k];else if(k==="html")n.innerHTML=a[k];else if(k.startsWith("on"))n.addEventListener(k.slice(2),a[k]);else n.setAttribute(k,a[k]);}kids.flat().forEach(c=>n.append(c.nodeType?c:document.createTextNode(c)));return n;};
-  const fmtBytes = b=>{if(b<1024)return b+" B";if(b<1048576)return (b/1024).toFixed(1)+" KB";return (b/1048576).toFixed(2)+" MB";};
-  let toastT;
-  function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove("show"),2200);}
-  function safeStore(){try{return window.localStorage;}catch(e){return null;}}
-
-  /* ---------- state ---------- */
-  const state = { img:null, fileName:"image", fileType:"image/png", origSize:0, isPro:false };
-  const DEV_CODE = "rik2026";
-  const WORKER_URL = "https://rightimagekit-ai.YOUR-SUBDOMAIN.workers.dev"; // ← set to your deployed Cloudflare Worker
-  const store = safeStore();
-  state.isPro = store ? store.getItem("rik_pro")==="1" : false;
-  state.license = store ? (store.getItem("rik_license")||"") : "";
-
-  /* ---------- file loading ---------- */
-  const fileInput = $("#fileInput");
-  function pickFile(){ fileInput.value=""; fileInput.click(); }
-  fileInput.addEventListener("change", e=>{ if(e.target.files[0]) loadFile(e.target.files[0]); });
-
-  function loadFile(file){
-    if(!file.type.startsWith("image/")){ toast("Please choose an image file"); return; }
-    state.fileName = file.name.replace(/\.[^.]+$/,"") || "image";
-    state.fileType = file.type; state.origSize = file.size;
-    const url = URL.createObjectURL(file);
-    const img = new Image();
-    img.onload = ()=>{ state.img = img; state._objURL=url; showLoaded(file.name, img.naturalWidth, img.naturalHeight);
-      if(pendingTool){ openTool(pendingTool); pendingTool=null; } else { toast("Loaded "+file.name); const ts=document.getElementById("tools"); ts&&ts.scrollIntoView({behavior:"smooth"}); } };
-    img.onerror = ()=>{ toast("Couldn't read that image — if it's an iPhone HEIC photo, try a JPG/PNG"); };
-    img.src = url;
+// Auto-unlock if returning from checkout
+;(function(){
+  const p = new URLSearchParams(window.location.search)
+  if (p.get('upgraded') === '1') {
+    isPro = true; localStorage.setItem('rik-pro','true')
+    toast('Pro unlocked! ⚡')
+    window.history.replaceState({},'',window.location.pathname)
   }
+})()
 
-  function showLoaded(name,w,h){
-    const d=$("#drop"); if(!d)return; d.classList.remove("drag"); d.innerHTML="";
-    d.append(
-      el("img",{src:state.img.src,style:"max-height:150px;max-width:100%;border-radius:10px;box-shadow:0 6px 18px -8px rgba(0,0,0,.3)"}),
-      el("h3",{style:"margin-top:14px"},"Image ready"),
-      el("p",{class:"mono",style:"font-size:12px;color:var(--faint);margin:4px 0"}, name+" · "+w+"×"+h),
-      el("p",{style:"margin:6px 0 14px;color:var(--muted);font-size:14px"},"Now pick a tool below ↓"),
-      el("button",{class:"btn ghost sm",onclick:pickFile},"Choose a different image")
-    );
+// ── NAV ──
+function nav(id) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'))
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'))
+  const panel = document.getElementById('panel-'+id)
+  if (panel) panel.classList.add('active')
+  const navEl = document.querySelector('[data-t="'+id+'"]')
+  if (navEl) navEl.classList.add('active')
+  if (PRO_TOOLS.has(id)) {
+    const gate = document.getElementById(id+'-gate')
+    const tool = document.getElementById(id+'-tool')
+    if (gate) { isPro ? gate.classList.add('rik-hidden') : gate.classList.remove('rik-hidden') }
+    if (tool) { isPro ? tool.classList.remove('rik-hidden') : tool.classList.add('rik-hidden') }
   }
+}
 
-  // drag + drop
-  const drop = $("#drop");
-  ["dragenter","dragover"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add("drag");}));
-  ["dragleave","drop"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove("drag");}));
-  drop.addEventListener("drop", e=>{ const f=e.dataTransfer.files[0]; if(f) loadFile(f); });
-  $("#dropPick").addEventListener("click",pickFile);
-  $("#heroPick").addEventListener("click",pickFile);
-
-  /* ---------- canvas utils ---------- */
-  function baseCanvas(){ const c=document.createElement("canvas"); c.width=state.img.naturalWidth; c.height=state.img.naturalHeight; c.getContext("2d").drawImage(state.img,0,0); return c; }
-  function download(canvas, type, quality, ext){
-    canvas.toBlob(blob=>{
-      const a=el("a",{href:URL.createObjectURL(blob),download:`${state.fileName}-rightimagekit.${ext}`});
-      document.body.append(a); a.click(); a.remove();
-      toast("Saved "+fmtBytes(blob.size));
-    }, type, quality);
+function toggleMobileMenu() {
+  const s = document.getElementById('sidebar')
+  if (s.classList.contains('sidebar-open')) {
+    s.classList.remove('sidebar-open')
+    s.style.cssText = ''
+  } else {
+    s.classList.add('sidebar-open')
+    s.style.cssText = 'display:flex !important;position:fixed;z-index:200;height:100vh;left:0;top:0;width:260px'
   }
-  function blobOf(canvas,type,q){ return new Promise(res=>canvas.toBlob(res,type,q)); }
+}
 
-  /* ---------- compact EXIF reader (JPEG) ---------- */
-  function readEXIF(buf){
-    const out={}; const d=new DataView(buf);
-    if(d.byteLength<4 || d.getUint16(0)!==0xFFD8) return out;
-    let o=2, app1=-1;
-    while(o<d.byteLength-1){ if(d.getUint8(o)!==0xFF)break; const m=d.getUint8(o+1); const len=d.getUint16(o+2);
-      if(m===0xE1 && d.getUint32(o+4)===0x45786966){ app1=o+10; break; }
-      if(m===0xDA)break; o+=2+len; }
-    if(app1<0) return out;
-    const tiff=app1; const little=d.getUint16(tiff)===0x4949;
-    const u16=p=>d.getUint16(p,little), u32=p=>d.getUint32(p,little);
-    const TAGS={0x010F:"Make",0x0110:"Camera Model",0x0132:"Date Taken",0x0112:"Orientation",0x8827:"ISO",0x829A:"Exposure",0x829D:"Aperture",0x920A:"Focal Length",0x0131:"Software",0xA002:"Width",0xA003:"Height"};
-    function readIFD(start){
-      const res={}; let exifPtr=0,gpsPtr=0; const n=u16(start);
-      for(let i=0;i<n;i++){ const e=start+2+i*12; const tag=u16(e), type=u16(e+2), cnt=u32(e+4), valOff=e+8;
-        const sizes={1:1,2:1,3:2,4:4,5:8,7:1,10:8}; const sz=(sizes[type]||1)*cnt;
-        if(tag===0x8769){exifPtr=tiff+u32(valOff);continue;} if(tag===0x8825){gpsPtr=tiff+u32(valOff);continue;}
-        const p = sz<=4 ? valOff : tiff+u32(valOff);
-        let val;
-        if(type===2){ let s=""; for(let j=0;j<cnt-1;j++){const ch=d.getUint8(p+j); if(ch)s+=String.fromCharCode(ch);} val=s.trim(); }
-        else if(type===3){ val=u16(p); }
-        else if(type===4){ val=u32(p); }
-        else if(type===5){ const num=u32(p),den=u32(p+4)||1; val=Math.round(num/den*1000)/1000; }
-        else continue;
-        if(TAGS[tag]!==undefined && val!=="" && val!=null) res[TAGS[tag]]=String(val);
+function checkProCode(tool) {
+  const input = document.getElementById((tool==='removebg'?'pro':'blur-pro')+'-code')
+  if (!input) return
+  if (input.value.trim() === DEV_CODE) {
+    isPro = true; localStorage.setItem('rik-pro','true'); toast('Pro unlocked! ✓'); nav(tool)
+  } else { toast('Invalid code') }
+}
+
+// ── DRAG & DROP ──
+function dzOver(e) { e.preventDefault(); e.currentTarget.classList.add('drag') }
+function dzLeave(e) { e.currentTarget.classList.remove('drag') }
+function dzDrop(e, tool) {
+  e.preventDefault(); e.currentTarget.classList.remove('drag')
+  const f = e.dataTransfer.files[0]; if(f) loadImage(f, tool)
+}
+function heicDrop(e) { e.preventDefault(); e.currentTarget.classList.remove('drag'); const f=e.dataTransfer.files[0]; if(f) heicLoad(f) }
+function img2pdfDrop(e) { e.preventDefault(); e.currentTarget.classList.remove('drag'); img2pdfLoad(e.dataTransfer.files) }
+function mergeDrop(e, n) { e.preventDefault(); e.currentTarget.classList.remove('drag'); const f=e.dataTransfer.files[0]; if(f) mergeLoad(f,n) }
+
+// ── IMAGE LOADER ──
+function loadImage(file, tool) {
+  if (!file) return
+  const chip = document.getElementById(tool + '-chip')
+  if (chip) {
+    chip.classList.remove('rik-hidden')
+    const x = document.createElement('span')
+    x.className = 'x'; x.textContent = '✕'
+    x.onclick = function() { clearTool(tool) }
+    chip.textContent = ''
+    chip.appendChild(document.createTextNode('📎 ' + file.name + ' (' + fmtSize(file.size) + ') '))
+    chip.appendChild(x)
+  }
+  // Show controls immediately
+  const ctrl = document.getElementById(tool + '-ctrl')
+  const btns = document.getElementById(tool + '-btns')
+  if (ctrl) ctrl.classList.remove('rik-hidden')
+  if (btns) btns.classList.remove('rik-hidden')
+
+  // Load image using object URL (faster than FileReader)
+  const url = URL.createObjectURL(file)
+  const img = new Image()
+  img.onload = function() {
+    URL.revokeObjectURL(url)
+    imgState[tool] = { img: img, file: file, name: file.name.replace(/\.[^.]+$/, ''), origSize: file.size }
+    onImageLoaded(tool)
+  }
+  img.onerror = function() {
+    // Fallback to FileReader
+    const reader = new FileReader()
+    reader.onload = function(ev) {
+      const img2 = new Image()
+      img2.onload = function() {
+        imgState[tool] = { img: img2, file: file, name: file.name.replace(/\.[^.]+$/, ''), origSize: file.size }
+        onImageLoaded(tool)
       }
-      return {res,exifPtr,gpsPtr};
+      img2.src = ev.target.result
     }
-    const a=readIFD(tiff+u32(tiff+4)); Object.assign(out,a.res);
-    if(a.exifPtr) Object.assign(out, readIFD(a.exifPtr).res);
-    if(a.gpsPtr){ const g=a.gpsPtr; const n=u16(g); let latRef="",lonRef="",lat=null,lon=null;
-      for(let i=0;i<n;i++){ const e=g+2+i*12; const tag=u16(e), valOff=e+8;
-        const rat3=()=>{ const p=tiff+u32(valOff); const r=q=>u32(p+q*8)/(u32(p+q*8+4)||1); return r(0)+r(1)/60+r(2)/3600; };
-        if(tag===1)latRef=String.fromCharCode(d.getUint8(valOff));
-        else if(tag===2)lat=rat3();
-        else if(tag===3)lonRef=String.fromCharCode(d.getUint8(valOff));
-        else if(tag===4)lon=rat3();
-      }
-      if(lat!=null&&lon!=null){ const la=(latRef==="S"?-1:1)*lat, lo=(lonRef==="W"?-1:1)*lon; out["GPS Location"]=la.toFixed(5)+", "+lo.toFixed(5); }
-    }
-    return out;
+    reader.readAsDataURL(file)
   }
+  img.src = url
+}
 
-  /* ============================================================
-     TOOL REGISTRY
-     each: {id,name,cat,icon,desc,pro,build(stage,controls)}
-     ============================================================ */
-  const TOOLS = [];
-  const add = t=>TOOLS.push(t);
+function onImageLoaded(tool) {
+  const s = imgState[tool]; if (!s) return
+  // Ensure controls visible (may already be from loadImage)
+  const ctrl = document.getElementById(tool+'-ctrl')
+  const btns = document.getElementById(tool+'-btns')
+  if (ctrl) ctrl.classList.remove('rik-hidden')
+  if (btns) btns.classList.remove('rik-hidden')
+  switch(tool) {
+    case 'compress':
+      drawToCanvas('compress-canvas-orig', s.img)
+      updateCompress()
+      break
+    case 'resize':
+      if (s.img.naturalWidth) {
+        document.getElementById('resize-w').value = s.img.naturalWidth
+        document.getElementById('resize-h').value = s.img.naturalHeight
+        _rOrigW = s.img.naturalWidth; _rOrigH = s.img.naturalHeight
+      }
+      break
+    case 'rotate': drawToCanvas('rotate-canvas', s.img); break
+    case 'filters': applyFilters(); break
+    case 'watermark': applyWatermark(); break
+    case 'text': applyText(); break
+    case 'crop':
+      const ci = document.getElementById('crop-img')
+      ci.src = s.img.src; ci.classList.remove('rik-hidden')
+      document.getElementById('crop-wrap').classList.remove('rik-hidden')
+      setTimeout(initCrop, 100)
+      break
+    case 'info': showInfo(s); break
+    case 'palette':
+      break
+    case 'removebg':
+      const ro = document.getElementById('removebg-orig')
+      if (ro) ro.src = s.img.src
+      document.getElementById('removebg-prev').classList.remove('rik-hidden')
+      break
+    case 'blur':
+      setupBlurCanvas()
+      break
+  }
+}
 
-  /* ---- helper UI builders ---- */
-  const field=(label,...inner)=>el("div",{class:"field"},el("label",{},label),...inner);
-  const stage = c=>{const s=$("#wsStage");s.innerHTML="";s.append(c);return c;};
+function fmtSize(b) {
+  if(b<1024) return b+' B'
+  if(b<1048576) return (b/1024).toFixed(1)+' KB'
+  return (b/1048576).toFixed(2)+' MB'
+}
 
-  /* ---------- OPTIMISE ---------- */
-  add({id:"compress",name:"Compress",cat:"Optimise",icon:"🗜️",desc:"Shrink file size with a quality slider.",
-    build(){
-      const c=baseCanvas(); const prev=el("img"); stage(prev);
-      const qv=el("span",{class:"mono"},"80%");
-      const sizeNow=el("b",{},"—");
-      let q=0.8, type="image/jpeg";
-      const render=async()=>{ const b=await blobOf(c,type,q); prev.src=URL.createObjectURL(b); sizeNow.textContent=fmtBytes(b.size); };
-      const range=el("input",{type:"range",min:"10",max:"100",value:"80",oninput:e=>{q=e.target.value/100;qv.textContent=e.target.value+"%";render();}});
-      const seg=el("div",{class:"seg"}); [["JPG","image/jpeg"],["WEBP","image/webp"],["PNG","image/png"]].forEach(([l,t],i)=>{
-        const b=el("button",{class:i===0?"on":"",onclick:()=>{[...seg.children].forEach(x=>x.classList.remove("on"));b.classList.add("on");type=t;render();}},l); seg.append(b);
-      });
-      render();
-      $("#wsControls").replaceChildren(
-        field("Format", seg),
-        field("Quality", range, el("div",{class:"stat"},el("span",{},"Level"),qv)),
-        el("div",{class:"stat"},el("span",{},"Original"),el("b",{},fmtBytes(state.origSize))),
-        el("div",{class:"stat"},el("span",{},"Compressed"),sizeNow),
-        el("button",{class:"btn",onclick:async()=>{const b=await blobOf(c,type,q);const a=el("a",{href:URL.createObjectURL(b),download:`${state.fileName}-compressed.${type==='image/jpeg'?'jpg':type==='image/webp'?'webp':'png'}`});document.body.append(a);a.click();a.remove();toast("Saved "+fmtBytes(b.size));}},"Download")
-      );
-    }});
+function clearTool(tool) {
+  imgState[tool] = null
+  const ids = [tool+'-chip',tool+'-ctrl',tool+'-btns',tool+'-res',tool+'-prev']
+  ids.forEach(id => { const el=document.getElementById(id); if(el){ el.classList.add('rik-hidden'); el.classList.add('rik-hidden') } })
+}
 
-  add({id:"resize",name:"Resize",cat:"Optimise",icon:"📐",desc:"Set exact pixel dimensions, lock aspect.",
-    build(){
-      const c=baseCanvas(); const ow=c.width, oh=c.height; const ratio=ow/oh;
-      const prev=el("img",{src:c.toDataURL()}); stage(prev);
-      let lock=true;
-      const wIn=el("input",{type:"number",value:ow,min:"1"});
-      const hIn=el("input",{type:"number",value:oh,min:"1"});
-      wIn.addEventListener("input",()=>{ if(lock) hIn.value=Math.round(wIn.value/ratio); });
-      hIn.addEventListener("input",()=>{ if(lock) wIn.value=Math.round(hIn.value*ratio); });
-      const lockBtn=el("button",{class:"btn ghost sm",onclick:()=>{lock=!lock;lockBtn.textContent=lock?"🔒 Aspect locked":"🔓 Free";}},"🔒 Aspect locked");
-      const seg=el("div",{class:"seg"}); [["50%",.5],["25%",.25],["1080",null],["512",null]].forEach(([l,f])=>{
-        seg.append(el("button",{onclick:()=>{ if(f){wIn.value=Math.round(ow*f);hIn.value=Math.round(oh*f);} else { const t=parseInt(l); if(ow>=oh){wIn.value=t;hIn.value=Math.round(t/ratio);} else {hIn.value=t;wIn.value=Math.round(t*ratio);} } }},l));
-      });
-      $("#wsControls").replaceChildren(
-        field("Width (px)", wIn), field("Height (px)", hIn), lockBtn,
-        field("Presets", seg),
-        el("button",{class:"btn",onclick:()=>{
-          const nc=el("canvas"); nc.width=Math.max(1,parseInt(wIn.value)); nc.height=Math.max(1,parseInt(hIn.value));
-          const ctx=nc.getContext("2d"); ctx.imageSmoothingQuality="high"; ctx.drawImage(state.img,0,0,nc.width,nc.height);
-          download(nc, state.fileType==="image/jpeg"?"image/jpeg":"image/png", .95, state.fileType==="image/jpeg"?"jpg":"png");
-        }},"Resize & download")
-      );
-    }});
+function drawToCanvas(id, img, w, h) {
+  const c = document.getElementById(id); if(!c) return
+  const W = w||img.naturalWidth, H = h||img.naturalHeight
+  c.width=W; c.height=H; c.classList.remove('rik-hidden')
+  const ctx = c.getContext('2d'); ctx.clearRect(0,0,W,H); ctx.drawImage(img,0,0,W,H)
+  return ctx
+}
 
-  add({id:"convert",name:"Convert",cat:"Optimise",icon:"🔄",desc:"PNG ⇄ JPG ⇄ WebP in a click.",
-    build(){
-      const c=baseCanvas(); stage(el("img",{src:c.toDataURL()}));
-      let type="image/png";
-      const seg=el("div",{class:"seg"}); [["PNG","image/png"],["JPG","image/jpeg"],["WEBP","image/webp"]].forEach(([l,t],i)=>{
-        const b=el("button",{class:i===0?"on":"",onclick:()=>{[...seg.children].forEach(x=>x.classList.remove("on"));b.classList.add("on");type=t;}},l);seg.append(b);
-      });
-      $("#wsControls").replaceChildren(
-        field("Export as", seg),
-        el("p",{class:"hint"},"JPG and WebP flatten transparency onto white. PNG keeps it."),
-        el("button",{class:"btn",onclick:()=>{
-          let cc=c;
-          if(type!=="image/png"){ cc=el("canvas");cc.width=c.width;cc.height=c.height;const x=cc.getContext("2d");x.fillStyle="#fff";x.fillRect(0,0,cc.width,cc.height);x.drawImage(c,0,0); }
-          download(cc,type,.95,type==="image/jpeg"?"jpg":type==="image/webp"?"webp":"png");
-        }},"Convert & download")
-      );
-    }});
+function toast(msg) {
+  const t = document.getElementById('toast'); t.textContent=msg; t.classList.remove('rik-hidden')
+  setTimeout(()=>t.classList.add('rik-hidden'), 2500)
+}
 
-  /* ---------- TRANSFORM ---------- */
-  add({id:"crop",name:"Crop",cat:"Transform",icon:"✂️",desc:"Drag a selection and crop to it.",
-    build(){
-      const c=baseCanvas(); const view=el("canvas"); const scale=Math.min(1, 460/Math.max(c.width,c.height));
-      view.width=c.width*scale; view.height=c.height*scale; view.style.cursor="crosshair";
-      const vx=view.getContext("2d");
-      let sel={x:.15*view.width,y:.15*view.height,w:.7*view.width,h:.7*view.height};
-      function draw(){ vx.clearRect(0,0,view.width,view.height); vx.drawImage(c,0,0,view.width,view.height);
-        vx.fillStyle="rgba(16,17,28,.45)"; vx.fillRect(0,0,view.width,view.height);
-        vx.clearRect(sel.x,sel.y,sel.w,sel.h); vx.drawImage(c, sel.x/scale,sel.y/scale,sel.w/scale,sel.h/scale, sel.x,sel.y,sel.w,sel.h);
-        vx.strokeStyle="#3D5AFE"; vx.lineWidth=2; vx.strokeRect(sel.x,sel.y,sel.w,sel.h); }
-      draw(); stage(view);
-      let drag=null;
-      const pos=e=>{const r=view.getBoundingClientRect();const t=e.touches?e.touches[0]:e;return {x:(t.clientX-r.left)*(view.width/r.width),y:(t.clientY-r.top)*(view.height/r.height)};};
-      const start=e=>{e.preventDefault();const p=pos(e);drag={ox:p.x,oy:p.y,sel:{...sel}};};
-      const move=e=>{ if(!drag)return; const p=pos(e); sel.x=Math.max(0,Math.min(drag.sel.x+(p.x-drag.ox),view.width-sel.w)); sel.y=Math.max(0,Math.min(drag.sel.y+(p.y-drag.oy),view.height-sel.h)); draw(); };
-      const end=()=>drag=null;
-      view.addEventListener("mousedown",start); view.addEventListener("touchstart",start,{passive:false});
-      window.addEventListener("mousemove",move); window.addEventListener("touchmove",move,{passive:false});
-      window.addEventListener("mouseup",end); window.addEventListener("touchend",end);
-      const wIn=el("input",{type:"range",min:"10",max:"100",value:"70",oninput:e=>{sel.w=view.width*e.target.value/100;sel.h=view.height*e.target.value/100;sel.x=Math.min(sel.x,view.width-sel.w);sel.y=Math.min(sel.y,view.height-sel.h);draw();}});
-      $("#wsControls").replaceChildren(
-        el("p",{class:"hint"},"Drag the bright box to position it."),
-        field("Selection size", wIn),
-        el("button",{class:"btn",onclick:()=>{
-          const nc=el("canvas"); nc.width=Math.round(sel.w/scale); nc.height=Math.round(sel.h/scale);
-          nc.getContext("2d").drawImage(c, sel.x/scale,sel.y/scale,sel.w/scale,sel.h/scale, 0,0,nc.width,nc.height);
-          download(nc,"image/png",.95,"png");
-        }},"Crop & download")
-      );
-    }});
+function downloadCanvas(id, name, fmt) {
+  const c = document.getElementById(id); if(!c) return
+  const ext = fmt==='jpeg'?'jpg':fmt
+  c.toBlob(blob=>{
+    const url=URL.createObjectURL(blob), a=document.createElement('a')
+    a.href=url; a.download=name+'.'+ext; a.click(); URL.revokeObjectURL(url)
+    toast('Downloaded ✓')
+  }, 'image/'+fmt, 0.92)
+}
 
-  add({id:"rotate",name:"Rotate & Flip",cat:"Transform",icon:"🔁",desc:"Turn 90° or mirror horizontally / vertically.",
-    build(){
-      let rot=0, fx=false, fy=false;
-      const prev=el("img"); stage(prev);
-      function out(){ const r=((rot%360)+360)%360; const swap=r===90||r===270;
-        const nc=el("canvas"); nc.width=swap?state.img.naturalHeight:state.img.naturalWidth; nc.height=swap?state.img.naturalWidth:state.img.naturalHeight;
-        const x=nc.getContext("2d"); x.translate(nc.width/2,nc.height/2); x.rotate(r*Math.PI/180); x.scale(fx?-1:1,fy?-1:1);
-        x.drawImage(state.img,-state.img.naturalWidth/2,-state.img.naturalHeight/2); return nc; }
-      const upd=()=>prev.src=out().toDataURL();
-      upd();
-      const seg=el("div",{class:"seg"},
-        el("button",{onclick:()=>{rot-=90;upd();}},"⟲ 90°"),
-        el("button",{onclick:()=>{rot+=90;upd();}},"⟳ 90°"),
-        el("button",{onclick:()=>{fx=!fx;upd();}},"⇋ H"),
-        el("button",{onclick:()=>{fy=!fy;upd();}},"⇅ V"));
-      $("#wsControls").replaceChildren(
-        field("Transform", seg),
-        el("button",{class:"btn",onclick:()=>download(out(), state.fileType==="image/jpeg"?"image/jpeg":"image/png",.95,state.fileType==="image/jpeg"?"jpg":"png")},"Download")
-      );
-    }});
+// ── COMPRESS ──
+function setFmt(tool, fmt, btn) {
+  compressState.fmt = fmt
+  btn.closest('.format-btns').querySelectorAll('.fmt-btn').forEach(b=>b.classList.remove('on'))
+  btn.classList.add('on')
+  if(tool==='compress') updateCompress()
+}
 
-  add({id:"adjust",name:"Adjust",cat:"Transform",icon:"🎚️",desc:"Brightness, contrast, saturation, grayscale.",
-    build(){
-      const prev=el("img"); stage(prev);
-      const v={bri:100,con:100,sat:100,gray:0};
-      const filt=()=>`brightness(${v.bri}%) contrast(${v.con}%) saturate(${v.sat}%) grayscale(${v.gray}%)`;
-      function out(){ const nc=baseCanvas2(); const x=nc.getContext("2d"); x.filter=filt(); x.drawImage(state.img,0,0); return nc; }
-      function baseCanvas2(){const c=el("canvas");c.width=state.img.naturalWidth;c.height=state.img.naturalHeight;return c;}
-      const upd=()=>prev.src=out().toDataURL();
-      const slider=(label,key,min,max)=>{const s=el("input",{type:"range",min,max,value:v[key],oninput:e=>{v[key]=+e.target.value;upd();}});return field(label,s);};
-      upd();
-      $("#wsControls").replaceChildren(
-        slider("Brightness","bri",0,200), slider("Contrast","con",0,200),
-        slider("Saturation","sat",0,200), slider("Grayscale","gray",0,100),
-        el("button",{class:"btn",onclick:()=>download(out(),state.fileType==="image/jpeg"?"image/jpeg":"image/png",.95,state.fileType==="image/jpeg"?"jpg":"png")},"Download")
-      );
-    }});
+function updateCompress() {
+  const s = imgState['compress']; if(!s) return
+  const q = parseInt(document.getElementById('compress-q').value)/100
+  document.getElementById('compress-qv').textContent = Math.round(q*100)+'%'
+  const prev = document.getElementById('compress-prev'); prev.classList.remove('rik-hidden')
+  const out = document.getElementById('compress-canvas-out')
+  out.width=s.img.naturalWidth; out.height=s.img.naturalHeight
+  out.getContext('2d').drawImage(s.img,0,0)
+  out.toBlob(blob=>{
+    if(!blob) return
+    const pct = Math.round((1-blob.size/s.origSize)*100)
+    const res = document.getElementById('compress-res'); res.classList.remove('rik-hidden')
+    document.getElementById('compress-stats').innerHTML =
+      '<div class="stat-chip"><span class="sv">'+fmtSize(s.origSize)+'</span><span class="sk">Original</span></div>'+
+      '<div class="stat-chip"><span class="sv">'+fmtSize(blob.size)+'</span><span class="sk">Compressed</span></div>'+
+      (pct>0?'<div class="saving-chip"><span class="sv">'+pct+'% smaller</span><span class="sk">Saving</span></div>':'')
+  }, 'image/'+compressState.fmt, q)
+}
 
-  /* ---------- PRIVACY ---------- */
-  add({id:"metadata",name:"Remove Metadata",cat:"Privacy",icon:"🛡️",desc:"Strip EXIF, GPS and device tags.",
-    build(){
-      stage(el("img",{src:state.img.src}));
-      const report=el("div",{class:"stat"},el("span",{},"Scanning…"),el("b",{},""));
-      $("#wsControls").replaceChildren(
-        el("p",{class:"hint"},"Re-exporting through your browser discards all embedded metadata."),
-        report,
-        el("button",{class:"btn",onclick:()=>{
-          const c=baseCanvas(); // canvas export carries no EXIF
-          download(c, state.fileType==="image/png"?"image/png":"image/jpeg", .95, state.fileType==="image/png"?"png":"jpg");
-        }},"Export clean copy")
-      );
-      // lightweight EXIF presence scan (JPEG)
-      fetch(state.img.src).then(r=>r.arrayBuffer()).then(buf=>{
-        const d=new DataView(buf); let hasExif=false,hasGPS=false;
-        if(d.byteLength>4 && d.getUint16(0)===0xFFD8){
-          let o=2;
-          while(o<d.byteLength-1){ if(d.getUint8(o)!==0xFF)break; const marker=d.getUint8(o+1); const len=d.getUint16(o+2);
-            if(marker===0xE1){ if(d.getUint32(o+4)===0x45786966){hasExif=true; if(buf.byteLength>o+12){ const s=new Uint8Array(buf,o+10,len-8); for(let i=0;i<s.length-1;i++){ if(s[i]===0x88&&s[i+1]===0x25){hasGPS=true;break;} } } } }
-            o+=2+len; if(marker===0xDA)break; }
+// ── RESIZE ──
+let _rOrigW=0, _rOrigH=0
+function resizeLock(changed) {
+  const s=imgState['resize']; if(!s) return
+  if(!_rOrigW){_rOrigW=s.img.naturalWidth;_rOrigH=s.img.naturalHeight}
+  if(!document.getElementById('resize-lock').checked) return
+  const ratio = _rOrigW/_rOrigH
+  if(changed==='w'){const w=parseInt(document.getElementById('resize-w').value)||1;document.getElementById('resize-h').value=Math.round(w/ratio)}
+  else{const h=parseInt(document.getElementById('resize-h').value)||1;document.getElementById('resize-w').value=Math.round(h*ratio)}
+}
+function setResizePreset(w,h) {
+  const s=imgState['resize']; if(!s) return
+  const r=s.img.naturalWidth/s.img.naturalHeight
+  if(s.img.naturalWidth>s.img.naturalHeight){document.getElementById('resize-w').value=w;document.getElementById('resize-h').value=Math.round(w/r)}
+  else{document.getElementById('resize-h').value=h;document.getElementById('resize-w').value=Math.round(h*r)}
+}
+function runResize() {
+  const s=imgState['resize']; if(!s) return
+  const w=parseInt(document.getElementById('resize-w').value), h=parseInt(document.getElementById('resize-h').value)
+  if(!w||!h||w<1||h<1) return
+  drawToCanvas('resize-canvas',s.img,w,h)
+  const res=document.getElementById('resize-res'); res.classList.remove('rik-hidden')
+  document.getElementById('resize-canvas').classList.remove('rik-hidden')
+  document.getElementById('resize-stats').innerHTML='<div class="stat-chip"><span class="sv">'+s.img.naturalWidth+'×'+s.img.naturalHeight+'</span><span class="sk">Original</span></div><div class="stat-chip"><span class="sv">'+w+'×'+h+'</span><span class="sk">New size</span></div>'
+}
+
+// ── CONVERT ──
+function setConvertFmt(fmt, btn) {
+  convertFmt = fmt
+  btn.closest('.format-btns').querySelectorAll('.fmt-btn').forEach(b=>b.classList.remove('on'))
+  btn.classList.add('on')
+}
+function runConvert() {
+  const s=imgState['convert']; if(!s) return
+  const tmp=document.createElement('canvas'); tmp.width=s.img.naturalWidth; tmp.height=s.img.naturalHeight
+  tmp.getContext('2d').drawImage(s.img,0,0)
+  tmp.toBlob(blob=>{
+    if(!blob) return
+    const url=URL.createObjectURL(blob)
+    const res=document.getElementById('convert-res'); res.classList.remove('rik-hidden')
+    document.getElementById('convert-stats').innerHTML='<div class="stat-chip"><span class="sv">'+fmtSize(s.origSize)+'</span><span class="sk">Original</span></div><div class="stat-chip"><span class="sv">'+fmtSize(blob.size)+'</span><span class="sk">Converted</span></div><div class="stat-chip"><span class="sv">'+convertFmt.toUpperCase()+'</span><span class="sk">Format</span></div>'
+    const dl=document.getElementById('convert-dl')
+    dl.onclick=()=>{const a=document.createElement('a');a.href=url;a.download=s.name+'.'+(convertFmt==='jpeg'?'jpg':convertFmt);a.click()}
+  }, 'image/'+convertFmt)
+}
+
+// ── ROTATE ──
+let _rotAngle=0, _flipH=false, _flipV=false
+function applyRotate(deg){_rotAngle=(_rotAngle+deg)%360;renderRotate()}
+function applyFlip(dir){if(dir==='h')_flipH=!_flipH;else _flipV=!_flipV;renderRotate()}
+function renderRotate(){
+  const s=imgState['rotate']; if(!s) return
+  const rad=(_rotAngle*Math.PI)/180, sw=s.img.naturalWidth, sh=s.img.naturalHeight
+  const cos=Math.abs(Math.cos(rad)), sin=Math.abs(Math.sin(rad))
+  const nw=Math.floor(sw*cos+sh*sin), nh=Math.floor(sw*sin+sh*cos)
+  const c=document.getElementById('rotate-canvas')
+  c.width=nw;c.height=nh;c.classList.remove('rik-hidden')
+  const ctx=c.getContext('2d'); ctx.save(); ctx.translate(nw/2,nh/2); ctx.rotate(rad); ctx.scale(_flipH?-1:1,_flipV?-1:1); ctx.drawImage(s.img,-sw/2,-sh/2); ctx.restore()
+  document.getElementById('rotate-btns').classList.remove('rik-hidden')
+}
+
+// ── FILTERS ──
+let _activeFilter='none'
+function setFilter(f,btn){_activeFilter=f;btn.closest('.format-btns').querySelectorAll('.fmt-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');applyFilters()}
+function applyFilters(){
+  const s=imgState['filters']; if(!s) return
+  const c=document.getElementById('filters-canvas')
+  c.width=s.img.naturalWidth;c.height=s.img.naturalHeight;c.classList.remove('rik-hidden')
+  const ctx=c.getContext('2d')
+  const br=document.getElementById('f-bright').value, co=document.getElementById('f-contrast').value, sa=document.getElementById('f-sat').value
+  document.getElementById('f-bright-v').textContent=br; document.getElementById('f-contrast-v').textContent=co; document.getElementById('f-sat-v').textContent=sa
+  let filter=`brightness(${br}%) contrast(${co}%) saturate(${sa}%)`
+  if(_activeFilter==='grayscale') filter+=' grayscale(100%)'
+  else if(_activeFilter==='sepia') filter+=' sepia(100%)'
+  else if(_activeFilter==='invert') filter+=' invert(100%)'
+  ctx.filter=filter; ctx.drawImage(s.img,0,0); ctx.filter='none'
+  document.getElementById('filters-btns').classList.remove('rik-hidden')
+}
+
+// ── WATERMARK ──
+let _wmPos='center'
+function setWmPos(p,btn){_wmPos=p;btn.closest('.format-btns').querySelectorAll('.fmt-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');applyWatermark()}
+function applyWatermark(){
+  const s=imgState['watermark']; if(!s) return
+  const c=document.getElementById('watermark-canvas')
+  c.width=s.img.naturalWidth;c.height=s.img.naturalHeight;c.classList.remove('rik-hidden')
+  const ctx=c.getContext('2d'); ctx.drawImage(s.img,0,0)
+  const text=document.getElementById('wm-text').value||''
+  const size=parseInt(document.getElementById('wm-size').value)
+  const opacity=parseInt(document.getElementById('wm-opacity').value)/100
+  document.getElementById('wm-size-v').textContent=size
+  document.getElementById('wm-opacity-v').textContent=Math.round(opacity*100)+'%'
+  ctx.globalAlpha=opacity; ctx.font='bold '+size+'px -apple-system,sans-serif'
+  ctx.fillStyle='#ffffff'; ctx.textAlign='center'; ctx.textBaseline='middle'
+  const pad=size, W=c.width, H=c.height
+  let x=W/2,y=H/2
+  if(_wmPos==='top-left'){ctx.textAlign='left';ctx.textBaseline='top';x=pad;y=pad}
+  else if(_wmPos==='top-right'){ctx.textAlign='right';ctx.textBaseline='top';x=W-pad;y=pad}
+  else if(_wmPos==='bottom-left'){ctx.textAlign='left';ctx.textBaseline='bottom';x=pad;y=H-pad}
+  else if(_wmPos==='bottom-right'){ctx.textAlign='right';ctx.textBaseline='bottom';x=W-pad;y=H-pad}
+  ctx.fillText(text,x,y); ctx.globalAlpha=1
+  document.getElementById('watermark-btns').classList.remove('rik-hidden')
+}
+
+// ── ADD TEXT ──
+let _txtPos='center'
+function setTxtPos(p,btn){_txtPos=p;btn.closest('.format-btns').querySelectorAll('.fmt-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');applyText()}
+function applyText(){
+  const s=imgState['text']; if(!s) return
+  const c=document.getElementById('text-canvas')
+  c.width=s.img.naturalWidth;c.height=s.img.naturalHeight;c.classList.remove('rik-hidden')
+  const ctx=c.getContext('2d'); ctx.drawImage(s.img,0,0)
+  const text=document.getElementById('txt-text').value||''
+  const size=parseInt(document.getElementById('txt-size').value)
+  const color=document.getElementById('txt-color').value
+  document.getElementById('txt-size-v').textContent=size
+  ctx.font='bold '+size+'px -apple-system,sans-serif'; ctx.fillStyle=color; ctx.textAlign='center'
+  const pad=size*1.5; let y=c.height/2
+  if(_txtPos==='top'){ctx.textBaseline='top';y=pad}
+  else if(_txtPos==='bottom'){ctx.textBaseline='bottom';y=c.height-pad}
+  else ctx.textBaseline='middle'
+  ctx.fillText(text,c.width/2,y)
+  document.getElementById('text-btns').classList.remove('rik-hidden')
+}
+
+// ── IMAGE INFO ──
+function showInfo(s){
+  const res=document.getElementById('info-res'); res.classList.remove('rik-hidden')
+  const w=s.img.naturalWidth, h=s.img.naturalHeight
+  const g=(a,b)=>{while(b){[a,b]=[b,a%b]}return a}
+  const gv=g(w,h), ratio=w/gv+':'+h/gv
+  const rows=[['Filename',s.file.name],['Format',s.file.type.replace('image/','').toUpperCase()],['File size',fmtSize(s.origSize)],['Dimensions',w+' × '+h+' px'],['Aspect ratio',ratio],['Megapixels',((w*h)/1e6).toFixed(2)+' MP']]
+  document.getElementById('info-table').innerHTML=rows.map(([k,v])=>'<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px"><span style="color:var(--muted)">'+k+'</span><span style="font-weight:700">'+v+'</span></div>').join('')
+}
+
+// ── CROP ──
+let _cropState={x:0,y:0,w:0,h:0,dragging:false,startX:0,startY:0,ratio:'free'}
+function setCropRatio(r,btn){_cropState.ratio=r;btn.closest('.format-btns').querySelectorAll('.fmt-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');initCrop()}
+function initCrop(){
+  const img=document.getElementById('crop-img')
+  const sel=document.getElementById('crop-sel')
+  const rect=img.getBoundingClientRect()
+  const iw=rect.width,ih=rect.height
+  if(!iw||!ih) return
+  let sw=iw*0.8,sh=ih*0.8
+  if(_cropState.ratio!=='free'){const[rw,rh]=_cropState.ratio.split(':').map(Number);sh=sw*rh/rw;if(sh>ih*0.8){sh=ih*0.8;sw=sh*rw/rh}}
+  _cropState.x=(iw-sw)/2;_cropState.y=(ih-sh)/2;_cropState.w=sw;_cropState.h=sh
+  updateCropSel(); sel.classList.remove('rik-hidden')
+  document.getElementById('crop-btns').classList.remove('rik-hidden')
+  sel.onmousedown=(e)=>{_cropState.dragging=true;_cropState.startX=e.clientX-_cropState.x;_cropState.startY=e.clientY-_cropState.y;e.preventDefault()}
+  document.onmousemove=(e)=>{
+    if(!_cropState.dragging) return
+    const r=img.getBoundingClientRect()
+    _cropState.x=Math.max(0,Math.min(e.clientX-_cropState.startX,r.width-_cropState.w))
+    _cropState.y=Math.max(0,Math.min(e.clientY-_cropState.startY,r.height-_cropState.h))
+    updateCropSel()
+  }
+  document.onmouseup=()=>{_cropState.dragging=false}
+}
+function updateCropSel(){
+  const sel=document.getElementById('crop-sel')
+  const img=document.getElementById('crop-img')
+  const wrap=document.getElementById('crop-wrap')
+  const ir=img.getBoundingClientRect(), wr=wrap.getBoundingClientRect()
+  sel.style.left=(ir.left-wr.left+_cropState.x)+'px'; sel.style.top=(ir.top-wr.top+_cropState.y)+'px'
+  sel.style.width=_cropState.w+'px'; sel.style.height=_cropState.h+'px'
+}
+function runCrop(){
+  const s=imgState['crop']; if(!s) return
+  const img=document.getElementById('crop-img'), rect=img.getBoundingClientRect()
+  const sx=s.img.naturalWidth/rect.width, sy=s.img.naturalHeight/rect.height
+  const cx=Math.round(_cropState.x*sx), cy=Math.round(_cropState.y*sy)
+  const cw=Math.round(_cropState.w*sx), ch=Math.round(_cropState.h*sy)
+  const c=document.getElementById('crop-canvas'); c.width=cw;c.height=ch;c.classList.remove('rik-hidden')
+  c.getContext('2d').drawImage(s.img,cx,cy,cw,ch,0,0,cw,ch)
+  document.getElementById('crop-dl').classList.remove('rik-hidden')
+}
+
+// ── HEIC ──
+const heicState={fmt:'jpeg',file:null}
+function heicSetFmt(fmt,btn){heicState.fmt=fmt;btn.closest('.format-btns').querySelectorAll('.fmt-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on')}
+function heicLoad(file){
+  if(!file) return; heicState.file=file
+  const chip=document.getElementById('heic-chip'); chip.classList.remove('rik-hidden'); chip.innerHTML='📎 '+file.name+' ('+fmtSize(file.size)+')'
+  document.getElementById('heic-ctrl').classList.remove('rik-hidden'); document.getElementById('heic-btns').classList.remove('rik-hidden')
+  const src=URL.createObjectURL(file); const img=new Image()
+  img.onload=()=>{const c=document.getElementById('heic-canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;c.classList.remove('rik-hidden');c.getContext('2d').drawImage(img,0,0)}
+  img.onerror=()=>toast('HEIC detected — click Convert to process')
+  img.src=src
+}
+async function runHeicConvert(){
+  const file=heicState.file; if(!file) return
+  const q=parseInt(document.getElementById('heic-q').value)/100
+  const fmt=heicState.fmt
+  const c=document.getElementById('heic-canvas')
+  if(c.width>0){downloadCanvas('heic-canvas',file.name.replace(/\.[^.]+$/,''),fmt);return}
+  try{
+    await loadScript('https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js')
+    const result=await heic2any({blob:file,toType:'image/'+fmt,quality:q})
+    const blob=Array.isArray(result)?result[0]:result
+    const url=URL.createObjectURL(blob), a=document.createElement('a')
+    a.href=url; a.download=file.name.replace(/\.[^.]+$/,'')+'.'+(fmt==='jpeg'?'jpg':fmt); a.click()
+    toast('Converted ✓')
+  }catch(e){const err=document.getElementById('heic-err');err.textContent='⚠ '+e.message;err.classList.remove('rik-hidden')}
+}
+
+// ── MERGE ──
+const mergeImages={1:null,2:null}; let _mergeDir='horizontal'
+function mergeLoad(file,n){
+  if(!file) return
+  const r=new FileReader(); r.onload=ev=>{const img=new Image();img.onload=()=>{mergeImages[n]={img};const c=document.getElementById('merge-chip'+n);c.classList.remove('rik-hidden');c.textContent='📎 '+file.name;if(mergeImages[1]&&mergeImages[2]){document.getElementById('merge-ctrl').classList.remove('rik-hidden');document.getElementById('merge-btns').classList.remove('rik-hidden');runMerge()}};img.src=ev.target.result}
+  r.readAsDataURL(file)
+}
+function setMergeDir(dir,btn){_mergeDir=dir;btn.closest('.format-btns').querySelectorAll('.fmt-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');if(mergeImages[1]&&mergeImages[2])runMerge()}
+function runMerge(){
+  const a=mergeImages[1]?.img,b=mergeImages[2]?.img; if(!a||!b) return
+  const gap=parseInt(document.getElementById('merge-gap')?.value||0)
+  const bg=document.getElementById('merge-bg')?.value||'#000'
+  const c=document.getElementById('merge-canvas')
+  if(_mergeDir==='horizontal'){const h=Math.max(a.naturalHeight,b.naturalHeight);const sA=h/a.naturalHeight,sB=h/b.naturalHeight;const wA=a.naturalWidth*sA,wB=b.naturalWidth*sB;c.width=wA+wB+gap;c.height=h;const ctx=c.getContext('2d');ctx.fillStyle=bg;ctx.fillRect(0,0,c.width,c.height);ctx.drawImage(a,0,0,wA,h);ctx.drawImage(b,wA+gap,0,wB,h)}
+  else{const w=Math.max(a.naturalWidth,b.naturalWidth);const sA=w/a.naturalWidth,sB=w/b.naturalWidth;const hA=a.naturalHeight*sA,hB=b.naturalHeight*sB;c.width=w;c.height=hA+hB+gap;const ctx=c.getContext('2d');ctx.fillStyle=bg;ctx.fillRect(0,0,c.width,c.height);ctx.drawImage(a,0,0,w,hA);ctx.drawImage(b,0,hA+gap,w,hB)}
+  c.classList.remove('rik-hidden'); document.getElementById('merge-dl').classList.remove('rik-hidden')
+}
+
+// ── COLOR PALETTE ──
+function runPalette(){
+  const s=imgState['palette']; if(!s) return
+  const count=parseInt(document.getElementById('palette-count').value)||8
+  const tmp=document.createElement('canvas')
+  const scale=Math.min(1,200/Math.max(s.img.naturalWidth,s.img.naturalHeight))
+  tmp.width=Math.round(s.img.naturalWidth*scale); tmp.height=Math.round(s.img.naturalHeight*scale)
+  tmp.getContext('2d').drawImage(s.img,0,0,tmp.width,tmp.height)
+  const data=tmp.getContext('2d').getImageData(0,0,tmp.width,tmp.height).data
+  const colours=kMeans(data,count)
+  const res=document.getElementById('palette-res'); res.classList.remove('rik-hidden')
+  document.getElementById('palette-output').innerHTML='<div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px">'+
+    colours.map(([r,g,b])=>{const hex='#'+[r,g,b].map(v=>v.toString(16).padStart(2,'0')).join('');return '<div onclick="navigator.clipboard.writeText(\''+hex+'\').then(()=>toast(\'Copied '+hex+' ✓\'))" style="width:72px;cursor:pointer;border-radius:10px;overflow:hidden;border:1px solid var(--border)" title="Click to copy"><div style="height:56px;background:'+hex+'"></div><div style="padding:6px;background:var(--surface);font-size:11px;font-weight:700;text-align:center;font-family:monospace">'+hex+'</div></div>'}).join('')+
+    '</div><div style="font-size:11px;color:var(--muted)">Click any colour to copy hex code</div>'
+}
+function kMeans(data,k){
+  const pixels=[]; for(let i=0;i<data.length;i+=16){if(data[i+3]<128)continue;pixels.push([data[i],data[i+1],data[i+2]])}
+  if(pixels.length<k)return pixels
+  let centroids=[];for(let i=0;i<k;i++)centroids.push(pixels[Math.floor(Math.random()*pixels.length)])
+  for(let iter=0;iter<15;iter++){const clusters=Array.from({length:k},()=>[]);for(const p of pixels){let minD=Infinity,ci=0;centroids.forEach((c,i)=>{const d=(p[0]-c[0])**2+(p[1]-c[1])**2+(p[2]-c[2])**2;if(d<minD){minD=d;ci=i}});clusters[ci].push(p)}
+  centroids=clusters.map(cl=>{if(!cl.length)return[0,0,0];const avg=[0,0,0];cl.forEach(p=>{avg[0]+=p[0];avg[1]+=p[1];avg[2]+=p[2]});return avg.map(v=>Math.round(v/cl.length))})}
+  return centroids.filter(c=>c[0]+c[1]+c[2]>0)
+}
+
+// ── IMAGE TO PDF ──
+const img2pdfFiles=[]
+function img2pdfLoad(files){for(const f of files){if(f.type.startsWith('image/'))img2pdfFiles.push(f)}renderImg2pdfList()}
+function renderImg2pdfList(){
+  const list=document.getElementById('img2pdf-list')
+  list.classList.remove('rik-hidden')
+  list.innerHTML=img2pdfFiles.map((f,i)=>'<div class="file-chip">'+f.name+' <span class="x" onclick="img2pdfRemove('+i+')">✕</span></div>').join('')
+  document.getElementById('img2pdf-btns').classList.remove('rik-hidden')
+}
+function img2pdfRemove(i){img2pdfFiles.splice(i,1);renderImg2pdfList()}
+async function runImg2Pdf(){
+  if(!img2pdfFiles.length)return
+  const prog=document.getElementById('img2pdf-prog'),pf=document.getElementById('img2pdf-pf'),pp=document.getElementById('img2pdf-pp'),status=document.getElementById('img2pdf-status')
+  prog.classList.remove('rik-hidden')
+  try{
+    const{PDFDocument}=PDFLib; const pdf=await PDFDocument.create()
+    for(let i=0;i<img2pdfFiles.length;i++){
+      const pct=Math.round((i/img2pdfFiles.length)*90); pf.style.width=pct+'%'; pp.textContent=pct+'%'; status.textContent='Processing '+(i+1)+'/'+img2pdfFiles.length+'...'
+      const ab=await img2pdfFiles[i].arrayBuffer(); const type=img2pdfFiles[i].type; let img
+      if(type==='image/jpeg')img=await pdf.embedJpg(ab)
+      else if(type==='image/png')img=await pdf.embedPng(ab)
+      else{const url=URL.createObjectURL(img2pdfFiles[i]);const el=new Image();await new Promise(r=>{el.onload=r;el.src=url});const tmp=document.createElement('canvas');tmp.width=el.naturalWidth;tmp.height=el.naturalHeight;tmp.getContext('2d').drawImage(el,0,0);const blob=await new Promise(r=>tmp.toBlob(r,'image/jpeg',0.92));const ab2=await blob.arrayBuffer();img=await pdf.embedJpg(ab2)}
+      const page=pdf.addPage([img.width,img.height]); page.drawImage(img,{x:0,y:0,width:img.width,height:img.height})
+    }
+    pf.style.width='95%'; status.textContent='Finalising...'
+    const bytes=await pdf.save(); const blob=new Blob([bytes],{type:'application/pdf'})
+    const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='images.pdf'; a.click()
+    pf.style.width='100%'; pp.textContent='100%'; status.textContent='Done!'
+    toast('PDF downloaded ✓'); setTimeout(()=>prog.classList.add('rik-hidden'),1500)
+  }catch(e){status.textContent='Error: '+e.message; pf.style.width='0'}
+}
+
+// ── REMOVE BACKGROUND ──
+let _bgRemovalLoaded=false
+async function runRemoveBg(){
+  const s=imgState['removebg']; if(!s) return
+  const prog=document.getElementById('removebg-prog'),pf=document.getElementById('removebg-pf'),pp=document.getElementById('removebg-pp'),status=document.getElementById('removebg-status'),err=document.getElementById('removebg-err'),dl=document.getElementById('removebg-dl')
+  err.classList.add('rik-hidden'); prog.classList.remove('rik-hidden')
+  try{
+    if(!_bgRemovalLoaded){status.textContent='Loading AI model (~15MB)...';pf.style.width='10%';await loadScript('https://cdn.jsdelivr.net/npm/@imgly/background-removal@1.4.5/dist/browser/index.js');_bgRemovalLoaded=true}
+    status.textContent='Processing...'; pf.style.width='40%'
+    const tmp=document.createElement('canvas'); tmp.width=s.img.naturalWidth; tmp.height=s.img.naturalHeight; tmp.getContext('2d').drawImage(s.img,0,0)
+    const blob=await new Promise(r=>tmp.toBlob(r,'image/png'))
+    pf.style.width='60%'; status.textContent='Removing background...'
+    const result=await imglyRemoveBackground(blob,{progress:(k,c,t)=>{const p=Math.round((c/t)*35)+60;pf.style.width=Math.min(p,95)+'%'}})
+    pf.style.width='100%'; status.textContent='Done!'
+    const url=URL.createObjectURL(result); const ri=new Image()
+    ri.onload=()=>{const c=document.getElementById('removebg-canvas');c.width=ri.naturalWidth;c.height=ri.naturalHeight;c.getContext('2d').clearRect(0,0,c.width,c.height);c.getContext('2d').drawImage(ri,0,0);dl.classList.remove('rik-hidden')}
+    ri.src=url
+    document.getElementById('removebg-prev').classList.remove('rik-hidden')
+    toast('Background removed ✓'); setTimeout(()=>prog.classList.add('rik-hidden'),1000)
+  }catch(e){err.textContent='⚠ '+e.message;err.classList.remove('rik-hidden');prog.classList.add('rik-hidden')}
+}
+
+// ── BLUR / CENSOR ──
+let _blurMode='blur', _blurDrawing=false
+function setBlurMode(mode,btn){_blurMode=mode;btn.closest('.format-btns').querySelectorAll('.fmt-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on')}
+function setupBlurCanvas(){
+  const s=imgState['blur']; if(!s) return
+  const bc=document.getElementById('blur-canvas')
+  bc.width=s.img.naturalWidth; bc.height=s.img.naturalHeight; bc.classList.remove('rik-hidden')
+  bc.getContext('2d').drawImage(s.img,0,0)
+  document.getElementById('blur-ctrl').classList.remove('rik-hidden'); document.getElementById('blur-btns').classList.remove('rik-hidden')
+  function getPos(e){const rect=bc.getBoundingClientRect();const sx=bc.width/rect.width,sy=bc.height/rect.height;const touch=e.touches?.[0]||e;return{x:(touch.clientX-rect.left)*sx,y:(touch.clientY-rect.top)*sy}}
+  function applyAt(x,y){
+    const strength=parseInt(document.getElementById('blur-strength').value); const brush=parseInt(document.getElementById('blur-brush').value)
+    const ctx=bc.getContext('2d'); const half=brush/2; const px=Math.max(0,x-half),py=Math.max(0,y-half),pw=Math.min(brush,bc.width-px),ph=Math.min(brush,bc.height-py)
+    if(_blurMode==='blur'){ctx.save();ctx.filter=`blur(${strength}px)`;ctx.beginPath();ctx.arc(x,y,half,0,Math.PI*2);ctx.clip();for(let i=0;i<3;i++)ctx.drawImage(s.img,0,0);ctx.restore()}
+    else{const d=ctx.getImageData(px,py,pw,ph);const dd=d.data;const bs=Math.max(4,strength);for(let iy=0;iy<ph;iy+=bs)for(let ix=0;ix<pw;ix+=bs){const idx=(iy*pw+ix)*4;const r=dd[idx],g=dd[idx+1],b=dd[idx+2];for(let dy=0;dy<bs&&iy+dy<ph;dy++)for(let dx=0;dx<bs&&ix+dx<pw;dx++){const i2=((iy+dy)*pw+ix+dx)*4;dd[i2]=r;dd[i2+1]=g;dd[i2+2]=b}};ctx.putImageData(d,px,py)}
+  }
+  bc.onmousedown=bc.ontouchstart=(e)=>{_blurDrawing=true;const p=getPos(e);applyAt(p.x,p.y);e.preventDefault()}
+  bc.onmousemove=bc.ontouchmove=(e)=>{if(!_blurDrawing)return;const p=getPos(e);applyAt(p.x,p.y);e.preventDefault()}
+  bc.onmouseup=bc.ontouchend=bc.onmouseleave=()=>{_blurDrawing=false}
+}
+function resetBlur(){const s=imgState['blur'];if(!s)return;const c=document.getElementById('blur-canvas');c.getContext('2d').drawImage(s.img,0,0)}
+
+// ── LICENSE / PRO ──
+async function activateLicense(){
+  const key=document.getElementById('rik-license-key')?.value?.trim(); const msg=document.getElementById('license-msg'); if(!key||!msg)return
+  msg.classList.remove('rik-hidden'); msg.style.color='var(--muted)'; msg.textContent='Verifying...'
+  try{
+    const res=await fetch('https://api.lemonsqueezy.com/v1/licenses/validate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({license_key:key,instance_name:'RightImageKit'})})
+    const data=await res.json()
+    if(data.valid){isPro=true;localStorage.setItem('rik-pro','true');localStorage.setItem('rik-license',key);msg.style.color='#22C55E';msg.textContent='✓ Activated! Pro unlocked.';setTimeout(()=>nav('home'),1200)}
+    else{msg.style.color='#ef4444';msg.textContent='✗ Invalid key. Check your Lemon Squeezy email.'}
+  }catch(e){const stored=localStorage.getItem('rik-license');if(stored&&stored===key){isPro=true;localStorage.setItem('rik-pro','true');msg.style.color='#22C55E';msg.textContent='✓ Activated!';setTimeout(()=>nav('home'),1200)}else{msg.style.color='#ef4444';msg.textContent='✗ Could not verify. Try again.'}}
+}
+
+
+// ══════════════════════════════════════════
+// WIRE ALL EVENT LISTENERS ON DOM READY
+// (no inline handlers - CSP safe on all browsers)
+// ══════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', function() {
+
+  // File inputs → loadImage
+  var singleTools = ['compress','resize','convert','crop','rotate','filters','watermark','text','info','palette','removebg','blur']
+  singleTools.forEach(function(tool) {
+    var input = document.getElementById(tool + '-in')
+    if (input) {
+      input.addEventListener('change', function() {
+        if (this.files && this.files[0]) loadImage(this.files[0], tool)
+      })
+    }
+    // Dropzone click → trigger input
+    var dz = document.getElementById(tool + '-dz')
+    if (dz && input) {
+      dz.addEventListener('click', function(e) {
+        if (e.target === dz || e.target.closest('.dropzone') === dz) {
+          // Don't re-trigger if clicking the span link
+          input.click()
         }
-        report.replaceChildren(el("span",{},"Found"), el("b",{}, hasGPS?"EXIF + GPS location ⚠":hasExif?"EXIF metadata":"No EXIF (already clean)"));
-      }).catch(()=>report.replaceChildren(el("span",{},"Metadata"),el("b",{},"will be stripped")));
-    }});
+      })
+    }
+  })
 
-  add({id:"redact",name:"Redact",cat:"Privacy",icon:"⬛",desc:"Pixelate or blur a region to hide it.",
-    build(){
-      const c=baseCanvas(); const scale=Math.min(1,460/Math.max(c.width,c.height));
-      const view=el("canvas"); view.width=c.width*scale; view.height=c.height*scale; view.style.cursor="crosshair";
-      const vx=view.getContext("2d"); let mode="pixelate", boxes=[];
-      function redactInto(ctx,cnv){ boxes.forEach(b=>{ const rx=b.x/scale,ry=b.y/scale,rw=b.w/scale,rh=b.h/scale;
-        if(mode==="blur"){ ctx.save(); ctx.filter="blur(12px)"; ctx.drawImage(cnv,rx,ry,rw,rh,rx,ry,rw,rh); ctx.restore(); }
-        else { const px=Math.max(6,Math.round(rw/12)); const t=el("canvas"); t.width=Math.max(1,Math.round(rw/px)); t.height=Math.max(1,Math.round(rh/px));
-          const tc=t.getContext("2d"); tc.imageSmoothingEnabled=false; tc.drawImage(cnv,rx,ry,rw,rh,0,0,t.width,t.height);
-          ctx.imageSmoothingEnabled=false; ctx.drawImage(t,0,0,t.width,t.height,rx,ry,rw,rh); ctx.imageSmoothingEnabled=true; } }); }
-      function draw(){ vx.clearRect(0,0,view.width,view.height); vx.drawImage(c,0,0,view.width,view.height);
-        // apply effect preview at view scale via full canvas
-        const full=el("canvas"); full.width=c.width; full.height=c.height; const fx=full.getContext("2d"); fx.drawImage(c,0,0); redactInto(fx,c); vx.drawImage(full,0,0,view.width,view.height);
-        vx.strokeStyle="#FF2E55"; vx.lineWidth=1.5; boxes.forEach(b=>vx.strokeRect(b.x,b.y,b.w,b.h)); }
-      draw(); stage(view);
-      let dr=null; const pos=e=>{const r=view.getBoundingClientRect();const t=e.touches?e.touches[0]:e;return{x:(t.clientX-r.left)*(view.width/r.width),y:(t.clientY-r.top)*(view.height/r.height)};};
-      const start=e=>{e.preventDefault();const p=pos(e);dr={x:p.x,y:p.y};};
-      const move=e=>{ if(!dr)return; const p=pos(e); dr.cur={x:Math.min(dr.x,p.x),y:Math.min(dr.y,p.y),w:Math.abs(p.x-dr.x),h:Math.abs(p.y-dr.y)};
-        draw(); vx.strokeStyle="#FF2E55"; vx.strokeRect(dr.cur.x,dr.cur.y,dr.cur.w,dr.cur.h); };
-      const end=()=>{ if(dr&&dr.cur&&dr.cur.w>6&&dr.cur.h>6){boxes.push(dr.cur);draw();} dr=null; };
-      view.addEventListener("mousedown",start);view.addEventListener("touchstart",start,{passive:false});
-      window.addEventListener("mousemove",move);window.addEventListener("touchmove",move,{passive:false});
-      window.addEventListener("mouseup",end);window.addEventListener("touchend",end);
-      const seg=el("div",{class:"seg"}); [["Pixelate","pixelate"],["Blur","blur"]].forEach(([l,m],i)=>{const b=el("button",{class:i===0?"on":"",onclick:()=>{[...seg.children].forEach(x=>x.classList.remove("on"));b.classList.add("on");mode=m;draw();}},l);seg.append(b);});
-      $("#wsControls").replaceChildren(
-        el("p",{class:"hint"},"Drag to mark areas to hide."),
-        field("Effect",seg),
-        el("button",{class:"btn ghost sm",onclick:()=>{boxes=[];draw();}},"Clear marks"),
-        el("button",{class:"btn",onclick:()=>{ const out=el("canvas"); out.width=c.width; out.height=c.height; const ox=out.getContext("2d"); ox.drawImage(c,0,0); redactInto(ox,c); download(out,"image/png",.95,"png"); }},"Download")
-      );
-    }});
+  // HEIC
+  var heicInput = document.getElementById('heic-in')
+  if (heicInput) heicInput.addEventListener('change', function() { if (this.files[0]) heicLoad(this.files[0]) })
+  var heicDz = document.getElementById('heic-dz')
+  if (heicDz && heicInput) heicDz.addEventListener('click', function() { heicInput.click() })
 
-  /* ---------- CREATE ---------- */
-  add({id:"watermark",name:"Add Text",cat:"Create",icon:"🅣",desc:"Overlay a watermark or caption.",
-    build(){
-      const prev=el("img"); stage(prev);
-      const v={text:"© RightImageKit",size:6,color:"#ffffff",op:80,pos:"br"};
-      function out(){ const c=baseCanvas(); const x=c.getContext("2d"); const fs=Math.round(c.width*v.size/100);
-        x.font=`700 ${fs}px Inter, sans-serif`; x.fillStyle=v.color; x.globalAlpha=v.op/100;
-        x.textBaseline="alphabetic"; const m=x.measureText(v.text); const pad=fs*0.6;
-        let tx=pad,ty=fs+pad; if(v.pos.includes("r"))tx=c.width-m.width-pad; if(v.pos.includes("b"))ty=c.height-pad; if(v.pos==="c"){tx=(c.width-m.width)/2;ty=c.height/2;}
-        x.shadowColor="rgba(0,0,0,.4)";x.shadowBlur=fs*0.15; x.fillText(v.text,tx,ty); return c; }
-      const upd=()=>prev.src=out().toDataURL();
-      const txt=el("input",{type:"text",value:v.text,oninput:e=>{v.text=e.target.value;upd();}});
-      const size=el("input",{type:"range",min:"2",max:"15",value:v.size,oninput:e=>{v.size=+e.target.value;upd();}});
-      const op=el("input",{type:"range",min:"10",max:"100",value:v.op,oninput:e=>{v.op=+e.target.value;upd();}});
-      const col=el("input",{type:"color",value:v.color,style:"width:46px;height:38px;padding:2px;border-radius:8px;border:1px solid var(--line-strong)",oninput:e=>{v.color=e.target.value;upd();}});
-      const seg=el("div",{class:"seg"}); [["TL","tl"],["TR","tr"],["C","c"],["BL","bl"],["BR","br"]].forEach(([l,p])=>{const b=el("button",{class:p===v.pos?"on":"",onclick:()=>{[...seg.children].forEach(x=>x.classList.remove("on"));b.classList.add("on");v.pos=p;upd();}},l);seg.append(b);});
-      upd();
-      $("#wsControls").replaceChildren(field("Text",txt),field("Size",size),field("Opacity",op),field("Colour",col),field("Position",seg),
-        el("button",{class:"btn",onclick:()=>download(out(),"image/png",.95,"png")},"Download"));
-    }});
+  // Merge
+  var mi1 = document.getElementById('merge-in1')
+  var mi2 = document.getElementById('merge-in2')
+  if (mi1) mi1.addEventListener('change', function() { if (this.files[0]) mergeLoad(this.files[0], 1) })
+  if (mi2) mi2.addEventListener('change', function() { if (this.files[0]) mergeLoad(this.files[0], 2) })
+  // Merge dropzone clicks
+  document.querySelectorAll('[onclick*="merge-in1"]').forEach(function(el) {
+    el.removeAttribute('onclick')
+    el.addEventListener('click', function() { if(mi1) mi1.click() })
+  })
+  document.querySelectorAll('[onclick*="merge-in2"]').forEach(function(el) {
+    el.removeAttribute('onclick')
+    el.addEventListener('click', function() { if(mi2) mi2.click() })
+  })
 
-  add({id:"favicon",name:"Favicon",cat:"Create",icon:"⭐",desc:"Generate favicon PNGs + .ico file.",
-    build(){
-      stage(el("img",{src:state.img.src}));
-      const sizes=[16,32,48,180,512];
-      const grid=el("div",{class:"swatches"});
-      sizes.forEach(s=>{ const cv=el("canvas");cv.width=s;cv.height=s;cv.getContext("2d").drawImage(state.img,0,0,s,s);
-        const wrap=el("div",{style:"text-align:center"}, el("img",{src:cv.toDataURL(),width:Math.min(s,48),height:Math.min(s,48),style:"border:1px solid var(--line);border-radius:6px"}), el("div",{class:"mono",style:"font-size:10px;color:var(--faint)"},s+"px"));
-        grid.append(wrap); });
-      function pngBytes(size){ const cv=el("canvas");cv.width=size;cv.height=size;cv.getContext("2d").drawImage(state.img,0,0,size,size); return new Promise(res=>cv.toBlob(b=>b.arrayBuffer().then(res),"image/png")); }
-      async function makeIco(){ const set=[16,32,48]; const pngs=await Promise.all(set.map(pngBytes));
-        let total=6+set.length*16; pngs.forEach(p=>total+=p.byteLength);
-        const buf=new ArrayBuffer(total); const dv=new DataView(buf); let off=0;
-        dv.setUint16(0,0,true);dv.setUint16(2,1,true);dv.setUint16(4,set.length,true); off=6;
-        let dataOff=6+set.length*16;
-        set.forEach((s,i)=>{ const b=pngs[i];
-          dv.setUint8(off,s>=256?0:s);dv.setUint8(off+1,s>=256?0:s);dv.setUint8(off+2,0);dv.setUint8(off+3,0);
-          dv.setUint16(off+4,1,true);dv.setUint16(off+6,32,true);dv.setUint32(off+8,b.byteLength,true);dv.setUint32(off+12,dataOff,true);
-          new Uint8Array(buf,dataOff,b.byteLength).set(new Uint8Array(b)); dataOff+=b.byteLength; off+=16; });
-        return new Blob([buf],{type:"image/x-icon"}); }
-      $("#wsControls").replaceChildren(
-        field("Preview", grid),
-        el("button",{class:"btn",onclick:async()=>{const b=await makeIco();const a=el("a",{href:URL.createObjectURL(b),download:"favicon.ico"});document.body.append(a);a.click();a.remove();toast("favicon.ico saved");}},"Download favicon.ico"),
-        el("button",{class:"btn ghost",onclick:()=>{const cv=el("canvas");cv.width=512;cv.height=512;cv.getContext("2d").drawImage(state.img,0,0,512,512);download(cv,"image/png",1,"png");}},"Download 512px PNG")
-      );
-    }});
+  // img2pdf
+  var pdfInput = document.getElementById('img2pdf-in')
+  if (pdfInput) pdfInput.addEventListener('change', function() { if (this.files.length) img2pdfLoad(this.files) })
+  var pdfDz = document.getElementById('img2pdf-dz')
+  if (pdfDz && pdfInput) pdfDz.addEventListener('click', function() { pdfInput.click() })
 
-  add({id:"color",name:"Colour Picker",cat:"Create",icon:"🎨",desc:"Sample colours and pull a palette.",
-    build(){
-      const c=baseCanvas(); const scale=Math.min(1,460/Math.max(c.width,c.height));
-      const view=el("canvas"); view.width=c.width*scale; view.height=c.height*scale; view.style.cursor="crosshair";
-      view.getContext("2d").drawImage(c,0,0,view.width,view.height); stage(view);
-      const picked=el("div",{class:"stat"},el("span",{},"Click image →"),el("b",{class:"mono"},"#—"));
-      const sw=el("div",{class:"swatch",style:"width:100%;height:46px"});
-      view.addEventListener("click",e=>{ const r=view.getBoundingClientRect(); const x=Math.floor((e.clientX-r.left)*(view.width/r.width)),y=Math.floor((e.clientY-r.top)*(view.height/r.height));
-        const d=view.getContext("2d").getImageData(x,y,1,1).data; const hex=rgbHex(d[0],d[1],d[2]); sw.style.background=hex; picked.lastChild.textContent=hex;
-        navigator.clipboard&&navigator.clipboard.writeText(hex); toast("Copied "+hex); });
-      // palette via quantisation
-      const small=el("canvas"); small.width=60; small.height=Math.round(60*view.height/view.width); small.getContext("2d").drawImage(c,0,0,small.width,small.height);
-      const dat=small.getContext("2d").getImageData(0,0,small.width,small.height).data; const cnt={};
-      for(let i=0;i<dat.length;i+=4){ const k=((dat[i]>>4)<<8)|((dat[i+1]>>4)<<4)|(dat[i+2]>>4); cnt[k]=(cnt[k]||0)+1; }
-      const top=Object.entries(cnt).sort((a,b)=>b[1]-a[1]).slice(0,6).map(([k])=>{k=+k;return rgbHex(((k>>8)&15)*17,((k>>4)&15)*17,(k&15)*17);});
-      const pal=el("div",{class:"swatches"}); top.forEach(hex=>{ const s=el("div",{class:"swatch",style:"background:"+hex,onclick:()=>{navigator.clipboard&&navigator.clipboard.writeText(hex);toast("Copied "+hex);}}, el("span",{},hex)); pal.append(s); });
-      function rgbHex(r,g,b){return "#"+[r,g,b].map(v=>v.toString(16).padStart(2,"0")).join("").toUpperCase();}
-      $("#wsControls").replaceChildren(field("Picked colour", sw), picked, field("Dominant palette", pal), el("p",{class:"hint"},"Tap any swatch to copy its hex."));
-    }});
+  // Tool cards nav
+  document.querySelectorAll('[data-nav]').forEach(function(el) {
+    el.addEventListener('click', function() { nav(this.getAttribute('data-nav')) })
+  })
 
-  add({id:"base64",name:"Base64",cat:"Create",icon:"🧬",desc:"Encode an image to a data URI.",
-    build(){
-      stage(el("img",{src:state.img.src}));
-      const c=baseCanvas(); const uri=c.toDataURL(state.fileType==="image/jpeg"?"image/jpeg":"image/png",.92);
-      const ta=el("textarea",{readonly:"true"}); ta.value=uri;
-      $("#wsControls").replaceChildren(
-        field("Data URI ("+fmtBytes(uri.length)+")", ta),
-        el("button",{class:"btn",onclick:()=>{navigator.clipboard&&navigator.clipboard.writeText(uri);toast("Copied to clipboard");}},"Copy data URI"),
-        el("p",{class:"hint"},"Paste directly into CSS background, <img src> or an HTML email.")
-      );
-    }});
+  // Upgrade buttons
+  document.querySelectorAll('.upgrade-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      window.location.href = LS_URL
+    })
+  })
 
-  /* ---------- MORE: OPTIMISE ---------- */
-  add({id:"social",name:"Social Resizer",cat:"Optimise",icon:"📱",desc:"One-click sizes for Instagram, X, YouTube & more.",
-    build(){
-      const prev=el("img"); stage(prev);
-      const presets=[["Instagram Post",1080,1080],["Instagram Story / Reel",1080,1920],["Instagram Portrait",1080,1350],["X / Twitter Header",1500,500],["YouTube Thumbnail",1280,720],["Facebook Cover",820,312],["LinkedIn Banner",1584,396]];
-      let target=presets[0], fitMode="fill";
-      function out(){ const nc=el("canvas"); nc.width=target[1]; nc.height=target[2]; const x=nc.getContext("2d");
-        x.fillStyle="#fff"; x.fillRect(0,0,nc.width,nc.height);
-        const iw=state.img.naturalWidth, ih=state.img.naturalHeight;
-        const s=fitMode==="fill"?Math.max(nc.width/iw,nc.height/ih):Math.min(nc.width/iw,nc.height/ih);
-        const dw=iw*s, dh=ih*s; x.imageSmoothingQuality="high"; x.drawImage(state.img,(nc.width-dw)/2,(nc.height-dh)/2,dw,dh); return nc; }
-      const upd=()=>prev.src=out().toDataURL("image/jpeg",.9);
-      const sel=el("select",{onchange:e=>{target=presets[+e.target.value];upd();}});
-      presets.forEach((p,i)=>sel.append(el("option",{value:i},`${p[0]} — ${p[1]}×${p[2]}`)));
-      const seg=el("div",{class:"seg"}); [["Fill (crop)","fill"],["Fit (pad)","fit"]].forEach(([l,m],i)=>{const b=el("button",{class:i===0?"on":"",onclick:()=>{[...seg.children].forEach(x=>x.classList.remove("on"));b.classList.add("on");fitMode=m;upd();}},l);seg.append(b);});
-      upd();
-      $("#wsControls").replaceChildren(field("Platform & size",sel),field("Mode",seg),el("button",{class:"btn",onclick:()=>download(out(),"image/jpeg",.92,"jpg")},"Download"));
-    }});
+  console.log('✅ RightImageKit: all event listeners wired')
+})
+// ── End wire ──
 
-  add({id:"target",name:"Compress to Size",cat:"Optimise",icon:"🎯",desc:"Hit a target like “under 200 KB” automatically.",
-    build(){
-      const c=baseCanvas(); const prev=el("img",{src:c.toDataURL("image/jpeg",.9)}); stage(prev);
-      const kbIn=el("input",{type:"number",value:"200",min:"5"});
-      const result=el("div",{class:"stat"},el("span",{},"Result"),el("b",{},"—")); let bestBlob=null;
-      const run=async()=>{ const targetBytes=Math.max(5,parseInt(kbIn.value)||200)*1024; let lo=0.05,hi=1,best=null,bestQ=0.05;
-        for(let i=0;i<9;i++){ const q=(lo+hi)/2; const b=await blobOf(c,"image/jpeg",q); if(b.size<=targetBytes){best=b;bestQ=q;lo=q;}else{hi=q;} }
-        if(!best) best=await blobOf(c,"image/jpeg",0.05);
-        bestBlob=best; prev.src=URL.createObjectURL(best); result.lastChild.textContent=fmtBytes(best.size)+" · q"+Math.round(bestQ*100); };
-      run();
-      $("#wsControls").replaceChildren(
-        field("Target size (KB)", el("div",{class:"row"},kbIn,el("button",{class:"btn ghost sm",onclick:run},"Apply"))),
-        el("div",{class:"stat"},el("span",{},"Original"),el("b",{},fmtBytes(state.origSize))), result,
-        el("p",{class:"hint"},"Exported as JPEG; quality is auto-tuned to fit under your target."),
-        el("button",{class:"btn",onclick:()=>{ if(!bestBlob){toast("Set a size first");return;} const a=el("a",{href:URL.createObjectURL(bestBlob),download:`${state.fileName}-${kbIn.value}kb.jpg`});document.body.append(a);a.click();a.remove();toast("Saved "+fmtBytes(bestBlob.size)); }},"Download"));
-    }});
-
-  /* ---------- MORE: TRANSFORM ---------- */
-  add({id:"filters",name:"Filters",cat:"Transform",icon:"🖼️",desc:"One-tap looks: noir, vintage, warm, cool…",
-    build(){
-      const prev=el("img"); stage(prev);
-      const FILTERS=[["Original","none"],["Grayscale","grayscale(100%)"],["Sepia","sepia(90%)"],["Noir","grayscale(100%) contrast(140%) brightness(95%)"],["Vintage","sepia(45%) contrast(110%) saturate(130%) brightness(105%)"],["Warm","sepia(25%) saturate(150%) brightness(105%)"],["Cool","hue-rotate(-18deg) saturate(125%) brightness(103%)"],["Fade","contrast(85%) brightness(112%) saturate(80%)"],["Invert","invert(100%)"]];
-      let active="none";
-      function out(f){ const nc=el("canvas"); nc.width=state.img.naturalWidth; nc.height=state.img.naturalHeight; const x=nc.getContext("2d"); x.filter=f; x.drawImage(state.img,0,0); return nc; }
-      const upd=()=>prev.src=out(active).toDataURL();
-      const ts=Math.min(1,140/Math.max(state.img.naturalWidth,state.img.naturalHeight)); const tw=Math.max(1,Math.round(state.img.naturalWidth*ts)), th=Math.max(1,Math.round(state.img.naturalHeight*ts));
-      const grid=el("div",{class:"swatches"});
-      FILTERS.forEach(([name,f])=>{ const tc=el("canvas");tc.width=tw;tc.height=th;const x=tc.getContext("2d");x.filter=f;x.drawImage(state.img,0,0,tw,th);
-        const w=el("div",{style:"text-align:center;cursor:pointer",onclick:()=>{active=f;upd();[...grid.children].forEach(ch=>ch.style.outline="");w.style.outline="2px solid var(--primary)";w.style.outlineOffset="2px";}},el("img",{src:tc.toDataURL(),style:"width:58px;height:auto;border-radius:7px;display:block;border:1px solid var(--line)"}),el("div",{class:"mono",style:"font-size:9px;color:var(--faint);margin-top:3px"},name)); grid.append(w); });
-      upd();
-      $("#wsControls").replaceChildren(field("Choose a look",grid),el("button",{class:"btn",onclick:()=>download(out(active),state.fileType==="image/jpeg"?"image/jpeg":"image/png",.95,state.fileType==="image/jpeg"?"jpg":"png")},"Download"));
-    }});
-
-  add({id:"round",name:"Round Corners",cat:"Transform",icon:"⬭",desc:"Rounded or circular crop with transparency.",
-    build(){
-      const prev=el("img"); stage(prev); let pct=18;
-      function out(){ const iw=state.img.naturalWidth, ih=state.img.naturalHeight; const nc=el("canvas"); nc.width=iw; nc.height=ih; const x=nc.getContext("2d");
-        const r=Math.min(iw,ih)*pct/100; x.beginPath(); x.moveTo(r,0); x.arcTo(iw,0,iw,ih,r); x.arcTo(iw,ih,0,ih,r); x.arcTo(0,ih,0,0,r); x.arcTo(0,0,iw,0,r); x.closePath(); x.clip(); x.drawImage(state.img,0,0); return nc; }
-      const upd=()=>prev.src=out().toDataURL("image/png");
-      const r=el("input",{type:"range",min:"0",max:"50",value:pct,oninput:e=>{pct=+e.target.value;upd();}});
-      upd();
-      $("#wsControls").replaceChildren(field("Corner radius",r),el("button",{class:"btn ghost sm",onclick:()=>{pct=50;r.value=50;upd();}},"Make it a circle"),el("p",{class:"hint"},"Exports as PNG to keep the transparent corners."),el("button",{class:"btn",onclick:()=>download(out(),"image/png",1,"png")},"Download PNG"));
-    }});
-
-  /* ---------- MORE: CREATE ---------- */
-  add({id:"border",name:"Border",cat:"Create",icon:"▢",desc:"Add a clean solid frame around your image.",
-    build(){
-      const prev=el("img"); stage(prev); let w=4, color="#ffffff";
-      function out(){ const iw=state.img.naturalWidth, ih=state.img.naturalHeight; const bw=Math.round(Math.min(iw,ih)*w/100);
-        const nc=el("canvas"); nc.width=iw+bw*2; nc.height=ih+bw*2; const x=nc.getContext("2d"); x.fillStyle=color; x.fillRect(0,0,nc.width,nc.height); x.drawImage(state.img,bw,bw); return nc; }
-      const upd=()=>prev.src=out().toDataURL();
-      const ws=el("input",{type:"range",min:"0",max:"20",value:w,oninput:e=>{w=+e.target.value;upd();}});
-      const col=el("input",{type:"color",value:color,style:"width:46px;height:38px;padding:2px;border-radius:8px;border:1px solid var(--line-strong)",oninput:e=>{color=e.target.value;upd();}});
-      upd();
-      $("#wsControls").replaceChildren(field("Thickness",ws),field("Colour",col),el("button",{class:"btn",onclick:()=>download(out(),"image/png",.95,"png")},"Download"));
-    }});
-
-  add({id:"meme",name:"Meme Text",cat:"Create",icon:"😂",desc:"Classic top & bottom Impact captions.",
-    build(){
-      const prev=el("img"); stage(prev); const v={top:"TOP TEXT",bottom:"BOTTOM TEXT",size:9};
-      function out(){ const c=baseCanvas(); const x=c.getContext("2d"); const fs=Math.round(c.width*v.size/100);
-        x.font=`400 ${fs}px Anton, Impact, sans-serif`; x.textAlign="center"; x.fillStyle="#fff"; x.strokeStyle="#000"; x.lineWidth=Math.max(2,fs*0.07); x.lineJoin="round";
-        const draw=(t,y,base)=>{ if(!t)return; x.textBaseline=base; x.strokeText(t.toUpperCase(),c.width/2,y); x.fillText(t.toUpperCase(),c.width/2,y); };
-        draw(v.top, fs*0.3, "top"); draw(v.bottom, c.height-fs*0.3, "bottom"); return c; }
-      const upd=()=>prev.src=out().toDataURL();
-      const top=el("input",{type:"text",value:v.top,oninput:e=>{v.top=e.target.value;upd();}});
-      const bot=el("input",{type:"text",value:v.bottom,oninput:e=>{v.bottom=e.target.value;upd();}});
-      const size=el("input",{type:"range",min:"4",max:"16",value:v.size,oninput:e=>{v.size=+e.target.value;upd();}});
-      upd();
-      $("#wsControls").replaceChildren(field("Top text",top),field("Bottom text",bot),field("Size",size),el("button",{class:"btn",onclick:()=>download(out(),"image/png",.95,"png")},"Download"));
-    }});
-
-  /* ---------- MORE: PRIVACY ---------- */
-  add({id:"exifview",name:"EXIF Viewer",cat:"Privacy",icon:"🔎",desc:"See the hidden data inside your photo.",
-    build(){
-      stage(el("img",{src:state.img.src}));
-      const list=el("div",{},el("p",{class:"hint"},"Reading metadata…"));
-      $("#wsControls").replaceChildren(list, el("button",{class:"btn",onclick:()=>{ const t=TOOLS.find(x=>x.id==="metadata"); if(t) openTool(t); }},"Remove this metadata"));
-      fetch(state.img.src).then(r=>r.arrayBuffer()).then(buf=>{ const data=readEXIF(buf); const keys=Object.keys(data); list.innerHTML="";
-        if(!keys.length){ list.append(el("p",{class:"hint"},"No EXIF metadata found — this image is already clean. 🎉")); return; }
-        keys.forEach(k=>{ const warn=k==="GPS Location"; list.append(el("div",{class:"stat",style:warn?"color:var(--danger)":""},el("span",{},k),el("b",{class:"mono",style:warn?"color:var(--danger)":""}, warn?"⚠ "+data[k]:data[k]))); });
-      }).catch(()=>{ list.innerHTML=""; list.append(el("p",{class:"hint"},"Couldn't parse metadata for this file type (EXIF reading supports JPEG).")); });
-    }});
-
-  /* ---------- LOCAL AI: Background Remover (free, on-device) ---------- */
-  add({id:"bg",name:"Background Remover",cat:"Transform",icon:"🪄",desc:"Erase the background on-device — no upload, no cost.",
-    build(){
-      const prev=el("img",{src:state.img.src}); stage(prev); // checkerboard stage shows the transparency
-      const status=el("p",{class:"hint"},"Runs a segmentation model right in your browser. The model files download once and cache — your image never leaves the device.");
-      const bar=el("div",{style:"height:8px;border-radius:6px;background:var(--surface-2);overflow:hidden;display:none"}); const fill=el("div",{style:"height:100%;width:0;background:var(--primary);transition:width .15s"}); bar.append(fill);
-      let resultBlob=null;
-      async function run(btn){
-        btn.disabled=true; btn.textContent="Loading model…"; bar.style.display="block"; status.style.color=""; status.textContent="Preparing… first run downloads the model (cached afterwards).";
-        try{
-          const mod=await import("https://esm.sh/@imgly/background-removal@1.7.0");
-          const removeBackground=mod.default||mod.removeBackground;
-          btn.textContent="Removing…";
-          const blob=await removeBackground(state.img.src,{ output:{format:"image/png"}, progress:(key,cur,tot)=>{ const p=tot?Math.round(cur/tot*100):0; fill.style.width=p+"%"; status.textContent=(/fetch|download/i.test(key)?"Downloading model… ":"Processing… ")+p+"%"; } });
-          resultBlob=blob; prev.src=URL.createObjectURL(blob); fill.style.width="100%"; status.textContent="Done — background removed locally. ✓";
-        }catch(err){ status.style.color="var(--danger)"; status.textContent="Couldn't load the model: "+(err && err.message || err)+". Check your connection and try again."; }
-        btn.disabled=false; btn.textContent="Run again";
-      }
-      const go=el("button",{class:"btn",onclick:()=>run(go)},"Remove background");
-      const dl=el("button",{class:"btn ghost",onclick:()=>{ if(!resultBlob){toast("Run it first");return;} const a=el("a",{href:URL.createObjectURL(resultBlob),download:`${state.fileName}-nobg.png`}); document.body.append(a); a.click(); a.remove(); toast("Saved transparent PNG"); }},"Download PNG");
-      $("#wsControls").replaceChildren(go, bar, status, dl);
-    }});
-
-  /* ---------- AI PRO ---------- */
-  // AI Alt-Text — real Claude API call through your Cloudflare Worker.
-  add({id:"ai-alt",name:"AI Alt-Text",cat:"AI Pro",icon:"💬",desc:"Accessible alt text + caption + SEO keywords.",pro:true,
-    build(){
-      stage(el("img",{src:state.img.src}));
-      const outBox=el("div",{},el("p",{class:"hint"},"Claude describes your image. Only a downscaled copy is sent — to your own Worker, never to a third party."));
-      async function run(btn){
-        btn.disabled=true; const label=btn.textContent; btn.textContent="Thinking…";
-        try{
-          const max=1024; const s=Math.min(1,max/Math.max(state.img.naturalWidth,state.img.naturalHeight));
-          const c=el("canvas"); c.width=Math.round(state.img.naturalWidth*s); c.height=Math.round(state.img.naturalHeight*s);
-          c.getContext("2d").drawImage(state.img,0,0,c.width,c.height);
-          const b64=c.toDataURL("image/jpeg",0.85).split(",")[1];
-          const res=await fetch(WORKER_URL+"/alt-text",{method:"POST",headers:{"Content-Type":"application/json","X-License-Key":state.license||DEV_CODE},body:JSON.stringify({image:b64,media_type:"image/jpeg"})});
-          if(!res.ok){ const e=await res.json().catch(()=>({})); throw new Error(e.error||("HTTP "+res.status)); }
-          const j=await res.json(); let data; try{ data=JSON.parse((j.result||"").replace(/```json|```/g,"").trim()); }catch{ data={alt:j.result||"No response"}; }
-          outBox.innerHTML="";
-          const block=(lbl,val)=>{ const ta=el("textarea",{readonly:"true"}); ta.value=val; outBox.append(field(lbl, ta, el("button",{class:"btn ghost sm",style:"margin-top:6px",onclick:()=>{navigator.clipboard&&navigator.clipboard.writeText(val);toast("Copied");}},"Copy"))); };
-          if(data.alt) block("Alt text", data.alt);
-          if(data.caption) block("Caption", data.caption);
-          if(data.keywords) block("SEO keywords", Array.isArray(data.keywords)?data.keywords.join(", "):data.keywords);
-        }catch(err){ outBox.innerHTML=""; outBox.append(el("p",{class:"hint",style:"color:var(--danger)"},"Couldn't reach the AI service: "+err.message)); }
-        btn.disabled=false; btn.textContent=label==="Thinking…"?"Generate again":"Generate again";
-      }
-      const go=el("button",{class:"btn",onclick:()=>run(go)},"Generate alt text");
-      $("#wsControls").replaceChildren(go, outBox);
-    }});
-
-  // The remaining Pro tools need providers Claude's API doesn't cover — scaffolded with accurate notes.
-  const proTool=(id,name,icon,desc,note)=>add({id,name,cat:"AI Pro",icon,desc,pro:true,build(){
-    stage(el("img",{src:state.img?state.img.src:""}));
-    $("#wsControls").replaceChildren(
-      el("p",{class:"hint"},note),
-      el("div",{class:"stat"},el("span",{},"Status"),el("b",{style:"color:var(--pro)"},"Coming soon"))
-    );
-  }});
-  proTool("ai-upscale","AI Upscale","🔍","Enlarge images 2–4× with detail reconstruction.","Upscaling needs a dedicated image model (e.g. Replicate / fal.ai) — wired through the same Worker pattern.");
-  proTool("ai-enhance","AI Enhance","✨","One-tap lighting, colour and clarity fix.","Uses an image-to-image model via your Worker; routed like Upscale.");
-
-  /* ============================================================
-     RENDER GRID + CATEGORIES
-     ============================================================ */
-  const CATS=["All","Optimise","Transform","Privacy","Create","AI Pro"];
-  const CATWASH={Optimise:"#ECEFFF",Transform:"#F1ECFF",Privacy:"#E6F8F0",Create:"#FFF1E6","AI Pro":"#FFF4DF"};
-  let activeCat="All", pendingTool=null, query="";
-  const catsEl=$("#cats"), gridEl=$("#grid");
-  const catCount=c=>c==="All"?TOOLS.length:TOOLS.filter(t=>t.cat===c).length;
-  CATS.forEach(c=>{ catsEl.append(el("button",{class:"cat"+(c==="All"?" active":""),"data-cat":c,onclick:(e)=>{activeCat=c;[...catsEl.children].forEach(x=>x.classList.remove("active"));e.currentTarget.classList.add("active");renderGrid();}}, c, el("span",{class:"cnt"},catCount(c)))); });
-  function renderGrid(){ gridEl.innerHTML="";
-    const q=query.trim().toLowerCase();
-    const list=TOOLS.filter(t=>(activeCat==="All"||t.cat===activeCat) && (!q || (t.name+" "+t.desc).toLowerCase().includes(q)));
-    if(!list.length){ gridEl.append(el("div",{class:"grid-empty"},"No tools match “"+query+"”.")); return; }
-    list.forEach(t=>{
-      const ico=el("div",{class:"tico"},t.icon); ico.style.background=CATWASH[t.cat]||"var(--surface-2)";
-      const card=el("button",{class:"tool",onclick:()=>requestTool(t)}, ico, el("h3",{},t.name), el("p",{},t.desc));
-      if(t.pro) card.append(el("span",{class:"protag"},"PRO"));
-      gridEl.append(card);
-    });
-  }
-  renderGrid();
-  $("#freeCount").textContent=TOOLS.filter(t=>!t.pro).length;
-  $("#toolSearch").addEventListener("input",e=>{ query=e.target.value; renderGrid(); });
-
-  /* ---------- open a tool ---------- */
-  function requestTool(t){
-    if(t.pro && !state.isPro){ openPro(); return; }
-    if(!state.img){ pendingTool=t; toast("Choose an image to begin"); pickFile(); return; }
-    openTool(t);
-  }
-  const wsBack=$("#wsBack");
-  function openTool(t){
-    $("#wsTitle").textContent=t.name; $("#wsIco").textContent=t.icon;
-    $("#wsStage").innerHTML=""; $("#wsControls").innerHTML="";
-    try{ t.build(); }catch(e){ console.error(e); toast("Something went wrong with that tool"); }
-    wsBack.classList.add("open"); document.body.style.overflow="hidden";
-    setTimeout(()=>$("#wsClose").focus(),30);
-    gtag&&gtag("event","open_tool",{tool:t.id});
-  }
-  function closeWs(){ wsBack.classList.remove("open"); document.body.style.overflow=""; }
-  $("#wsClose").addEventListener("click",closeWs);
-  wsBack.addEventListener("click",e=>{ if(e.target===wsBack) closeWs(); });
-  window.addEventListener("keydown",e=>{ if(e.key==="Escape") closeWs(); });
-
-  /* ============================================================
-     PRO UNLOCK
-     ============================================================ */
-  function unlock(key){ state.isPro=true; state.license=key; if(store){store.setItem("rik_pro","1"); store.setItem("rik_license",key);} toast("Pro unlocked ✓"); closeWs(); renderGrid(); }
-  function openPro(){
-    $("#wsTitle").textContent="RightImageKit Pro"; $("#wsIco").textContent="★";
-    $("#wsStage").innerHTML=""; $("#wsStage").append(el("div",{style:"font-size:64px"},"🪄"));
-    const codeIn=el("input",{type:"text",placeholder:"Unlock code"});
-    const card=el("div",{class:"pro-card"},
-      el("div",{class:"price"},"£4.99",el("small",{}," one-time")),
-      el("ul",{},
-        el("li",{},"AI Background Remover"),
-        el("li",{},"AI Upscale (2–4×)"),
-        el("li",{},"AI Photo Enhance"),
-        el("li",{},"AI Alt-Text generator"),
-        el("li",{},"All free tools, forever")),
-      // Lemon Squeezy checkout — replace href with your store link / overlay
-      el("a",{class:"btn",style:"width:100%;justify-content:center",href:"https://rightpdfkit.lemonsqueezy.com/checkout/buy/29e1e924-ef12-4f4e-91fa-35e693698ef8",target:"_blank",rel:"noopener","data-rik":"checkout"},"Unlock Pro — £4.99"),
-      el("div",{class:"unlock-row"}, codeIn, el("button",{class:"btn ghost sm",onclick:async(e)=>{
-        const v=codeIn.value.trim(); if(!v){toast("Enter your code");return;}
-        if(v===DEV_CODE){ unlock(v); return; }
-        const btn=e.currentTarget; btn.disabled=true; btn.textContent="Checking…";
-        try{ const r=await fetch(WORKER_URL+"/license",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({license_key:v})}); const d=await r.json();
-          if(d.valid){ unlock(v); } else { toast("Invalid or inactive licence"); }
-        }catch{ toast("Couldn't reach the licence server"); }
-        btn.disabled=false; btn.textContent="Apply";
-      }},"Apply")),
-      el("p",{class:"hint",style:"margin-top:10px"},"After purchase you'll receive a licence key by email — paste it above to unlock on any device.")
-    );
-    $("#wsControls").replaceChildren(card);
-    wsBack.classList.add("open"); document.body.style.overflow="hidden";
-  }
-  $("#openProBtn").addEventListener("click",openPro);
-
-  /* ---------- nav jump + misc ---------- */
-  document.querySelectorAll("[data-jump]").forEach(a=>a.addEventListener("click",()=>{ const c=a.dataset.jump; activeCat=c; query=""; $("#toolSearch").value=""; [...catsEl.children].forEach(x=>x.classList.toggle("active",x.dataset.cat===c)); renderGrid(); }));
-  $("#menuBtn").addEventListener("click",()=>document.querySelector("#tools").scrollIntoView());
-  $("#yr").textContent=new Date().getFullYear();
-
-})();
+// ── UTILS ──
+function loadScript(src){return new Promise((res,rej)=>{if(document.querySelector('script[src="'+src+'"]')){res();return}const s=document.createElement('script');s.src=src;s.onload=res;s.onerror=rej;document.head.appendChild(s)})}
+document.addEventListener('dragover',e=>e.preventDefault())
+document.addEventListener('drop',e=>e.preventDefault())
+document.querySelectorAll('.nav-item').forEach(item=>item.addEventListener('click',()=>{if(window.innerWidth<=768){const s=document.getElementById('sidebar');s.classList.add('rik-hidden')}}))
 </script>
+
+<!-- Default Statcounter code for Right Image Kit -->
+<script type="text/javascript">
+var sc_project=13283784; 
+var sc_invisible=1; 
+var sc_security="11d82cfe"; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/13283784/0/11d82cfe/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
 </body>
 </html>
