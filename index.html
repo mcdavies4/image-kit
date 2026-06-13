@@ -3,22 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RightImageKit – Free Image Compressor, Resizer & Converter | No Upload</title>
-<meta name="description" content="Free image compressor, resizer, converter and background remover. Compress JPG, PNG, WebP. Convert HEIC to JPG. Remove backgrounds locally. No upload, no account — files never leave your browser.">
-<meta name="keywords" content="compress image online free, image compressor, reduce image size, resize image free, remove background free, heic to jpg, jpg to png free, png to jpg, crop image online, image to pdf, convert image format, image tools no upload">
+<title>RightImageKit – 28 Free Image Tools | Compress, Resize, Sharpen & More | No Upload</title>
+<meta name="description" content="Free image tools — compress, resize, convert, crop, sharpen, add borders, remove background and more. 28 tools, zero uploads. Files never leave your browser.">
+<meta name="keywords" content="compress image online free, image compressor, resize image free, remove background free, heic to jpg, sharpen image online, add border to image, remove exif data, image to base64, pixelate image, create favicon online, before after image comparison, image tools no upload">
 <link rel="canonical" href="https://rightimagekit.com">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="128x128" href="/favicon-128x128.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/favicon-128x128.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="RightImageKit – Free Image Compressor, Resizer & Background Remover">
-<meta property="og:description" content="Compress, resize, convert HEIC to JPG, remove background — 19 image tools with zero uploads.">
+<meta property="og:title" content="RightImageKit – 28 Free Image Tools | No Upload Required">
+<meta property="og:description" content="Compress, resize, convert, sharpen, remove background and more — 28 image tools with zero uploads.">
 <meta property="og:image" content="https://rightimagekit.com/og-image.png">
 <meta property="og:url" content="https://rightimagekit.com">
 <meta property="og:site_name" content="RightImageKit">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="RightImageKit – Free Image Compressor & Background Remover">
-<meta name="twitter:description" content="19 image tools. Zero uploads. Files never leave your device.">
+<meta name="twitter:title" content="RightImageKit – 29 Image Tools, Zero Uploads">
+<meta name="twitter:description" content="28 image tools. Zero uploads. Files never leave your device.">
 <meta name="twitter:image" content="https://rightimagekit.com/og-image.png">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJB8W8DEW1"></script>
@@ -161,11 +162,11 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
   <!-- SIDEBAR -->
   <nav class="sidebar" id="sidebar">
     <div class="logo">
-      <svg width="30" height="30" viewBox="0 0 32 32" fill="none" style="flex-shrink:0">
-        <rect width="32" height="32" rx="9" fill="url(#lg2)"/>
-        <path d="M16 5C16.5 13 19 16 27 16C19 16.5 16.5 19 16 27C15.5 19 13 16.5 5 16C13 15.5 15.5 13 16 5Z" fill="white"/>
-        <defs><linearGradient id="lg2" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#6C63FF"/><stop offset="1" stop-color="#A78BFA"/></linearGradient></defs>
-      </svg>
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" style="flex-shrink:0">
+  <defs><linearGradient id="rl" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6C63FF"/><stop offset="1" stop-color="#A78BFA"/></linearGradient></defs>
+  <rect width="32" height="32" rx="9" fill="url(#rl)"/>
+  <text x="9" y="23" font-family="-apple-system,Arial,sans-serif" font-size="18" font-weight="900" fill="white">R</text>
+</svg>
       <div class="logo-name">Right<span>Image</span>Kit</div>
     </div>
     <div class="nav-section">Free Tools</div>
@@ -183,12 +184,22 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
     <button class="nav-item" data-nav="heic" data-t="heic"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="1" width="8" height="14" rx="2"/><path d="M7 13h2"/><circle cx="8" cy="5" r="1.5"/></svg></span>HEIC to JPG</button>
     <button class="nav-item" data-nav="merge" data-t="merge"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="8" height="8" rx="1.5"/><rect x="7" y="7" width="8" height="8" rx="1.5"/></svg></span>Merge Images</button>
     <button class="nav-item" data-nav="palette" data-t="palette"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h12M4 8h8M6 12h4"/></svg></span>Color Palette</button>
+    <button class="nav-item" onclick="nav('sharpen')" data-t="sharpen"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="5"/><path d="M8 5v6M5 8h6"/></svg></span>Sharpen</button>
+    <button class="nav-item" onclick="nav('border')" data-t="border"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="12" height="12" rx="2"/><rect x="4" y="4" width="8" height="8" rx="1"/></svg></span>Add Border</button>
+    <button class="nav-item" onclick="nav('flip')" data-t="flip"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 8h12M5 5l-3 3 3 3M11 5l3 3-3 3"/></svg></span>Flip Image</button>
+    <button class="nav-item" onclick="nav('adjust')" data-t="adjust"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="5" cy="5" r="2"/><circle cx="11" cy="11" r="2"/><path d="M7 5h7M2 11h7"/></svg></span>Adjust Colours</button>
+    <button class="nav-item" onclick="nav('padding')" data-t="padding"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="1" width="14" height="14" rx="2"/><rect x="4" y="4" width="8" height="8" rx="1" stroke-dasharray="2 1.5"/></svg></span>Add Padding</button>
+    <button class="nav-item" onclick="nav('exif')" data-t="exif"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><path d="M4 4l8 8M4 12L8 8"/></svg></span>Remove EXIF</button>
+    <button class="nav-item" onclick="nav('base64')" data-t="base64"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4h2l1 4 1-4h2M10 8v4M12 8v4M2 12h5"/></svg></span>Image to Base64</button>
+    <button class="nav-item" onclick="nav('pixelate')" data-t="pixelate"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span>Pixelate</button>
     <div class="nav-section">Pro Tools</div>
     <button class="nav-item" data-nav="removebg" data-t="removebg"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14l3-3m3-7l5 5-3 3-5-5m-1 5l1-1"/><path d="M9 3l4 4-1 1"/><circle cx="12" cy="4" r="1.5"/></svg></span>Remove Background<span class="pro-badge">PRO</span></button>
     <button class="nav-item" data-nav="blur" data-t="blur"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><path d="M2 8h1M13 8h1M8 2v1M8 13v1"/><path d="M3.5 3.5l.7.7M11.8 11.8l.7.7M3.5 12.5l.7-.7M11.8 4.2l.7-.7" stroke-width="1"/></svg></span>Blur / Censor<span class="pro-badge">PRO</span></button>
     <button class="nav-item" data-nav="enhance" data-t="enhance"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v2M8 12v2M3 8H1M15 8h-2M4.2 4.2L2.8 2.8M13.2 13.2l-1.4-1.4M4.2 11.8l-1.4 1.4M13.2 2.8l-1.4 1.4"/><circle cx="8" cy="8" r="3"/></svg></span>AI Enhance<span class="pro-badge">PRO</span></button>
     <button class="nav-item" data-nav="bulk" data-t="bulk"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="10" height="8" rx="1.5"/><path d="M1 3h14M5 1h6"/></svg></span>Bulk Compress<span class="pro-badge">PRO</span></button>
     <button class="nav-item" data-nav="roundcorners" data-t="roundcorners"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 2H2v2M4 14H2v-2M12 2h2v2M12 14h2v-2"/><rect x="4" y="2" width="8" height="12" rx="3"/></svg></span>Round Corners<span class="pro-badge">PRO</span></button>
+    <button class="nav-item" onclick="nav('favicon')" data-t="favicon"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="12" height="12" rx="3"/><path d="M5 8h6M8 5v6"/></svg></span>Create Favicon<span class="pro-badge">PRO</span></button>
+    <button class="nav-item" onclick="nav('compare')" data-t="compare"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 1v14"/><rect x="1" y="3" width="6" height="10" rx="1"/><rect x="9" y="3" width="6" height="10" rx="1"/></svg></span>Before/After<span class="pro-badge">PRO</span></button>
     <div class="nav-section">More</div>
     <button class="nav-item" data-nav="pricing" data-t="pricing"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2L7 9h6L8 14"/></svg></span>Pricing</button>
     <a class="nav-item" href="/blog/"><span class="ni"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 6h6M5 9h4"/></svg></span>Blog</a>
@@ -203,9 +214,9 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
     <!-- HOME -->
     <div class="panel panel-home active" id="panel-home">
       <div class="hero">
-        <div class="hero-badge">🔒 Privacy-first image tools</div>
-        <h1>19 image tools.<br><span>Zero uploads.</span></h1>
-        <p>Compress, resize, convert, crop, remove backgrounds and more — all running in your browser. Your images never leave your device.</p>
+        <div class="hero-badge">🔒 28 privacy-first image tools</div>
+        <h1>28 image tools.<br><span>Zero uploads.</span></h1>
+        <p>Compress, resize, sharpen, crop, remove backgrounds and more — 28 tools, all running locally in your browser. Your images never leave your device.</p>
         <div class="hero-pills">
           <div class="pill"><span class="dot"></span>No upload</div>
           <div class="pill"><span class="dot"></span>No account</div>
@@ -229,6 +240,14 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
         <div class="tool-card" data-nav="merge"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="8" height="8" rx="1.5"/><rect x="7" y="7" width="8" height="8" rx="1.5"/></svg></span><div class="tc-name">Merge Images</div><div class="tc-desc">Side by side</div></div>
         <div class="tool-card" data-nav="palette"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><circle cx="6" cy="6" r="1" fill="currentColor" stroke="none"/><circle cx="10" cy="6" r="1" fill="currentColor" stroke="none"/><circle cx="6" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="10" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="5" r="1" fill="currentColor" stroke="none"/></svg></span><div class="tc-name">Color Palette</div><div class="tc-desc">Extract colours</div></div>
       </div>
+        <div class="tool-card" onclick="nav('sharpen')"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="5"/><path d="M8 5v6M5 8h6"/></svg></span><div class="tc-name">Sharpen</div><div class="tc-desc">Fix blurry photos</div></div>
+        <div class="tool-card" onclick="nav('border')"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="12" height="12" rx="2"/><rect x="4" y="4" width="8" height="8" rx="1"/></svg></span><div class="tc-name">Add Border</div><div class="tc-desc">Frame your image</div></div>
+        <div class="tool-card" onclick="nav('flip')"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 8h12M5 5l-3 3 3 3M11 5l3 3-3 3"/></svg></span><div class="tc-name">Flip Image</div><div class="tc-desc">Mirror horizontally</div></div>
+        <div class="tool-card" onclick="nav('adjust')"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="5" cy="5" r="2"/><circle cx="11" cy="11" r="2"/><path d="M7 5h7M2 11h7"/></svg></span><div class="tc-name">Adjust Colours</div><div class="tc-desc">Hue, brightness, saturation</div></div>
+        <div class="tool-card" onclick="nav('padding')"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="1" width="14" height="14" rx="2"/><rect x="4" y="4" width="8" height="8" rx="1" stroke-dasharray="2 1.5"/></svg></span><div class="tc-name">Add Padding</div><div class="tc-desc">Extend canvas</div></div>
+        <div class="tool-card" onclick="nav('exif')"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><path d="M4 4l8 8M4 12L8 8"/></svg></span><div class="tc-name">Remove EXIF</div><div class="tc-desc">Strip GPS & metadata</div></div>
+        <div class="tool-card" onclick="nav('base64')"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4h2l1 4 1-4h2M10 8v4M12 8v4M2 12h5"/></svg></span><div class="tc-name">Image to Base64</div><div class="tc-desc">Get base64 string</div></div>
+        <div class="tool-card" onclick="nav('pixelate')"><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span><div class="tc-name">Pixelate</div><div class="tc-desc">8-bit effect</div></div>
       <div class="section-label">Pro tools</div>
       <div class="tools-grid">
         <div class="tool-card" data-nav="removebg"><span class="pro-tag">PRO</span><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14l3-3m3-7l5 5-3 3-5-5m-1 5l1-1"/><path d="M9 3l4 4-1 1"/><circle cx="12" cy="4" r="1.5"/></svg></span><div class="tc-name">Remove Background</div><div class="tc-desc">Local WASM AI</div></div>
@@ -237,6 +256,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
         <div class="tool-card" data-nav="bulk"><span class="pro-tag">PRO</span><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="10" height="8" rx="1.5"/><path d="M1 3h14M5 1h6"/></svg></span><div class="tc-name">Bulk Compress</div><div class="tc-desc">Multiple files</div></div>
         <div class="tool-card" data-nav="roundcorners"><span class="pro-tag">PRO</span><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 2H2v2M4 14H2v-2M12 2h2v2M12 14h2v-2"/><rect x="4" y="2" width="8" height="12" rx="3"/></svg></span><div class="tc-name">Round Corners</div><div class="tc-desc">Custom radius</div></div>
       </div>
+              <div class="tool-card" onclick="nav('favicon')"><span class="pro-tag">PRO</span><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="12" height="12" rx="3"/><path d="M5 8h6M8 5v6"/></svg></span><div class="tc-name">Create Favicon</div><div class="tc-desc">ICO + PNG set</div></div>
+        <div class="tool-card" onclick="nav('compare')"><span class="pro-tag">PRO</span><span class="tc-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 1v14"/><rect x="1" y="3" width="6" height="10" rx="1"/><rect x="9" y="3" width="6" height="10" rx="1"/></svg></span><div class="tc-name">Before / After</div><div class="tc-desc">Comparison slider</div></div>
       <!-- Cross promo RPK -->
       <div style="margin:0 24px 28px;background:linear-gradient(135deg,rgba(232,69,10,0.08),rgba(13,13,26,0.5));border:1px solid rgba(232,69,10,0.2);border-radius:16px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap">
         <div style="display:flex;align-items:center;gap:12px">
@@ -555,6 +576,186 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
       </div>
     </div>
 
+
+    <!-- ══ SHARPEN ══ -->
+    <div class="panel" id="panel-sharpen">
+      <div class="ph"><h2><span class="ni" style="width:28px;height:28px;background:rgba(108,99,255,0.15);border-radius:8px;display:inline-flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="5"/><path d="M8 5v6M5 8h6"/></svg></span> Sharpen Image</h2><p>Fix blurry photos with an unsharp mask filter. Drag to adjust strength.</p></div>
+      <div class="dropzone" id="sharpen-dz"><input type="file" id="sharpen-in" accept="image/*"><div class="dz-icon">🔍</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div></div>
+      <div class="file-chip rik-hidden" id="sharpen-chip"></div>
+      <div class="controls rik-hidden" id="sharpen-ctrl">
+        <div class="ctrl-row"><span class="ctrl-label">Strength</span><input type="range" id="sharpen-amount" min="0" max="100" value="50" oninput="applySharpen()"><span class="ctrl-val" id="sharpen-amount-v">50</span></div>
+        <div class="ctrl-row"><span class="ctrl-label">Radius</span><input type="range" id="sharpen-radius" min="1" max="5" value="1" oninput="applySharpen()"><span class="ctrl-val" id="sharpen-radius-v">1</span></div>
+      </div>
+      <canvas id="sharpen-canvas" class="rik-hidden" style="max-width:100%;border-radius:8px;margin-top:12px"></canvas>
+      <div class="btn-row rik-hidden" id="sharpen-btns"><button class="btn" onclick="downloadCanvas('sharpen-canvas','sharpened','jpeg')">⬇ Download</button></div>
+    </div>
+
+    <!-- ══ ADD BORDER ══ -->
+    <div class="panel" id="panel-border">
+      <div class="ph"><h2><span class="ni" style="width:28px;height:28px;background:rgba(108,99,255,0.15);border-radius:8px;display:inline-flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="12" height="12" rx="2"/><rect x="4" y="4" width="8" height="8" rx="1"/></svg></span> Add Border</h2><p>Add a solid, gradient or shadow border around any image.</p></div>
+      <div class="dropzone" id="border-dz"><input type="file" id="border-in" accept="image/*"><div class="dz-icon">🖼</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div></div>
+      <div class="file-chip rik-hidden" id="border-chip"></div>
+      <div class="controls rik-hidden" id="border-ctrl">
+        <div class="ctrl-row"><span class="ctrl-label">Size</span><input type="range" id="border-size" min="1" max="80" value="20" oninput="applyBorder()"><span class="ctrl-val" id="border-size-v">20px</span></div>
+        <div class="ctrl-row"><span class="ctrl-label">Colour</span><input type="color" id="border-color" value="#ffffff" oninput="applyBorder()" style="width:40px;height:30px;border:none;border-radius:6px;cursor:pointer;background:none"></div>
+        <div class="ctrl-row"><span class="ctrl-label">Style</span><div class="format-btns"><button class="fmt-btn on" onclick="setBorderStyle('solid',this)">Solid</button><button class="fmt-btn" onclick="setBorderStyle('shadow',this)">Shadow</button><button class="fmt-btn" onclick="setBorderStyle('gradient',this)">Gradient</button></div></div>
+      </div>
+      <canvas id="border-canvas" class="rik-hidden" style="max-width:100%;border-radius:8px;margin-top:12px"></canvas>
+      <div class="btn-row rik-hidden" id="border-btns"><button class="btn" onclick="downloadCanvas('border-canvas','bordered','jpeg')">⬇ Download</button></div>
+    </div>
+
+    <!-- ══ FLIP ══ -->
+    <div class="panel" id="panel-flip">
+      <div class="ph"><h2><span class="ni" style="width:28px;height:28px;background:rgba(108,99,255,0.15);border-radius:8px;display:inline-flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 8h12M5 5l-3 3 3 3M11 5l3 3-3 3"/></svg></span> Flip Image</h2><p>Mirror your image horizontally or vertically with one click.</p></div>
+      <div class="dropzone" id="flip-dz"><input type="file" id="flip-in" accept="image/*"><div class="dz-icon">↔</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div></div>
+      <div class="file-chip rik-hidden" id="flip-chip"></div>
+      <div class="controls rik-hidden" id="flip-ctrl">
+        <div class="ctrl-row" style="flex-wrap:wrap;gap:8px">
+          <button class="fmt-btn" onclick="applyFlipDir('h')">⇄ Flip Horizontal</button>
+          <button class="fmt-btn" onclick="applyFlipDir('v')">⇅ Flip Vertical</button>
+          <button class="fmt-btn" onclick="applyFlipDir('both')">⤢ Flip Both</button>
+        </div>
+      </div>
+      <canvas id="flip-canvas" class="rik-hidden" style="max-width:100%;border-radius:8px;margin-top:12px"></canvas>
+      <div class="btn-row rik-hidden" id="flip-btns"><button class="btn" onclick="downloadCanvas('flip-canvas','flipped','jpeg')">⬇ Download</button></div>
+    </div>
+
+    <!-- ══ ADJUST COLOURS ══ -->
+    <div class="panel" id="panel-adjust">
+      <div class="ph"><h2><span class="ni" style="width:28px;height:28px;background:rgba(108,99,255,0.15);border-radius:8px;display:inline-flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="5" cy="5" r="2"/><circle cx="11" cy="11" r="2"/><path d="M7 5h7M2 11h7"/></svg></span> Adjust Colours</h2><p>Fine-tune hue, brightness, contrast, saturation and warmth.</p></div>
+      <div class="dropzone" id="adjust-dz"><input type="file" id="adjust-in" accept="image/*"><div class="dz-icon">🎨</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div></div>
+      <div class="file-chip rik-hidden" id="adjust-chip"></div>
+      <div class="controls rik-hidden" id="adjust-ctrl">
+        <div class="ctrl-row"><span class="ctrl-label">Brightness</span><input type="range" id="adj-bright" min="-100" max="100" value="0" oninput="applyAdjust()"><span class="ctrl-val" id="adj-bright-v">0</span></div>
+        <div class="ctrl-row"><span class="ctrl-label">Contrast</span><input type="range" id="adj-contrast" min="-100" max="100" value="0" oninput="applyAdjust()"><span class="ctrl-val" id="adj-contrast-v">0</span></div>
+        <div class="ctrl-row"><span class="ctrl-label">Saturation</span><input type="range" id="adj-sat" min="-100" max="100" value="0" oninput="applyAdjust()"><span class="ctrl-val" id="adj-sat-v">0</span></div>
+        <div class="ctrl-row"><span class="ctrl-label">Warmth</span><input type="range" id="adj-warm" min="-100" max="100" value="0" oninput="applyAdjust()"><span class="ctrl-val" id="adj-warm-v">0</span></div>
+        <div class="ctrl-row"><span class="ctrl-label">Hue Shift</span><input type="range" id="adj-hue" min="0" max="360" value="0" oninput="applyAdjust()"><span class="ctrl-val" id="adj-hue-v">0°</span></div>
+        <div class="btn-row" style="margin-top:4px"><button class="btn" style="background:var(--surface2);color:var(--muted);box-shadow:none;font-size:12px" onclick="resetAdjust()">Reset</button></div>
+      </div>
+      <canvas id="adjust-canvas" class="rik-hidden" style="max-width:100%;border-radius:8px;margin-top:12px"></canvas>
+      <div class="btn-row rik-hidden" id="adjust-btns"><button class="btn" onclick="downloadCanvas('adjust-canvas','adjusted','jpeg')">⬇ Download</button></div>
+    </div>
+
+    <!-- ══ ADD PADDING ══ -->
+    <div class="panel" id="panel-padding">
+      <div class="ph"><h2><span class="ni" style="width:28px;height:28px;background:rgba(108,99,255,0.15);border-radius:8px;display:inline-flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="1" width="14" height="14" rx="2"/><rect x="4" y="4" width="8" height="8" rx="1" stroke-dasharray="2 1.5"/></svg></span> Add Padding / Canvas</h2><p>Extend the canvas around your image. Perfect for social media formatting.</p></div>
+      <div class="dropzone" id="padding-dz"><input type="file" id="padding-in" accept="image/*"><div class="dz-icon">⬜</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div></div>
+      <div class="file-chip rik-hidden" id="padding-chip"></div>
+      <div class="controls rik-hidden" id="padding-ctrl">
+        <div class="ctrl-row"><span class="ctrl-label">All sides</span><input type="range" id="pad-all" min="0" max="200" value="40" oninput="applyPadding()"><span class="ctrl-val" id="pad-all-v">40px</span></div>
+        <div class="ctrl-row"><span class="ctrl-label">Colour</span><input type="color" id="pad-color" value="#ffffff" oninput="applyPadding()" style="width:40px;height:30px;border:none;border-radius:6px;cursor:pointer;background:none"></div>
+        <div class="ctrl-row"><span class="ctrl-label">Presets</span><div class="format-btns"><button class="fmt-btn" onclick="setPadPreset('1:1')">1:1 Square</button><button class="fmt-btn" onclick="setPadPreset('16:9')">16:9</button><button class="fmt-btn" onclick="setPadPreset('4:5')">4:5 Instagram</button></div></div>
+      </div>
+      <canvas id="padding-canvas" class="rik-hidden" style="max-width:100%;border-radius:8px;margin-top:12px"></canvas>
+      <div class="btn-row rik-hidden" id="padding-btns"><button class="btn" onclick="downloadCanvas('padding-canvas','padded','jpeg')">⬇ Download</button></div>
+    </div>
+
+    <!-- ══ REMOVE EXIF ══ -->
+    <div class="panel" id="panel-exif">
+      <div class="ph"><h2><span class="ni" style="width:28px;height:28px;background:rgba(108,99,255,0.15);border-radius:8px;display:inline-flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><path d="M4 4l8 8M4 12L8 8"/></svg></span> Remove EXIF Data</h2><p>Strip GPS location, camera model, timestamps and all metadata from your photos. Privacy-first.</p></div>
+      <div class="dropzone" id="exif-dz"><input type="file" id="exif-in" accept="image/*"><div class="dz-icon">🔒</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span> · JPG, PNG, WebP</div></div>
+      <div class="file-chip rik-hidden" id="exif-chip"></div>
+      <div class="result-box rik-hidden" id="exif-res" style="margin-top:12px">
+        <div id="exif-info" style="margin-bottom:14px;font-size:13px;color:var(--muted)"></div>
+        <div class="btn-row"><button class="btn" id="exif-dl">⬇ Download Clean Image</button></div>
+      </div>
+    </div>
+
+    <!-- ══ IMAGE TO BASE64 ══ -->
+    <div class="panel" id="panel-base64">
+      <div class="ph"><h2><span class="ni" style="width:28px;height:28px;background:rgba(108,99,255,0.15);border-radius:8px;display:inline-flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4h2l1 4 1-4h2M10 8v4M12 8v4M2 12h5"/></svg></span> Image to Base64</h2><p>Convert any image to a Base64 string. Useful for embedding images in HTML, CSS or JSON.</p></div>
+      <div class="dropzone" id="base64-dz"><input type="file" id="base64-in" accept="image/*"><div class="dz-icon">{ }</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div></div>
+      <div class="file-chip rik-hidden" id="base64-chip"></div>
+      <div class="result-box rik-hidden" id="base64-res" style="margin-top:12px">
+        <div class="ctrl-row" style="margin-bottom:10px">
+          <span class="ctrl-label">Format</span>
+          <div class="format-btns">
+            <button class="fmt-btn on" onclick="setB64Format('full',this)">Full data URI</button>
+            <button class="fmt-btn" onclick="setB64Format('raw',this)">Raw base64</button>
+            <button class="fmt-btn" onclick="setB64Format('css',this)">CSS background</button>
+          </div>
+        </div>
+        <textarea id="base64-output" style="width:100%;height:120px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px;color:var(--text);font-family:monospace;font-size:11px;resize:vertical;outline:none" readonly></textarea>
+        <div class="btn-row" style="margin-top:10px">
+          <button class="btn" onclick="copyBase64()">📋 Copy</button>
+          <div id="base64-size" style="font-size:12px;color:var(--muted);align-self:center"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ PIXELATE ══ -->
+    <div class="panel" id="panel-pixelate">
+      <div class="ph"><h2><span class="ni" style="width:28px;height:28px;background:rgba(108,99,255,0.15);border-radius:8px;display:inline-flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span> Pixelate</h2><p>Apply an 8-bit pixelation effect to the whole image.</p></div>
+      <div class="dropzone" id="pixelate-dz"><input type="file" id="pixelate-in" accept="image/*"><div class="dz-icon">🟦</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span></div></div>
+      <div class="file-chip rik-hidden" id="pixelate-chip"></div>
+      <div class="controls rik-hidden" id="pixelate-ctrl">
+        <div class="ctrl-row"><span class="ctrl-label">Pixel size</span><input type="range" id="px-size" min="2" max="40" value="10" oninput="applyPixelate()"><span class="ctrl-val" id="px-size-v">10px</span></div>
+      </div>
+      <canvas id="pixelate-canvas" class="rik-hidden" style="max-width:100%;border-radius:8px;margin-top:12px"></canvas>
+      <div class="btn-row rik-hidden" id="pixelate-btns"><button class="btn" onclick="downloadCanvas('pixelate-canvas','pixelated','jpeg')">⬇ Download</button></div>
+    </div>
+
+    <!-- ══ PRO: CREATE FAVICON ══ -->
+    <div class="panel" id="panel-favicon">
+      <div class="ph"><h2><span class="ni" style="width:28px;height:28px;background:rgba(108,99,255,0.15);border-radius:8px;display:inline-flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="12" height="12" rx="3"/><path d="M5 8h6M8 5v6"/></svg></span> Create Favicon <span style="font-size:12px;background:var(--accent);color:#fff;border-radius:5px;padding:2px 7px;vertical-align:middle">PRO</span></h2>
+        <p>Upload any image and generate a complete favicon set — 16px, 32px, 48px, 180px (Apple Touch), plus a 64px ICO file. Ready to drop into any website.</p></div>
+      <div id="favicon-gate" style="background:rgba(108,99,255,0.08);border:1px solid var(--border2);border-radius:16px;padding:28px;text-align:center">
+        <div style="font-size:36px;margin-bottom:12px">⭐</div>
+        <div style="font-weight:800;font-size:16px;margin-bottom:8px">Pro feature</div>
+        <div style="font-size:14px;color:var(--muted);margin-bottom:20px">Generate a complete favicon set from any image.</div>
+        <button class="btn" onclick="window.location.href='https://rightpdfkit.lemonsqueezy.com/checkout/buy/29e1e924-ef12-4f4e-91fa-35e693698ef8'">⚡ Upgrade to Pro — £4.99/mo</button>
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:12px">
+          <input class="ctrl-input" type="text" id="fav-pro-code" placeholder="Dev code" style="max-width:180px;font-size:12px">
+          <button class="btn" style="padding:8px 14px;font-size:12px" onclick="checkProCode('favicon')">Unlock</button>
+        </div>
+      </div>
+      <div id="favicon-tool" class="rik-hidden">
+        <div class="dropzone" id="favicon-dz"><input type="file" id="favicon-in" accept="image/*"><div class="dz-icon">⭐</div><div class="dz-title">Drop image here</div><div class="dz-sub">or <span>browse files</span> · Square image works best</div></div>
+        <div class="file-chip rik-hidden" id="favicon-chip"></div>
+        <div class="result-box rik-hidden" id="favicon-res" style="margin-top:12px">
+          <div style="font-size:13px;font-weight:700;margin-bottom:12px;color:var(--text)">Favicon set ready — download each size:</div>
+          <div id="favicon-previews" style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px"></div>
+          <button class="btn" onclick="downloadAllFavicons()">⬇ Download All Sizes</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ PRO: BEFORE/AFTER COMPARE ══ -->
+    <div class="panel" id="panel-compare">
+      <div class="ph"><h2><span class="ni" style="width:28px;height:28px;background:rgba(108,99,255,0.15);border-radius:8px;display:inline-flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 1v14"/><rect x="1" y="3" width="6" height="10" rx="1"/><rect x="9" y="3" width="6" height="10" rx="1"/></svg></span> Before / After Comparison <span style="font-size:12px;background:var(--accent);color:#fff;border-radius:5px;padding:2px 7px;vertical-align:middle">PRO</span></h2>
+        <p>Upload two images and create a draggable before/after comparison slider.</p></div>
+      <div id="compare-gate" style="background:rgba(108,99,255,0.08);border:1px solid var(--border2);border-radius:16px;padding:28px;text-align:center">
+        <div style="font-size:36px;margin-bottom:12px">↔</div>
+        <div style="font-weight:800;font-size:16px;margin-bottom:8px">Pro feature</div>
+        <div style="font-size:14px;color:var(--muted);margin-bottom:20px">Create stunning before/after image comparisons.</div>
+        <button class="btn" onclick="window.location.href='https://rightpdfkit.lemonsqueezy.com/checkout/buy/29e1e924-ef12-4f4e-91fa-35e693698ef8'">⚡ Upgrade to Pro — £4.99/mo</button>
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:12px">
+          <input class="ctrl-input" type="text" id="cmp-pro-code" placeholder="Dev code" style="max-width:180px;font-size:12px">
+          <button class="btn" style="padding:8px 14px;font-size:12px" onclick="checkProCode('compare')">Unlock</button>
+        </div>
+      </div>
+      <div id="compare-tool" class="rik-hidden">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+          <div><div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:6px;text-transform:uppercase">Before</div>
+            <div class="dropzone" style="padding:20px" id="cmp-dz1"><input type="file" id="cmp-in1" accept="image/*"><div class="dz-icon" style="font-size:20px">🖼</div><div class="dz-sub" style="font-size:11px"><span>Browse</span></div></div></div>
+          <div><div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:6px;text-transform:uppercase">After</div>
+            <div class="dropzone" style="padding:20px" id="cmp-dz2"><input type="file" id="cmp-in2" accept="image/*"><div class="dz-icon" style="font-size:20px">🖼</div><div class="dz-sub" style="font-size:11px"><span>Browse</span></div></div></div>
+        </div>
+        <div id="compare-wrap" class="rik-hidden" style="position:relative;overflow:hidden;border-radius:12px;cursor:ew-resize;user-select:none;border:1px solid var(--border)">
+          <img id="cmp-img2" style="width:100%;display:block">
+          <div id="cmp-overlay" style="position:absolute;top:0;left:0;width:50%;overflow:hidden">
+            <img id="cmp-img1" style="display:block">
+          </div>
+          <div id="cmp-slider" style="position:absolute;top:0;bottom:0;left:50%;width:3px;background:white;box-shadow:0 0 6px rgba(0,0,0,0.4);cursor:ew-resize;transform:translateX(-50%)">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;background:white;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;font-size:14px;color:#000">↔</div>
+          </div>
+        </div>
+        <div id="compare-status" style="font-size:13px;color:var(--muted);margin-top:10px;text-align:center"></div>
+      </div>
+    </div>
+
+
     <!-- PRO PLACEHOLDERS -->
     <div class="panel" id="panel-enhance"><div class="ph"><h2>✨ AI Enhance <span style="font-size:12px;background:var(--accent);color:#fff;border-radius:5px;padding:2px 7px;vertical-align:middle">PRO</span></h2><p>Auto-enhance photos using Claude AI.</p></div><div style="background:rgba(108,99,255,0.08);border:1px solid var(--border2);border-radius:16px;padding:28px;text-align:center"><div style="font-size:36px;margin-bottom:12px">✨</div><button class="btn" onclick="window.location.href='https://rightpdfkit.lemonsqueezy.com/checkout/buy/29e1e924-ef12-4f4e-91fa-35e693698ef8'">⚡ Upgrade to Pro</button></div></div>
     <div class="panel" id="panel-bulk"><div class="ph"><h2>📦 Bulk Compress <span style="font-size:12px;background:var(--accent);color:#fff;border-radius:5px;padding:2px 7px;vertical-align:middle">PRO</span></h2><p>Compress multiple images at once. Download as ZIP.</p></div><div style="background:rgba(108,99,255,0.08);border:1px solid var(--border2);border-radius:16px;padding:28px;text-align:center"><div style="font-size:36px;margin-bottom:12px">📦</div><button class="btn" onclick="window.location.href='https://rightpdfkit.lemonsqueezy.com/checkout/buy/29e1e924-ef12-4f4e-91fa-35e693698ef8'">⚡ Upgrade to Pro</button></div></div>
@@ -565,7 +766,7 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
       <div class="ph"><h2>⚡ Pricing</h2><p>10 tools free forever. Pro unlocks AI-powered features.</p></div>
       <div class="pricing-grid">
         <div class="pricing-card">
-          <div style="font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">Free</div>
+          <div style="font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">Free — 21 tools</div>
           <div class="price-tag">£0 <span>forever</span></div>
           <div style="height:1px;background:var(--border);margin:16px 0"></div>
           <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--muted)">
@@ -576,7 +777,7 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
           </div>
         </div>
         <div class="pricing-card featured">
-          <div style="font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">Pro</div>
+          <div style="font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">Pro — 7 tools</div>
           <div class="price-tag">£4.99 <span>/ month</span></div>
           <div style="height:1px;background:var(--border);margin:16px 0"></div>
           <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--muted)">
@@ -611,7 +812,7 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
 const DEV_CODE = 'rik2026'
 const LS_URL   = 'https://rightpdfkit.lemonsqueezy.com/checkout/buy/29e1e924-ef12-4f4e-91fa-35e693698ef8'
 let isPro = localStorage.getItem('rik-pro') === 'true'
-const PRO_TOOLS = new Set(['removebg','blur','enhance','bulk','roundcorners'])
+const PRO_TOOLS = new Set(['removebg','blur','enhance','bulk','roundcorners','favicon','compare'])
 const imgState  = {}
 const compressState = {fmt:'jpeg'}
 let convertFmt  = 'png'
@@ -755,6 +956,19 @@ function onImageLoaded(tool) {
     case 'blur':
       setupBlurCanvas()
       break
+    case 'sharpen': applySharpen(); break
+    case 'border': applyBorder(); break
+    case 'flip':
+      document.getElementById('flip-ctrl').classList.remove('rik-hidden')
+      document.getElementById('flip-btns').classList.remove('rik-hidden')
+      applyFlipDir('h')
+      break
+    case 'adjust': applyAdjust(); break
+    case 'padding': applyPadding(); break
+    case 'exif': processExif(s); break
+    case 'base64': processBase64(s); break
+    case 'pixelate': applyPixelate(); break
+    case 'favicon': processFavicon(s); break
   }
 }
 
@@ -1164,7 +1378,7 @@ async function activateLicense(){
 document.addEventListener('DOMContentLoaded', function() {
 
   // File inputs → loadImage
-  var singleTools = ['compress','resize','convert','crop','rotate','filters','watermark','text','info','palette','removebg','blur']
+  var singleTools = ['compress','resize','convert','crop','rotate','filters','watermark','text','info','palette','removebg','blur','sharpen','border','flip','adjust','padding','exif','base64','pixelate','favicon']
   singleTools.forEach(function(tool) {
     var input = document.getElementById(tool + '-in')
     if (input) {
@@ -1223,11 +1437,345 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   })
 
+
+  // Compare tool
+  var cin1 = document.getElementById('cmp-in1')
+  var cin2 = document.getElementById('cmp-in2')
+  if(cin1) cin1.addEventListener('change', function(){ if(this.files[0]) loadCompareImage(this.files[0],1) })
+  if(cin2) cin2.addEventListener('change', function(){ if(this.files[0]) loadCompareImage(this.files[0],2) })
+  var cdz1 = document.getElementById('cmp-dz1')
+  var cdz2 = document.getElementById('cmp-dz2')
+  if(cdz1 && cin1) cdz1.addEventListener('click', function(){ cin1.click() })
+  if(cdz2 && cin2) cdz2.addEventListener('click', function(){ cin2.click() })
+  // Compare tool inputs
+  var cin1 = document.getElementById('cmp-in1')
+  var cin2 = document.getElementById('cmp-in2')
+  if(cin1) cin1.addEventListener('change', function(){ if(this.files[0]) loadCmpImg(this.files[0],1) })
+  if(cin2) cin2.addEventListener('change', function(){ if(this.files[0]) loadCmpImg(this.files[0],2) })
+  var cdz1 = document.getElementById('cmp-dz1')
+  var cdz2 = document.getElementById('cmp-dz2')
+  if(cdz1 && cin1) cdz1.addEventListener('click', function(){ cin1.click() })
+  if(cdz2 && cin2) cdz2.addEventListener('click', function(){ cin2.click() })
+
   console.log('✅ RightImageKit: all event listeners wired')
 })
 // ── End wire ──
 
 // ── UTILS ──
+
+// ── NEW TOOLS ──
+
+function applySharpen() {
+  const s = imgState['sharpen']; if(!s) return
+  const amount = parseInt(document.getElementById('sharpen-amount').value)
+  const radius = parseInt(document.getElementById('sharpen-radius').value)
+  document.getElementById('sharpen-amount-v').textContent = amount
+  document.getElementById('sharpen-radius-v').textContent = radius
+  const canvas = document.getElementById('sharpen-canvas')
+  canvas.width = s.img.naturalWidth; canvas.height = s.img.naturalHeight
+  canvas.classList.remove('rik-hidden')
+  const ctx = canvas.getContext('2d')
+  ctx.drawImage(s.img, 0, 0)
+  const idata = ctx.getImageData(0, 0, canvas.width, canvas.height)
+  const src = idata.data
+  const w = canvas.width, h = canvas.height
+  const blurred = new Uint8ClampedArray(src.length)
+  const r = radius
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      let rs=0,gs=0,bs=0,cnt=0
+      for (let dy=-r; dy<=r; dy++) {
+        for (let dx=-r; dx<=r; dx++) {
+          const nx=Math.min(w-1,Math.max(0,x+dx)), ny=Math.min(h-1,Math.max(0,y+dy))
+          const i=(ny*w+nx)*4
+          rs+=src[i]; gs+=src[i+1]; bs+=src[i+2]; cnt++
+        }
+      }
+      const i=(y*w+x)*4
+      blurred[i]=rs/cnt; blurred[i+1]=gs/cnt; blurred[i+2]=bs/cnt; blurred[i+3]=src[i+3]
+    }
+  }
+  const factor = amount / 50
+  for (let i=0; i<src.length; i+=4) {
+    src[i]   = Math.min(255,Math.max(0, src[i]   + (src[i]   - blurred[i])   * factor))
+    src[i+1] = Math.min(255,Math.max(0, src[i+1] + (src[i+1] - blurred[i+1]) * factor))
+    src[i+2] = Math.min(255,Math.max(0, src[i+2] + (src[i+2] - blurred[i+2]) * factor))
+  }
+  ctx.putImageData(idata, 0, 0)
+  document.getElementById('sharpen-btns').classList.remove('rik-hidden')
+}
+
+let _borderStyle = 'solid'
+function setBorderStyle(style, btn) {
+  _borderStyle = style
+  btn.closest('.format-btns').querySelectorAll('.fmt-btn').forEach(b=>b.classList.remove('on'))
+  btn.classList.add('on')
+  applyBorder()
+}
+function applyBorder() {
+  const s = imgState['border']; if(!s) return
+  const size = parseInt(document.getElementById('border-size').value)
+  const color = document.getElementById('border-color').value
+  document.getElementById('border-size-v').textContent = size + 'px'
+  const iw = s.img.naturalWidth, ih = s.img.naturalHeight
+  const canvas = document.getElementById('border-canvas')
+  canvas.width = iw + size*2; canvas.height = ih + size*2
+  canvas.classList.remove('rik-hidden')
+  const ctx = canvas.getContext('2d')
+  ctx.save()
+  if (_borderStyle === 'solid') {
+    ctx.fillStyle = color
+  } else if (_borderStyle === 'shadow') {
+    ctx.fillStyle = '#000'
+  } else {
+    const g = ctx.createLinearGradient(0,0,canvas.width,canvas.height)
+    g.addColorStop(0,'#6C63FF'); g.addColorStop(1,'#A78BFA')
+    ctx.fillStyle = g
+  }
+  ctx.fillRect(0,0,canvas.width,canvas.height)
+  ctx.restore()
+  ctx.drawImage(s.img, size, size, iw, ih)
+  document.getElementById('border-btns').classList.remove('rik-hidden')
+}
+
+function applyFlipDir(dir) {
+  const s = imgState['flip']; if(!s) return
+  const w = s.img.naturalWidth, h = s.img.naturalHeight
+  const canvas = document.getElementById('flip-canvas')
+  canvas.width = w; canvas.height = h
+  canvas.classList.remove('rik-hidden')
+  const ctx = canvas.getContext('2d')
+  ctx.save()
+  if (dir==='h')        { ctx.translate(w,0); ctx.scale(-1,1) }
+  else if (dir==='v')   { ctx.translate(0,h); ctx.scale(1,-1) }
+  else                  { ctx.translate(w,h); ctx.scale(-1,-1) }
+  ctx.drawImage(s.img,0,0)
+  ctx.restore()
+  document.getElementById('flip-btns').classList.remove('rik-hidden')
+}
+
+function applyAdjust() {
+  const s = imgState['adjust']; if(!s) return
+  const bright   = parseInt(document.getElementById('adj-bright').value)
+  const contrast = parseInt(document.getElementById('adj-contrast').value)
+  const sat      = parseInt(document.getElementById('adj-sat').value)
+  const warm     = parseInt(document.getElementById('adj-warm').value)
+  const hue      = parseInt(document.getElementById('adj-hue').value)
+  document.getElementById('adj-bright-v').textContent   = bright
+  document.getElementById('adj-contrast-v').textContent = contrast
+  document.getElementById('adj-sat-v').textContent      = sat
+  document.getElementById('adj-warm-v').textContent     = warm
+  document.getElementById('adj-hue-v').textContent      = hue + '°'
+  const canvas = document.getElementById('adjust-canvas')
+  canvas.width = s.img.naturalWidth; canvas.height = s.img.naturalHeight
+  canvas.classList.remove('rik-hidden')
+  const ctx = canvas.getContext('2d')
+  const b = (100 + bright) / 100
+  const con = (100 + contrast) / 100
+  const satF = (100 + sat) / 100
+  let filter = 'brightness('+b+') contrast('+con+') saturate('+satF+') hue-rotate('+hue+'deg)'
+  if (warm > 0) filter += ' sepia(' + (warm/200) + ')'
+  ctx.filter = filter
+  ctx.drawImage(s.img,0,0)
+  ctx.filter = 'none'
+  if (warm < 0) {
+    const d = ctx.getImageData(0,0,canvas.width,canvas.height)
+    const pct = Math.abs(warm)/100*0.3
+    for (let i=0; i<d.data.length; i+=4) {
+      d.data[i]   = Math.max(0, d.data[i]   - d.data[i]   * pct)
+      d.data[i+2] = Math.min(255, d.data[i+2] + d.data[i+2] * pct)
+    }
+    ctx.putImageData(d,0,0)
+  }
+  document.getElementById('adjust-btns').classList.remove('rik-hidden')
+}
+function resetAdjust() {
+  ['adj-bright','adj-contrast','adj-sat','adj-warm','adj-hue'].forEach(function(id){
+    document.getElementById(id).value = 0
+  })
+  applyAdjust()
+}
+
+function applyPadding() {
+  const s = imgState['padding']; if(!s) return
+  const pad   = parseInt(document.getElementById('pad-all').value)
+  const color = document.getElementById('pad-color').value
+  document.getElementById('pad-all-v').textContent = pad + 'px'
+  const canvas = document.getElementById('padding-canvas')
+  canvas.width  = s.img.naturalWidth  + pad*2
+  canvas.height = s.img.naturalHeight + pad*2
+  canvas.classList.remove('rik-hidden')
+  const ctx = canvas.getContext('2d')
+  ctx.fillStyle = color
+  ctx.fillRect(0,0,canvas.width,canvas.height)
+  ctx.drawImage(s.img, pad, pad)
+  document.getElementById('padding-btns').classList.remove('rik-hidden')
+}
+function setPadPreset(ratio) {
+  const s = imgState['padding']; if(!s) return
+  const parts = ratio.split(':'), rw = parseInt(parts[0]), rh = parseInt(parts[1])
+  const iw = s.img.naturalWidth, ih = s.img.naturalHeight
+  let pad = 0
+  if (iw/ih > rw/rh) {
+    pad = Math.round((Math.round(iw * rh/rw) - ih) / 2)
+  } else {
+    pad = Math.round((Math.round(ih * rw/rh) - iw) / 2)
+  }
+  document.getElementById('pad-all').value = Math.max(0, pad)
+  document.getElementById('pad-all-v').textContent = Math.max(0, pad) + 'px'
+  applyPadding()
+}
+
+function processExif(s) {
+  const tmp = document.createElement('canvas')
+  tmp.width = s.img.naturalWidth; tmp.height = s.img.naturalHeight
+  tmp.getContext('2d').drawImage(s.img, 0, 0)
+  const info = document.getElementById('exif-info')
+  info.innerHTML = '<div style="color:#22c55e;font-weight:700;margin-bottom:6px">✓ EXIF data stripped</div>' +
+    '<div style="font-size:13px;color:var(--muted)">GPS, camera model, timestamps and all metadata removed.<br>Original: ' + fmtSize(s.origSize) + '</div>'
+  document.getElementById('exif-dl').onclick = function() {
+    tmp.toBlob(function(blob) {
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url; a.download = s.name + '-clean.jpg'; a.click()
+      URL.revokeObjectURL(url)
+      toast('Downloaded — EXIF removed ✓')
+    }, 'image/jpeg', 0.95)
+  }
+  document.getElementById('exif-res').classList.remove('rik-hidden')
+}
+
+let _b64Format = 'full', _b64DataStr = ''
+function setB64Format(fmt, btn) {
+  _b64Format = fmt
+  btn.closest('.format-btns').querySelectorAll('.fmt-btn').forEach(b=>b.classList.remove('on'))
+  btn.classList.add('on')
+  if (_b64DataStr) updateB64Output()
+}
+function updateB64Output() {
+  const out  = document.getElementById('base64-output')
+  const size = document.getElementById('base64-size')
+  if (!_b64DataStr) return
+  let val = ''
+  if (_b64Format === 'full')     val = _b64DataStr
+  else if (_b64Format === 'raw') val = _b64DataStr.split(',')[1]
+  else                           val = 'background-image: url("' + _b64DataStr + '");'
+  out.value = val
+  size.textContent = fmtSize(val.length) + ' string'
+}
+function copyBase64() {
+  navigator.clipboard.writeText(document.getElementById('base64-output').value).then(function(){ toast('Copied ✓') })
+}
+function processBase64(s) {
+  const tmp = document.createElement('canvas')
+  tmp.width = s.img.naturalWidth; tmp.height = s.img.naturalHeight
+  tmp.getContext('2d').drawImage(s.img, 0, 0)
+  _b64DataStr = tmp.toDataURL('image/jpeg', 0.92)
+  document.getElementById('base64-res').classList.remove('rik-hidden')
+  updateB64Output()
+}
+
+function applyPixelate() {
+  const s = imgState['pixelate']; if(!s) return
+  const size = parseInt(document.getElementById('px-size').value)
+  document.getElementById('px-size-v').textContent = size + 'px'
+  const canvas = document.getElementById('pixelate-canvas')
+  const w = s.img.naturalWidth, h = s.img.naturalHeight
+  canvas.width = w; canvas.height = h
+  canvas.classList.remove('rik-hidden')
+  const ctx = canvas.getContext('2d')
+  ctx.imageSmoothingEnabled = false
+  const sw = Math.max(1, Math.ceil(w/size)), sh = Math.max(1, Math.ceil(h/size))
+  ctx.drawImage(s.img, 0, 0, sw, sh)
+  ctx.drawImage(canvas, 0, 0, sw, sh, 0, 0, w, h)
+  document.getElementById('pixelate-btns').classList.remove('rik-hidden')
+}
+
+// ── FAVICON ──
+const _favSizes = [16,32,48,64,128,180]
+const _favCanvases = {}
+function processFavicon(s) {
+  const previews = document.getElementById('favicon-previews')
+  previews.innerHTML = ''
+  _favSizes.forEach(function(sz) {
+    const cv = document.createElement('canvas')
+    cv.width = sz; cv.height = sz
+    cv.getContext('2d').drawImage(s.img, 0, 0, sz, sz)
+    _favCanvases[sz] = cv
+    const wrap = document.createElement('div')
+    wrap.style.textAlign = 'center'
+    const prev = document.createElement('canvas')
+    prev.width = 48; prev.height = 48
+    prev.style.cssText = 'border:1px solid var(--border);border-radius:6px;display:block;margin-bottom:4px;image-rendering:pixelated'
+    prev.getContext('2d').drawImage(cv, 0, 0, 48, 48)
+    const lbl = document.createElement('div')
+    lbl.style.cssText = 'font-size:11px;color:var(--muted)'; lbl.textContent = sz + 'px'
+    const btn = document.createElement('button')
+    btn.className = 'fmt-btn'
+    btn.style.cssText = 'font-size:10px;padding:3px 8px;margin-top:4px;display:block;width:100%;cursor:pointer'
+    btn.textContent = '⬇'; btn.onclick = (function(s2){ return function(){ downloadFavSize(s2) } })(sz)
+    wrap.appendChild(prev); wrap.appendChild(lbl); wrap.appendChild(btn)
+    previews.appendChild(wrap)
+  })
+  document.getElementById('favicon-res').classList.remove('rik-hidden')
+}
+function downloadFavSize(sz) {
+  const cv = _favCanvases[sz]; if(!cv) return
+  cv.toBlob(function(blob){
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url; a.download = 'favicon-'+sz+'x'+sz+'.png'; a.click()
+    URL.revokeObjectURL(url)
+  }, 'image/png')
+}
+function downloadAllFavicons() {
+  _favSizes.forEach(function(sz, i){
+    setTimeout(function(){ downloadFavSize(sz) }, i * 200)
+  })
+  toast('Downloading ' + _favSizes.length + ' favicon sizes ✓')
+}
+
+// ── BEFORE/AFTER COMPARE ──
+const _cmpImgs = {1:null, 2:null}
+function loadCmpImg(file, n) {
+  if(!file) return
+  const url = URL.createObjectURL(file)
+  const img = new Image()
+  img.onload = function(){
+    URL.revokeObjectURL(url)
+    _cmpImgs[n] = img
+    toast('Image ' + n + ' loaded')
+    if (_cmpImgs[1] && _cmpImgs[2]) initCompare()
+  }
+  img.src = url
+}
+function initCompare() {
+  const wrap  = document.getElementById('compare-wrap')
+  const el1   = document.getElementById('cmp-img1')
+  const el2   = document.getElementById('cmp-img2')
+  const over  = document.getElementById('cmp-overlay')
+  const sldr  = document.getElementById('cmp-slider')
+  const stat  = document.getElementById('compare-status')
+  el1.src = _cmpImgs[1].src; el2.src = _cmpImgs[2].src
+  wrap.classList.remove('rik-hidden')
+  stat.textContent = '← Drag the divider to compare →'
+  let dragging = false
+  function setPos(x) {
+    const rect = wrap.getBoundingClientRect()
+    const pct = Math.min(100, Math.max(0, ((x - rect.left) / rect.width) * 100))
+    over.style.width = pct + '%'
+    sldr.style.left  = pct + '%'
+    el1.style.width  = wrap.offsetWidth + 'px'
+  }
+  sldr.onmousedown = function(e){ dragging=true; e.preventDefault() }
+  wrap.ontouchstart = function(){ dragging=true }
+  document.addEventListener('mousemove', function(e){ if(dragging) setPos(e.clientX) })
+  wrap.addEventListener('touchmove', function(e){ if(dragging){ setPos(e.touches[0].clientX); e.preventDefault() } }, {passive:false})
+  document.addEventListener('mouseup', function(){ dragging=false })
+  wrap.addEventListener('touchend', function(){ dragging=false })
+}
+// ── End new tools ──
+
 function loadScript(src){return new Promise((res,rej)=>{if(document.querySelector('script[src="'+src+'"]')){res();return}const s=document.createElement('script');s.src=src;s.onload=res;s.onerror=rej;document.head.appendChild(s)})}
 document.addEventListener('dragover',e=>e.preventDefault())
 document.addEventListener('drop',e=>e.preventDefault())
