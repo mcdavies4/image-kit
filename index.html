@@ -43,6 +43,7 @@ a{color:var(--accent);text-decoration:none}
 .app{display:flex;height:100vh;overflow:hidden}
 .sidebar{width:240px;background:rgba(13,13,26,0.98);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;overflow-y:auto}
 .main{flex:1;overflow-y:auto;display:flex;flex-direction:column}
+.logo:hover{opacity:0.85}
 .logo{padding:18px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
 .logo-icon{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;color:#fff;flex-shrink:0}
 .logo-name{font-size:14px;font-weight:800;color:var(--text)}.logo-name span{color:var(--accent)}
@@ -147,7 +148,7 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
 <body>
 <!-- Mobile nav -->
 <div class="mobile-nav">
-  <div style="display:flex;align-items:center;gap:10px">
+  <div style="display:flex;align-items:center;gap:10px;cursor:pointer" onclick="nav('home')" title="Back to home" role="button" aria-label="RightImageKit home">
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
   <rect width="32" height="32" rx="9" fill="url(#rg)"/>
   <defs><linearGradient id="rg" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6C63FF"/><stop offset="1" stop-color="#A78BFA"/></linearGradient></defs>
@@ -161,7 +162,7 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;min-width:80p
 <div class="app">
   <!-- SIDEBAR -->
   <nav class="sidebar" id="sidebar">
-    <div class="logo">
+    <div class="logo" onclick="nav('home')" style="cursor:pointer" title="Home">
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" style="flex-shrink:0">
   <defs><linearGradient id="rl" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6C63FF"/><stop offset="1" stop-color="#A78BFA"/></linearGradient></defs>
   <rect width="32" height="32" rx="9" fill="url(#rl)"/>
